@@ -74,3 +74,14 @@ router.post("/product-details",async(req,res)=>{
     }
     
 })
+router.path("/edit-product",async(req,res)=>{
+    let {}
+    try{
+
+    }catch(err){
+        res.status(err.status).json({
+            message:`Err: ${err.message}`,
+            status:err.status
+        })
+    }
+})
