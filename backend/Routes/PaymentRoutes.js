@@ -14,7 +14,11 @@ const contact_service = [{
     address:"SHOP GA 11 Lagos island",
 }]
 router.post("/",async(req,res)=>{
-    let {account_name,account_number,bank_name,amount} = req.body
+    let {account_name,account_number,bank_name,amount} = req.body;
+    let ide = uuid.v4();
+    const payment_details = new payment_detailss({
+        
+    })
     try{
 
     }catch(err){
