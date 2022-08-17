@@ -73,6 +73,7 @@ const payment_details = new Schema({
     timer:{
         type:Date.now()
     },
+    order_id:String,
     status:String ,
     ide:String
 })
