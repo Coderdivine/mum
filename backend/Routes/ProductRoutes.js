@@ -75,7 +75,7 @@ router.post("/product-details",async(req,res)=>{
     
 })
 router.path("/edit-product",async(req,res)=>{
-    let {}
+    let {} = req.body;
     try{
 
     }catch(err){
