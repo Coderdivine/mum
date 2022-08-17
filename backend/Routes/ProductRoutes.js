@@ -74,7 +74,7 @@ router.post("/product-details",async(req,res)=>{
     }
     
 })
-router.path("/edit-product",async(req,res)=>{
+router.put("/edit-product",async(req,res)=>{
     let { ide,name,description,amount } = req.body;
     try{
        if(name == ""){
@@ -122,6 +122,17 @@ router.path("/edit-product",async(req,res)=>{
         res.status(err.status).json({
             message:`Err: ${err.message}`,
             status:err.status
+        })
+    }
+})
+router.update("/delete-product",async(req,res)=>{
+    let {} = req.body;
+    try{
+
+    }catch(error){
+        res.status(error.status).json({
+            message:`Err: ${error.message}`,
+            status:error.status
         })
     }
 })
