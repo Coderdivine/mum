@@ -171,5 +171,10 @@ router.post("/product-info",(req,res)=>{
                 status:400
             })
         }
+    }).catch(err=>{
+        res.status(err.status).json({
+            message:`Err: ${err.message}`,
+            status:err.status
+        })
     })
 })
