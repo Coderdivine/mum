@@ -3,7 +3,10 @@ const Schema = mongoose.Schema;
 const product_details = new Schema({
     name:String,
     rate:String,
-    sold_out:Boolean,
+    sold_out:{
+        type:Boolean,
+        required:false
+    },
     quantity:String,
     sold:String,
     brand:{
@@ -14,7 +17,7 @@ const product_details = new Schema({
         type:String,
         required:true
     },
-    id:String,
+    ide:String,
     price:Number,
     description:{
         type:String,
@@ -40,6 +43,7 @@ const order_details = new Schema({
     phone_number:String,
     email:String,
     type:String,
+    ide:String,
     company:{
         type:String,
         required:false
@@ -69,7 +73,8 @@ const payment_details = new Schema({
     timer:{
         type:Date.now()
     },
-    status:String 
+    status:String ,
+    ide:String
 })
 const payment_detailss = mongoose.model("payment_details",payment_details);
 
