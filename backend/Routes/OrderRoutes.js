@@ -5,10 +5,12 @@ const uuid = require("uuid");
 const axios = require("axios");
 const request = require("request");
 const {product_detailss,order_detailss, payment_detailss} = require("../Model/index");
-//add a order,
+//add a order, stiil need to calc del price.
 //get order info,
 const payment_cards = [{
-
+ account_name:"",
+ account_bank:"",
+ account_number:"",
 }]
 router.post("/order-details",async(req,res)=>{
     let {firstname,lastname,country,address,city,phone_number,email,type,company,product} = req.body;
