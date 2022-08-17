@@ -31,6 +31,19 @@ router.post("/order-details",async(req,res)=>{
                 message:"Please input a valid email address",
                 status:400
             })
+        }else {
+            const order_details = new order_detailss({
+                firstname,
+                lastname,
+                country,
+                address,
+                city,
+                phone_number,
+                email,
+                type,
+                ide,
+                company
+            })
         }
     }catch(err){
         res.status(err.status).json({
