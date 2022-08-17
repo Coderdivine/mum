@@ -14,6 +14,7 @@ const contact_service = [{
     address:"SHOP GA 11 Lagos island",
 }]
 router.post("/",async(req,res)=>{
+    let {account_name,account_number,bank_name,amount} = req.body
     try{
 
     }catch(err){
