@@ -62,7 +62,14 @@ const order_details = new Schema({
 const order_detailss = mongoose.model("order_details",order_details);
 
 const payment_details = new Schema({
-
+    account_name:String,
+    account_number:String,
+    bank_name:String,
+    amount:String,
+    timer:{
+        type:Date.now()
+    },
+    status:String 
 })
 const payment_detailss = mongoose.model("payment_details",payment_details);
 
