@@ -17,7 +17,12 @@ router.post("/order-details",async(req,res)=>{
                 status:400
             })
         }else if(address == "" || address.length < 10 || typeof address !== "stirng"){
-
+            res.status(400).json({
+                message:"Please input a valid address",
+                status:400
+            })
+        }else if(){
+            
         }
     }catch(err){
         res.status(err.status).json({
