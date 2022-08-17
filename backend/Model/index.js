@@ -60,7 +60,9 @@ const order_details = new Schema({
 })
 const order_detailss = mongoose.model("order_details",order_details);
 
-const payment_details = new Schema({})
+const payment_details = new Schema({
+    
+})
 const payment_detailss = mongoose.model("payment_details",payment_details);
 
 
