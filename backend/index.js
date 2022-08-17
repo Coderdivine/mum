@@ -10,12 +10,12 @@ const mongoose = require("mongoose");
 mongoose.connect('mongodb://localhost:27017/mum');
 const port = process.env.PORT || 9099;
 const db = mongoose.connection;
-db.on("error",(err)=>{console.log(err)})
+db.on("error",(err)=>{console.log(err)});
 db.once("open",()=> console.log("Connected to database"));
 app.get("/",(req,res)=>{
     res.json({
         message:"Welcome to Mum's shop",
-        status:200
+        status:200,
     });
 })
 app.listen(port, () => {
