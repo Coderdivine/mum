@@ -78,7 +78,16 @@ router.path("/edit-product",async(req,res)=>{
     let { ide } = req.body;
     try{
         product_detailss.find({ide}).then(cornt=>{
-            
+            if(cornt.length){
+
+            }else{
+
+            }
+        }).catch(err=>{
+            res.status(err.status).json({
+                message:err.message,
+                status:err.status
+            })
         })
     }catch(err){
         res.status(err.status).json({
