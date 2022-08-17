@@ -19,6 +19,10 @@ router.post("/product-details",async(req,res)=>{
 
        }else if(typeof price  !== "number"){
 
+       }else if(description == "" || description.length < 6 ){
+
+       }else if(sizes == "" || color == "" || image == "" || weight == ""){
+        
        }else{
         let ide = uuid.v4();
         const product_details = new product_detailss({
