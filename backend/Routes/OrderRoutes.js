@@ -8,6 +8,9 @@ const {product_detailss,order_detailss, payment_detailss} = require("../Model/in
 //add a order,
 //update a order,
 //get order info,
+const payment_cards = [{
+
+}]
 router.post("/order-details",async(req,res)=>{
     let {firstname,lastname,country,address,city,phone_number,email,type,company,product} = req.body;
     try{
@@ -48,7 +51,23 @@ router.post("/order-details",async(req,res)=>{
                 date:Date.now()
             });
             order_details.save().then(corn=>{
-                
+               if(type == "pickup"){
+                res.status(201).json({
+                    message:"We sent your order id to your email address",
+                    status:201
+                })
+               }else if(type == "delivery"){
+                res.status(201).json({
+                    message:"Order packed",
+                    data:payment_cards,
+                    ide
+                })
+               }else{
+                 res.status(400).json({
+                    message:"Product type can't be read",
+                    status:400
+                 })
+               } 
             }).catch(err=>{
                 res.status(err.status).json({
                     message:`Er: ${err.message}`,
