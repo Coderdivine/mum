@@ -16,13 +16,25 @@ router.post("/product-details",async(req,res)=>{
     price = Number(price);
     try{
        if(name == "" || rate == "" || quantity == "" || brand == "" || category == ""){
-
+        res.status(400).json({
+            message:"Product details are needed",
+            status:400
+        })
        }else if(typeof price  !== "number"){
-
+        res.status(400).json({
+            message:"Amount must be a number",
+            status:400
+        })
        }else if(description == "" || description.length < 6 ){
-
+        res.status(400).json({
+            message:"Description must be greater than six letters",
+            status:400
+        })
        }else if(sizes == "" || color == "" || image == "" || weight == ""){
-        
+        res.status(400).json({
+            message:"Product property is needed",
+            status:400
+        })
        }else{
         let ide = uuid.v4();
         const product_details = new product_detailss({
