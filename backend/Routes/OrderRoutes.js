@@ -8,3 +8,14 @@ const {product_detailss,order_detailss, payment_detailss} = require("../Model/in
 //add a order,
 //update a order,
 //get order info,
+router.post("/order-details",async(req,res)=>{
+    let {firstname,lastname,country,address,city,phone_number,email,type,company,product} = req.body;
+    try{
+
+    }catch(err){
+        res.status(err.status).json({
+            message:`Err: ${err.message}`,
+            status:err.status
+        })
+    }
+})
