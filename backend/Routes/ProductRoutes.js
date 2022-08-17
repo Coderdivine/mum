@@ -167,7 +167,7 @@ router.post("/product-info",(req,res)=>{
             })
         }else{
             res.status(400).json({
-                message:"Post not found"
+                message:"Post not found",
                 status:400
             })
         }
