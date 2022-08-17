@@ -75,9 +75,11 @@ router.post("/product-details",async(req,res)=>{
     
 })
 router.path("/edit-product",async(req,res)=>{
-    let {} = req.body;
+    let { ide } = req.body;
     try{
-
+        product_detailss.find({ide}).then(cornt=>{
+            
+        })
     }catch(err){
         res.status(err.status).json({
             message:`Err: ${err.message}`,
