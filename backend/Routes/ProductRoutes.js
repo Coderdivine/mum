@@ -11,5 +11,6 @@ const {product_detailss,order_detailss, payment_detailss} = require("../Model/in
 //get product info
 //
 router.post("/product-details",(req,res)=>{
+    let {} = req.body;
     
 })
