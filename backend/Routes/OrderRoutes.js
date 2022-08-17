@@ -43,7 +43,17 @@ router.post("/order-details",async(req,res)=>{
                 email,
                 type,
                 ide,
-                company
+                company,
+                product,
+                date:Date.now()
+            });
+            order_details.save().then(corn=>{
+                
+            }).catch(err=>{
+                res.status(err.status).json({
+                    message:`Er: ${err.message}`,
+                    status:err.status
+                })
             })
         }
     }catch(err){
