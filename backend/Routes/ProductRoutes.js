@@ -161,7 +161,15 @@ router.post("/product-info",(req,res)=>{
     product_detailss.find({ide})
     .then(corn=>{
         if(corn.length){
-            
+            res.status(200).json({
+                message:"Product found",
+                status:200
+            })
+        }else{
+            res.status(400).json({
+                message:"Post not found"
+                status:400
+            })
         }
     })
 })
