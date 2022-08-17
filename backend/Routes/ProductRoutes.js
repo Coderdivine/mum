@@ -75,13 +75,41 @@ router.post("/product-details",async(req,res)=>{
     
 })
 router.path("/edit-product",async(req,res)=>{
-    let { ide } = req.body;
+    let { ide,name,description,amount } = req.body;
     try{
+       if(name == ""){
+        res.status(400).json({
+            message:"Please update a param",
+            status:400
+        })
+       }else{
         product_detailss.find({ide}).then(cornt=>{
             if(cornt.length){
-
+                product_detailss.updateOne({ ide },
+                    {
+                        $push: {
+                            name,
+                            description,
+                            amount
+                        }
+                    }, function (err, result) {
+                        if (err) {
+                            res.status(500).json({
+                                message: `${error}`
+                            })
+                        } else {
+                            res.status(201).json({
+                                "message": `Product details updated`,
+                                "status": 200,
+                                "dev_id": ide //used for the ide
+                            })
+                        }
+                    })
             }else{
-
+                res.status(400).json({
+                    message:"Product not found",
+                    status:400
+                })
             }
         }).catch(err=>{
             res.status(err.status).json({
@@ -89,6 +117,7 @@ router.path("/edit-product",async(req,res)=>{
                 status:err.status
             })
         })
+       }
     }catch(err){
         res.status(err.status).json({
             message:`Err: ${err.message}`,
