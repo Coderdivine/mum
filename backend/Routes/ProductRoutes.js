@@ -125,7 +125,7 @@ router.put("/edit-product",async(req,res)=>{
         })
     }
 })
-router.update("/delete-product",async(req,res)=>{
+router.post("/delete-product",async(req,res)=>{
     let { ide } = req.body;
     try{
         product_detailss.deleteMany({ide})
@@ -146,4 +146,22 @@ router.update("/delete-product",async(req,res)=>{
             status:error.status
         })
     }
+})
+router.get("/all-product",(req,res)=>{
+    product_detailss.find()
+    .then(corn=>{
+        res.status(200).json({
+            message:`Products found`,
+            data:corn,
+            status:200
+        })
+    })
+})
+router.post("/product-info",(req,res)=>{
+    product_detailss.find({ide})
+    .then(corn=>{
+        if(corn.length){
+            
+        }
+    })
 })
