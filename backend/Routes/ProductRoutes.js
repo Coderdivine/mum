@@ -126,9 +126,20 @@ router.put("/edit-product",async(req,res)=>{
     }
 })
 router.update("/delete-product",async(req,res)=>{
-    let {} = req.body;
+    let { ide } = req.body;
     try{
-
+        product_detailss.deleteMany({ide})
+        .then(show=>{
+            res.status(201).json({
+                message:"Deleted",
+                status:201
+            })
+        }).catch(err=>{
+            res.status(401).json({
+                message:`Err : ${err.message}`,
+                status:401
+            })
+        })
     }catch(error){
         res.status(error.status).json({
             message:`Err: ${error.message}`,
