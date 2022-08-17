@@ -86,7 +86,11 @@ router.get("/order-info/:ide",(req,res)=>{
     order_detailss.find({ide})
     .then(corn=>{
         if(corn.length){
-            
+            res.status(200).json({
+                message:"Order found",
+                data:corn,
+                status:200
+            })
         }else{
             res.status(400).json({
                 message:"This order was not found",
