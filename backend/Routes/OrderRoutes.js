@@ -16,8 +16,8 @@ router.post("/order-details",async(req,res)=>{
                 message:"Please all details are required",
                 status:400
             })
-        }else if(){
-
+        }else if(address == "" || address.length < 10 || typeof address !== "stirng"){
+            
         }
     }catch(err){
         res.status(err.status).json({
