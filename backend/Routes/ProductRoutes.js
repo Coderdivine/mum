@@ -30,6 +30,17 @@ router.post("/product-details",async(req,res)=>{
             color,
             image,
             weight
+        });
+        product_details.save().then(corn=>{
+            res.status(201).json({
+                message:"New Product Added",
+                status:201
+            })
+        }).catch(err=>{
+            res.status(401).json({
+                message:`Product err: ${err.message}`,
+                status:err.status
+            })
         })
 
     }catch(err){
