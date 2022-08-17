@@ -21,8 +21,11 @@ router.post("/order-details",async(req,res)=>{
                 message:"Please input a valid address",
                 status:400
             })
-        }else if(){
-            
+        }else if(phone_number.length < 8){
+            res.status(400).json({
+                message:"Please input a vaild phone number",
+                status:400
+            })
         }
     }catch(err){
         res.status(err.status).json({
