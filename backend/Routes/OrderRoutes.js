@@ -32,6 +32,7 @@ router.post("/order-details",async(req,res)=>{
                 status:400
             })
         }else {
+            let ide = uuid.v4();
             const order_details = new order_detailss({
                 firstname,
                 lastname,
