@@ -11,13 +11,13 @@ const {product_detailss,order_detailss, payment_detailss} = require("../Model/in
 router.post("/order-details",async(req,res)=>{
     let {firstname,lastname,country,address,city,phone_number,email,type,company,product} = req.body;
     try{
-        if(firstname == "" || lastname == "" || country == "" || address = ""){
-            res.status().json({
+        if(firstname == "" || lastname == "" || country == "" || address == ""){
+            res.status(400).json({
                 message:"Please all details are required",
                 status:400
             })
         }else if(address == "" || address.length < 10 || typeof address !== "stirng"){
-            
+
         }
     }catch(err){
         res.status(err.status).json({
