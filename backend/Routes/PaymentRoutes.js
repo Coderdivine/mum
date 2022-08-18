@@ -17,7 +17,13 @@ router.post("/", async (req, res) => {
     let { account_name, account_number, bank_name, amount, order_id } = req.body;
     let ide = uuid.v4();
     let data = {
-        
+        contact_service,
+        account_name,
+        account_number,
+        bank_name,
+        amount,
+        order_id,
+        ref:ide
     };
     const payment_details = new payment_detailss({
         account_name,
@@ -30,7 +36,11 @@ router.post("/", async (req, res) => {
         ide
     })
     payment_details.save().then(corn => {
-
+        res.status(201).json({
+            message:"Payment account init",
+            data,
+            status:201
+        })
     })
     try {
 
