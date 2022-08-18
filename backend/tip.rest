@@ -39,13 +39,13 @@ POST http://localhost:9099/order/order-details
 Content-Type: application/json
 {
     "firstname":"Chimdindu",
-    "lastname":"",
-    "country":"",
-    "address":"",
-    "city":"",
-    "phone_number":"",
-    "email":"",
-    "type":"",
-    "company":"",
-    "product":""
+    "lastname":"Ezechukwu",
+    "country":"Nigeria",
+    "address":"114,alhji amoo",
+    "city":"Lagos",
+    "phone_number":"00000000000",
+    "email":"chimdi4332@gmail.com",
+    "type":"pickup",
+    "company":"non",
+    "product":[{"name":"name","size":"3","color":"red","amount":"10000","product_id":"7c7068cc-bde9-46f7-bf26-3f8f2ea32136","quantity":"3"}]
 }
