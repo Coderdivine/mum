@@ -74,7 +74,7 @@ const payment_details = new Schema({
         type:Date
     },
     order_id:String,
-    status:String ,
+    status:String,
     ide:String
 })
 const payment_detailss = mongoose.model("payment_details",payment_details);

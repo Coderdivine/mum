@@ -110,6 +110,8 @@ router.post("/update-payment",async(req,res)=>{
             if(show.length){
                 let data = show[0];
                 if(Date.now() >= data.timer){
+
+                }else if(){
                     
                 }
             }else{
