@@ -19,7 +19,7 @@ GET http://localhost:9099/product/all-product
 ###
 GET http://localhost:9099/product/product-info/ide
 ###
-PUT http://localhost:9099/product/edit-product
+POST http://localhost:9099/product/edit-product
 Content-Type: application/json
 
 {

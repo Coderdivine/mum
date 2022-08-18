@@ -75,7 +75,7 @@ router.post("/product-details",async(req,res)=>{
     }
     
 })
-router.put("/edit-product",async(req,res)=>{
+router.post("/edit-product",async(req,res)=>{
     let { ide,name,description,amount } = req.body;
     try{
        if(name == ""){
@@ -88,7 +88,7 @@ router.put("/edit-product",async(req,res)=>{
             if(cornt.length){
                 product_detailss.updateOne({ ide },
                     {
-                        $push: {
+                        $set: {
                             name,
                             description,
                             amount
