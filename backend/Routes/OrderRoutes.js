@@ -163,8 +163,8 @@ router.post("/order-update",(req,res)=>{
 async function IncrementProduct(data){
     try{
         console.log("data",data);
-    if(typeof data == "object"){
-        
+    if(typeof data !== "object"){
+        console.log("data")
         return {
            bool:false,
            message:"data type if not defined" 
@@ -175,17 +175,19 @@ async function IncrementProduct(data){
             message:"data type if not defined" 
          }
     }else{
-        
+        console.log("entering loop")
         let cc = 0;
         for(let i=0;data.length;i++){
-            console.log("cc",cc)
+            console.log("cc",i)
             let ide = data[i].product_id;
+            console.log("ide",ide)
             let sold = Number(data[i].quantity);
             const aa = await product_detailss.find({ide});
             if(aa.length){
                 console.log("yes")
                 sold = Number(aa[0].sold) + sold;
-            const result = await product_detailss.upadteOne({ide},{sold})
+            const result = await product_detailss.updateOne({ide},{sold})
+            console.log(result);
             if(result){
                 console.log("yes_two")
              cc++;
@@ -196,7 +198,7 @@ async function IncrementProduct(data){
                     message:"Done Updated"
                 }
              }
-            }
+            }else{return{bool:false,message:"resut was not defined"}}
             }else{
                 return {
                     bool:false,

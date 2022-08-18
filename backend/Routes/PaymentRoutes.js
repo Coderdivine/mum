@@ -109,19 +109,24 @@ router.post("/update-payment",async(req,res)=>{
                     payment_detailss.updateOne({ide},{status:"done"})  
                     .then(corn=>{
                         ide = data.order_id;
-                        AxiosCont.post("/order-update",{ide})
+                        AxiosCont.post("/order/order-update",{ide})
                         .then(uu=>{
                             res.status(201).json({
                                 message:`Payment Updated`,
                                 data:uu.data,
                                 status:201
                             })
+                        }).catch(err=>{
+                            res.status(400).json({
+                                message:err.message,
+                            status:400
+                            })
                         })
 
                     }).catch(err=>{
-                        res.status(err.status).json({
+                        res.status(400).json({
                             message:`Err: ${err.message}`,
-                            status:err.status
+                            status:400
                         })
                     });
                 }else{
