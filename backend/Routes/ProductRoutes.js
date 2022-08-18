@@ -177,4 +177,5 @@ router.post("/product-info",(req,res)=>{
             status:err.status
         })
     })
-})
+});
+module.exports = router;
