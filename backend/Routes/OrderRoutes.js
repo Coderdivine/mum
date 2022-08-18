@@ -148,11 +148,10 @@ async function IncrementProduct(data){
          }
     }else{
        const result = await product_detailss.upadteOne({})
-       if(result.length){
+       if(result){
 
-       }else{
+       }
+}
 
-       } 
-    }
 
 }
