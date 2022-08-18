@@ -181,10 +181,67 @@ router.get("/check-payment/:ide",(req,res)=>{
         })
     })
 })
-async function sendMail({},res){
+async function sendMail({email,message},res){
     try{
-
+        const options = {
+            method: 'POST',
+            url: 'https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send',
+            headers: {
+                'content-type': 'application/json',
+                'X-RapidAPI-Host': 'rapidprod-sendgrid-v1.p.rapidapi.com',
+                'X-RapidAPI-Key': process.env.AUTH_KEY,
+                useQueryString: true
+            },
+            body: {
+                personalizations: [{ to: [{ email: email }], subject: `${message.length > 15 ? message.substring(0, 15) + "..." : message}` }],
+                from: { email: process.env.AUTH_PASS_EMAIL },
+                content: [{
+                    type: 'text/html', value: `                
+              <div>
+              <div id="header" style="text-align:center;background:#00e404;color:#fff;padding:5px 12px;border-radius:5px;font-style:sans-serif;">
+              <h1>STANRUTE</h1>
+              </div>
+              <section id="body" style="margin:0 5px;padding:0;box-sizing:border-box;background:whitesmoke;border-radius:6px;padding:6px 18px;font-style:sans-serif;">
+              <p style="font-style:sans-serif;">${message}</p>
+              </section>
+              
+              </div>`}]
+            },
+            json: true
+        };
+        request(options, function (error, response, body) {
+            if (error) {
+                res.status(500).json({
+                    message: `${error.message}`
+                })
+            } else {
+                UserSchema.updateOne({ ide },
+                    {
+                        $push: {
+                            notifications: {
+                                name: message, id: uuidv4.v4()
+                            }
+                        }
+                    }, function (err, result) {
+                        if (err) {
+                            res.status(500).json({
+                                message: `${error}`
+                            })
+                        } else {
+                            res.status(201).json({
+                                "message": `message sent with email`,
+                                "status": 200,
+                                "dev_id": ide //used for the ide
+                            })
+                        }
+                    })
+            }
+        });
     }catch(error){
         res.status(error.status)
+        .json({
+            message:`Err: ${err.message}`,
+            status:error.status
+        })
     }
 }
