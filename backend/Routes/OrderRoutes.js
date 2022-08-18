@@ -154,7 +154,7 @@ async function IncrementProduct(data){
             let sold = Number(data[i].quantity);
             const aa = await product_detailss.find({ide});
             if(aa.length){
-                sold = Number() + sold;
+                sold = Number(aa[0].sold) + sold;
             const result = await product_detailss.upadteOne({ide},{sold})
             if(result){
              cc++;
