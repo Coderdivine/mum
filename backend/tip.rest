@@ -8,7 +8,7 @@ Content-Type: application/json
     "brand":"GUCCI",
     "category":"boxers",
     "price":"1200",
-    "description":"0x00",
+    "description":"This is a description for a gucci boxer worth 1200 :)",
     "sizes":"3,12,14",
     "color":"red,blue,yellow",
     "image":"https://cloudinary.com/cloud",
