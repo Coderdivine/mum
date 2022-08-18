@@ -108,4 +108,5 @@ router.get("/order-info/:ide",(req,res)=>{
 });
 router.post("/order-update",(req,res)=>{
     let { ide } = req.params;
+    order_detailss.
 })
