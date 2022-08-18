@@ -18,3 +18,14 @@ Content-Type: application/json
 GET http://localhost:9099/product/all-product
 ###
 GET http://localhost:9099/product/product-info/ide
+
+###
+PUT http://localhost:9099/product/edit-product
+Content-Type: application/json
+
+{
+    "ide":"",
+    "name":"name",
+    "description":"description",
+    "amount":"10000"
+}
