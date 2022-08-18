@@ -141,5 +141,11 @@ async function IncrementProduct(data){
            bool:false,
            message:"data type if not defined" 
         }
+    }else if(!data[0].name){
+        return {
+            bool:false,
+            message:"data type if not defined" 
+         }
     }
+
 }
