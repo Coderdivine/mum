@@ -81,18 +81,7 @@ router.post("/send-payment", async (req, res) => {
 });
 router.post("/update-payment",async(req,res)=>{
     let {ide} = req.body;
-    payment_detailss.updateOne({ide},{status:"done"})  
-    .then(corn=>{
-        res.status(201).json({
-            message:``,
-            status:201
-        })
-    }).catch(err=>{
-        res.status(err.status).json({
-            message:`Err: ${err.message}`,
-            status:err.status
-        })
-    });
+   
     try{
        if(ide == ""){
         res.status(400).json({
@@ -109,10 +98,33 @@ router.post("/update-payment",async(req,res)=>{
         .then(show=>{
             if(show.length){
                 let data = show[0];
-                if(Date.now() >= data.timer){
-
-                }else if(){
-                    
+                if(Date.now() < data.timer){
+                    payment_detailss.updateOne({ide},{status:"done"})  
+                    .then(corn=>{
+                        res.status(201).json({
+                            message:``,
+                            status:201
+                        })
+                    }).catch(err=>{
+                        res.status(err.status).json({
+                            message:`Err: ${err.message}`,
+                            status:err.status
+                        })
+                    });
+                }else{
+                    payment_detailss.updateOne({ide},{status:"hold"})  
+                    .then(corn=>{
+                        res.status(201).json({
+                            message:`Time expired`,
+                            data:contact_service,
+                            status:201
+                        })
+                    }).catch(err=>{
+                        res.status(err.status).json({
+                            message:`Err: ${err.message}`,
+                            status:err.status
+                        })
+                    });
                 }
             }else{
                 res.status(400).json({
