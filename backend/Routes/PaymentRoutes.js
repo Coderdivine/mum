@@ -73,6 +73,9 @@ router.post("/", async (req, res) => {
             })
         }
     } catch (err) {
-
+        res.status(err.status).json({
+            message:`Err: ${err.message}`,
+            status:err.status
+        })
     }
 })
