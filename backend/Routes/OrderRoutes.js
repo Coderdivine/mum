@@ -136,6 +136,7 @@ router.post("/order-update",(req,res)=>{
     });
 })
 async function IncrementProduct(data){
+    try{
     if(typeof data == "object"){
         return {
            bool:false,
@@ -147,11 +148,18 @@ async function IncrementProduct(data){
             message:"data type if not defined" 
          }
     }else{
-       const result = await product_detailss.upadteOne({})
-       if(result){
-
-       }
+        for(let i=0;data.length;i++){
+            const result = await product_detailss.upadteOne({})
+            if(result){
+             
+            }
+        };
 }
-
+    }catch(err){
+        return {
+            bool:false,
+            message:err.message
+        }
+    }
 
 }
