@@ -54,7 +54,7 @@ Content-Type: application/json
 ###
 GET http://localhost:9099/order/all-order-info
 ###
-GET http://localhost:9099/order/order-info/ide
+GET http://localhost:9099/order/order-info/985a3909-7eb6-4076-969e-ae139ee50ac5
 ###
 POST http://localhost:9099/payment/send-payment
 Content-Type: application/json
@@ -64,14 +64,14 @@ Content-Type: application/json
     "account_number":"00000000000",
     "bank_name":"PALMPAY",
     "amount":"10000",
-    "order_id":"5ecb5ead-fbc8-49df-8665-a343581a760f"
+    "order_id":"985a3909-7eb6-4076-969e-ae139ee50ac5"
 }
 ###
 POST http://localhost:9099/payment/update-payment
 Content-Type: application/json
 
 {
-    "ide":"5ecb5ead-fbc8-49df-8665-a343581a760f"
+    "ide":"985a3909-7eb6-4076-969e-ae139ee50ac5"
 }
 ###
-GET http://localhost:9099/payment/check-payment/5ecb5ead-fbc8-49df-8665-a343581a760f
+GET http://localhost:9099/payment/check-payment/985a3909-7eb6-4076-969e-ae139ee50ac5
