@@ -8,6 +8,7 @@ const { product_detailss, order_detailss, payment_detailss } = require("../Model
 //send payment info 
 //then make payment
 //update status
+//view payment
 const contact_service = [{
     number: "09161911394",
     email: "chimdi4332@gmail.com",
@@ -77,4 +78,7 @@ router.post("/send-payment", async (req, res) => {
             status:err.status
         })
     }
-})
+});
+router.post("/update-payment",async(req,res)=>{
+
+});
