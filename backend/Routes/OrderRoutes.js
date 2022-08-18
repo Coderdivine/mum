@@ -147,7 +147,12 @@ async function IncrementProduct(data){
             message:"data type if not defined" 
          }
     }else{
+       const result = await product_detailss.find({})
+       if(result.length){
+
+       }else{
         
+       } 
     }
 
 }
