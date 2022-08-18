@@ -109,7 +109,15 @@ router.get("/order-info/:ide",async(req,res)=>{
 router.post("/order-update",(req,res)=>{
     let { ide } = req.params;
     order_detailss.find({ide}).then(async(corn)=>{
-        IncrementProduct().then()
+        IncrementProduct().then(corn=>{
+            if(corn.bool){
+                
+            }else{
+                res.status(400).json({
+                    message:corn.message
+                })
+            }
+        })
         .catch(err=>{
             res.status(err.status).json({
                 message:`Err: ${err.message}`,
@@ -123,6 +131,10 @@ router.post("/order-update",(req,res)=>{
         })
     });
 })
-async function IncrementProduct(){
+async function IncrementProduct(data){
+    if(typeof data == "object"){
+        return {
 
+        }
+    }
 }
