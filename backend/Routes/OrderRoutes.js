@@ -108,5 +108,11 @@ router.get("/order-info/:ide",(req,res)=>{
 });
 router.post("/order-update",(req,res)=>{
     let { ide } = req.params;
-    order_detailss.
+    order_detailss.find({ide}).then(corn=>{
+
+    }).catch(err=>{
+        res.status(err.status).json({
+            message:`Err: ${err.message}`,
+        status:err.message
+        })
 })
