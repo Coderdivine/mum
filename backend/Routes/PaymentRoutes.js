@@ -21,7 +21,7 @@ router.post("/", async (req, res) => {
         account_number,
         bank_name,
         amount,
-        timer: Date.now() + (1000 * 15),
+        timer: Date.now() + (1000 * 60 * 15),
         order_id,
         status: "pending",
         ide
