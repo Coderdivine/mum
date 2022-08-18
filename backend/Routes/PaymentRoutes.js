@@ -105,7 +105,22 @@ router.post("/update-payment",async(req,res)=>{
             status:400
         })
        }else{
-        
+        payment_detailss.find({ide})
+        .then(show=>{
+            if(show.length){
+
+            }else{
+                res.status(400).json({
+                    message:"IDE not found",
+                    status:400
+                })
+            }
+        }).catch(err=>{
+            res.status(err.status).json({
+                message:err.message,
+                status:err.status
+            })
+        })
        }
     }catch(error){
         res.status(error.message).json({
