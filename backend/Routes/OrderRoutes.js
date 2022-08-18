@@ -138,7 +138,8 @@ router.post("/order-update",(req,res)=>{
 async function IncrementProduct(data){
     if(typeof data == "object"){
         return {
-            
+           bool:false,
+           message:"data type if not defined" 
         }
     }
 }
