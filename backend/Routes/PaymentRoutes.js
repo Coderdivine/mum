@@ -45,7 +45,7 @@ router.post("/", async (req, res) => {
             })
         }else if(typeof amount !== "number"){
             res.status(400).json({
-                message:"",
+                message:"Amount not defined",
                 status:400
             })
         }else{
