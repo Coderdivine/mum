@@ -71,7 +71,7 @@ POST http://localhost:9099/payment/update-payment
 Content-Type: application/json
 
 {
-    "ide":"65adf369-275e-4966-83ed-7c0f922b3248"
+    "ide":"9ea81f50-8e21-41db-bf4b-64eefc3398bd"
 }
 ###
-GET http://localhost:9099/payment/check-payment/65adf369-275e-4966-83ed-7c0f922b3248
+GET http://localhost:9099/payment/check-payment/9ea81f50-8e21-41db-bf4b-64eefc3398bd
