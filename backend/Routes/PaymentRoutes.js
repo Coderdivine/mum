@@ -26,28 +26,7 @@ router.post("/", async (req, res) => {
         order_id,
         ref:ide
     };
-    const payment_details = new payment_detailss({
-        account_name,
-        account_number,
-        bank_name,
-        amount,
-        timer: Date.now() + (1000 * 60 * 15),
-        order_id,
-        status: "pending",
-        ide
-    })
-    payment_details.save().then(corn => {
-        res.status(201).json({
-            message:"Payment account init",
-            data,
-            status:201
-        })
-    }).catch(err=>{
-        res.json({
-            message:`Err: ${err.message}`,
-            status:501
-        })
-    })
+    
     try {
         if(account_name == "" && account_number == "" && bank_name == "" && amount == "" && order_id == ""){
             res.status(400).json({
@@ -65,8 +44,32 @@ router.post("/", async (req, res) => {
                 status:400
             })
         }else if(typeof amount !== "number"){
-            res.status().json({
-                message:""
+            res.status(400).json({
+                message:"",
+                status:400
+            })
+        }else{
+            const payment_details = new payment_detailss({
+                account_name,
+                account_number,
+                bank_name,
+                amount,
+                timer: Date.now() + (1000 * 60 * 15),
+                order_id,
+                status: "pending",
+                ide
+            })
+            payment_details.save().then(corn => {
+                res.status(201).json({
+                    message:"Payment account init",
+                    data,
+                    status:201
+                })
+            }).catch(err=>{
+                res.json({
+                    message:`Err: ${err.message}`,
+                    status:501
+                })
             })
         }
     } catch (err) {
