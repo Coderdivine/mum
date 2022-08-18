@@ -1,0 +1,18 @@
+POST http://localhost:9099/product/product-details
+Content-Type: application/json
+
+{   
+    "name":"150",
+    "rate":"5",
+    "quantity":"90",
+    "brand":"GUCCI",
+    "category":"boxers",
+    "price":1200,
+    "description":"0x00",
+    "sizes":"3,12,14",
+    "color":"red,blue,yellow",
+    "image":"https://cloudinary.com/cloud",
+    "weight":"5"
+}
+###
+GET http://localhost:9099/product/all-product

@@ -12,7 +12,8 @@ const {product_detailss,order_detailss, payment_detailss} = require("../Model/in
 //get product info
 //
 router.post("/product-details",async(req,res)=>{
-    let {name,rate,quantity,brand,category,price,description,sizes,color,image,weight} = req.body;
+    let {name,rate,quantity,brand,category,
+        price,description,sizes,color,image,weight} = req.body;
     price = Number(price);
     try{
        if(name == "" || rate == "" || quantity == "" || brand == "" || category == ""){
