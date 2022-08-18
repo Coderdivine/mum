@@ -80,8 +80,27 @@ router.post("/send-payment", async (req, res) => {
     }
 });
 router.post("/update-payment",async(req,res)=>{
+    let {ide} = req.body;
+    payment_detailss.updateOne({ide},{status:"done"})  
+    .then(corn=>{
+        res.status(201).json({
+            message:``,
+            status:201
+        })
+    }).catch(err=>{
+        res.status(err.status).json({
+            message:`Err: ${err.message}`,
+            status:err.status
+        })
+    });
     try{
+       if(ide == ""){
+
+       }else if(typeof ide == "undefined"){
+
+       }else if(){
         
+       }
     }catch(error){
         res.status(error.message).json({
             message:`Err: ${error.message}`,
