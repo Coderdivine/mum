@@ -13,7 +13,8 @@ const payment_cards = [{
  account_number:"",
 }];
 router.post("/order-details",async(req,res)=>{
-    let {firstname,lastname,country,address,city,phone_number,email,type,company,product} = req.body;
+    let {firstname,lastname,country,address,city,phone_number
+        ,email,type,company,product} = req.body;
     try{
         if(firstname == "" || lastname == "" || country == "" || address == "" || city == "" || type == "" || company == "" || typeof product !== "object"){
             res.status(400).json({
