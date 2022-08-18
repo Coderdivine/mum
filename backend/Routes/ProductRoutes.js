@@ -158,7 +158,7 @@ router.get("/all-product",(req,res)=>{
         })
     })
 })
-router.post("/product-info/:ide",(req,res)=>{
+router.get("/product-info/:ide",(req,res)=>{
     const ide = req.params.ide;
     product_detailss.find({ide})
     .then(corn=>{
