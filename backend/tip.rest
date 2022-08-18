@@ -23,7 +23,7 @@ PUT http://localhost:9099/product/edit-product
 Content-Type: application/json
 
 {
-    "ide":"",
+    "ide":"7c7068cc-bde9-46f7-bf26-3f8f2ea32136",
     "name":"name",
     "description":"description",
     "amount":"10000"
