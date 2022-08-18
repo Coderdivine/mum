@@ -34,3 +34,18 @@ Content-Type: application/json
 {
     "ide":""
 }
+###
+POST http://localhost:9099/order/order-details
+Content-Type: application/json
+{
+    "firstname":"Chimdindu",
+    "lastname":"",
+    "country":"",
+    "address":"",
+    "city":"",
+    "phone_number":"",
+    "email":"",
+    "type":"",
+    "company":"",
+    "product":""
+}
