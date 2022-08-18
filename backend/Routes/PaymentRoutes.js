@@ -48,7 +48,12 @@ router.post("/", async (req, res) => {
         })
     })
     try {
-        
+        if(account_name == "" && account_number == "" && bank_name == "" && amount == "" && order_id == ""){
+            res.status(400).json({
+                message:"Please all details are needed",
+                status:400
+            })
+        }else if(account_name)
     } catch (err) {
 
     }
