@@ -152,3 +152,11 @@ router.post("/update-payment",async(req,res)=>{
         });
     }
 });
+router.get("/check-payment",(req,res)=>{
+    payment_detailss.find({ide})
+    .then(corn=>{
+        if(corn.length){
+            
+        }
+    })
+})
