@@ -11,7 +11,7 @@ const payment_cards = [{
  account_name:"",
  account_bank:"",
  account_number:"",
-}]
+}];
 router.post("/order-details",async(req,res)=>{
     let {firstname,lastname,country,address,city,phone_number,email,type,company,product} = req.body;
     try{
