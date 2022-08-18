@@ -160,7 +160,7 @@ async function IncrementProduct(data){
              cc++;
              if(cc == data.length){
                 return {
-                    bool:false,
+                    bool:true,
                     message:"Done Updated"
                 }
              }
