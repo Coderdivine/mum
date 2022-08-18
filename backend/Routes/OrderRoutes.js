@@ -148,6 +148,7 @@ async function IncrementProduct(data){
             message:"data type if not defined" 
          }
     }else{
+        let cc = 0;
         for(let i=0;data.length;i++){
             const result = await product_detailss.upadteOne({})
             if(result){
