@@ -215,26 +215,10 @@ async function sendMail({email,message},res){
                     message: `${error.message}`
                 })
             } else {
-                UserSchema.updateOne({ ide },
-                    {
-                        $push: {
-                            notifications: {
-                                name: message, id: uuidv4.v4()
-                            }
-                        }
-                    }, function (err, result) {
-                        if (err) {
-                            res.status(500).json({
-                                message: `${error}`
-                            })
-                        } else {
-                            res.status(201).json({
-                                "message": `message sent with email`,
-                                "status": 200,
-                                "dev_id": ide //used for the ide
-                            })
-                        }
-                    })
+               res.status(200).json({
+                message,
+                status:200
+               })
             }
         });
     }catch(error){
