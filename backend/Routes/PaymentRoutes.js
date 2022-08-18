@@ -14,12 +14,18 @@ const contact_service = [{
     email: "chimdi4332@gmail.com",
     address: "SHOP GA 11 Lagos island",
 }];
+const payment_cards = [{
+ account_name:"",
+ account_bank:"",
+ account_number:"",
+}]
 router.post("/send-payment", async (req, res) => {
     let { account_name, account_number, bank_name, amount, order_id } = req.body;
     let ide = uuid.v4();
     amount = Number(amount);
     const data = {
         contact_service,
+        payment_cards,
         account_name,
         account_number,
         bank_name,
