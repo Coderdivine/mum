@@ -150,10 +150,10 @@ async function IncrementProduct(data){
     }else{
         let cc = 0;
         for(let i=0;data.length;i++){
-            let ide = data[0].product_id;
+            let ide = data[i].product_id;
+            let sold = data[i].quantity;
             const result = await product_detailss.upadteOne({ide})
             if(result){
-
              cc++;
              if(cc == data.length){
                 return {
