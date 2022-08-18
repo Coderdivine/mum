@@ -95,10 +95,16 @@ router.post("/update-payment",async(req,res)=>{
     });
     try{
        if(ide == ""){
-
+        res.status(400).json({
+            message:"No ide",
+            status:400
+        })
        }else if(typeof ide == "undefined"){
-
-       }else if(){
+        res.status(400).json({
+            message:"IDE undefined",
+            status:400
+        })
+       }else{
         
        }
     }catch(error){
