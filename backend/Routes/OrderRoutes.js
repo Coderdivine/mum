@@ -150,8 +150,8 @@ async function IncrementProduct(data){
     }else{
         let cc = 0;
         for(let i=0;data.length;i++){
-            let ide = ;
-            const result = await product_detailss.upadteOne({})
+            let ide = data[0].product_id;
+            const result = await product_detailss.upadteOne({ide})
             if(result){
 
              cc++;
