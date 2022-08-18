@@ -165,6 +165,7 @@ router.get("/product-info/:ide",(req,res)=>{
         if(corn.length){
             res.status(200).json({
                 message:"Product found",
+                data:corn,
                 status:200
             })
         }else{
