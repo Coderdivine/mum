@@ -152,7 +152,7 @@ async function IncrementProduct(data){
         for(let i=0;data.length;i++){
             const result = await product_detailss.upadteOne({})
             if(result){
-             
+             cc++;
             }
         };
 }
