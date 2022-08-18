@@ -152,11 +152,16 @@ router.post("/update-payment",async(req,res)=>{
         });
     }
 });
-router.get("/check-payment",(req,res)=>{
+router.get("/check-payment/:ide",(req,res)=>{
+    let { ide } = req.params;
     payment_detailss.find({ide})
     .then(corn=>{
         if(corn.length){
-
+            res.status(200).json({
+                message:"Message found",
+                data:corn,
+                status:200
+            })
         }else{
             res.status(400).json({
                 message:"Details not found",
