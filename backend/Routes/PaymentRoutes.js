@@ -156,7 +156,17 @@ router.get("/check-payment",(req,res)=>{
     payment_detailss.find({ide})
     .then(corn=>{
         if(corn.length){
-            
+
+        }else{
+            res.status(400).json({
+                message:"Details not found",
+                status:400
+            })
         }
+    }).catch(err=>{
+        res.status(err.status).json({
+            message:`Err: ${err.message}`,
+        status:err.message
+        })
     })
 })
