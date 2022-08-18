@@ -34,14 +34,16 @@ Content-Type: application/json
 {
     "ide":""
 }
+
 ###
 POST http://localhost:9099/order/order-details
 Content-Type: application/json
+
 {
     "firstname":"Chimdindu",
     "lastname":"Ezechukwu",
     "country":"Nigeria",
-    "address":"114,alhji amoo",
+    "address":"114,alhji amoo street ogudu ojota",
     "city":"Lagos",
     "phone_number":"00000000000",
     "email":"chimdi4332@gmail.com",
