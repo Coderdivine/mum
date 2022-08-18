@@ -96,7 +96,7 @@ router.put("/edit-product",async(req,res)=>{
                     }, function (err, result) {
                         if (err) {
                             res.status(500).json({
-                                message: `${error}`
+                                message: `${err}`
                             })
                         } else {
                             res.status(201).json({
