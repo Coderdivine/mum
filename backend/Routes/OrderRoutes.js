@@ -181,3 +181,4 @@ async function IncrementProduct(data){
     }
 
 }
+module.exports = router;

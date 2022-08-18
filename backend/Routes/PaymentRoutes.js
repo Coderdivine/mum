@@ -229,3 +229,4 @@ async function sendMail({email,message},res){
         })
     }
 }
+module.exports = router;
