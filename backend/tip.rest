@@ -17,7 +17,7 @@ Content-Type: application/json
 ###
 GET http://localhost:9099/product/all-product
 ###
-GET http://localhost:9099/product/product-info/ide
+GET http://localhost:9099/product/product-info/7c7068cc-bde9-46f7-bf26-3f8f2ea32136
 ###
 POST http://localhost:9099/product/edit-product
 Content-Type: application/json
