@@ -16,6 +16,9 @@ const contact_service = [{
 router.post("/", async (req, res) => {
     let { account_name, account_number, bank_name, amount, order_id } = req.body;
     let ide = uuid.v4();
+    let data = {
+        
+    };
     const payment_details = new payment_detailss({
         account_name,
         account_number,
