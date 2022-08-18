@@ -108,7 +108,10 @@ router.post("/update-payment",async(req,res)=>{
         payment_detailss.find({ide})
         .then(show=>{
             if(show.length){
-
+                let data = show[0];
+                if(Date.now() >= data.timer){
+                    
+                }
             }else{
                 res.status(400).json({
                     message:"IDE not found",

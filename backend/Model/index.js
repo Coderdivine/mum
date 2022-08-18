@@ -71,7 +71,7 @@ const payment_details = new Schema({
     bank_name:String,
     amount:String,
     timer:{
-        type:Date.now()
+        type:Date
     },
     order_id:String,
     status:String ,
