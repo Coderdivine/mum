@@ -83,7 +83,7 @@ router.post("/order-details",async(req,res)=>{
         })
     }
 })
-router.get("/order-info/:ide",(req,res)=>{
+router.get("/order-info/:ide",async(req,res)=>{
     let { ide } = req.params;
     order_detailss.find({ide})
     .then(corn=>{
@@ -108,7 +108,7 @@ router.get("/order-info/:ide",(req,res)=>{
 });
 router.post("/order-update",(req,res)=>{
     let { ide } = req.params;
-    order_detailss.find({ide}).then(corn=>{
+    order_detailss.find({ide}).then(async(corn)=>{
 
     }).catch(err=>{
         res.status(err.status).json({
@@ -117,3 +117,4 @@ router.post("/order-update",(req,res)=>{
         })
     });
 })
+async
