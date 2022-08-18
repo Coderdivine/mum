@@ -21,7 +21,8 @@ router.post("/order-details",async(req,res)=>{
                 message:"Please all details are required",
                 status:400
             })
-        }else if(address == "" || address.length < 10 || typeof address !== "stirng"){
+        }else if(address == "" || address.length < 10 ){
+            //|| typeof address !== "stirng"
             res.status(400).json({
                 message:"Please input a valid address",
                 status:400
@@ -87,6 +88,29 @@ router.post("/order-details",async(req,res)=>{
 router.get("/order-info/:ide",async(req,res)=>{
     let { ide } = req.params;
     order_detailss.find({ide})
+    .then(corn=>{
+        if(corn.length){
+            res.status(200).json({
+                message:"Order found",
+                data:corn,
+                status:200
+            })
+        }else{
+            res.status(400).json({
+                message:"This order was not found",
+                status:400
+            })
+        }
+    }).catch(err=>{
+        res.status(400).json({
+            message:err.message,
+            status:err.status
+        })
+    })
+});
+router.get("/all-order-info",async(req,res)=>{
+    let { ide } = req.params;
+    order_detailss.find()
     .then(corn=>{
         if(corn.length){
             res.status(200).json({
