@@ -64,5 +64,5 @@ Content-Type: application/json
     "account_number":"00000000000",
     "bank_name":"PALMPAY",
     "amount":"10000",
-    "order_id":""
+    "order_id":"5ecb5ead-fbc8-49df-8665-a343581a760f"
 }
