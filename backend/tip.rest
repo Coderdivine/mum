@@ -29,3 +29,12 @@ Content-Type: application/json
     "description":"description",
     "amount":"10000"
 }
+###
+POST http://localhost:9099/product/edit-product
+Content-Type: application/json
+{
+    "ide":"",
+    "name":"name",
+    "description":"description",
+    "amount":"10000"
+}
