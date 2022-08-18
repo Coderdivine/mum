@@ -150,9 +150,17 @@ async function IncrementProduct(data){
     }else{
         let cc = 0;
         for(let i=0;data.length;i++){
+            let ide = ;
             const result = await product_detailss.upadteOne({})
             if(result){
+
              cc++;
+             if(cc == data.length){
+                return {
+                    bool:false,
+                    message:"Done Updated"
+                }
+             }
             }
         };
 }
