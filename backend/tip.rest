@@ -7,7 +7,7 @@ Content-Type: application/json
     "quantity":"90",
     "brand":"GUCCI",
     "category":"boxers",
-    "price":1200,
+    "price":"1200",
     "description":"0x00",
     "sizes":"3,12,14",
     "color":"red,blue,yellow",
