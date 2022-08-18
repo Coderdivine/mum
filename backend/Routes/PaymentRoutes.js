@@ -107,10 +107,15 @@ router.post("/update-payment",async(req,res)=>{
                 if(Date.now() < data.timer){
                     payment_detailss.updateOne({ide},{status:"done"})  
                     .then(corn=>{
-                        res.status(201).json({
-                            message:``,
-                            status:201
+                        ide = data.order_id;
+                        AxiosCont.post("/order-update",{ide})
+                        .then(uu=>{
+                            res.status(201).json({
+                                message:`Payment Updated`,
+                                status:201
+                            })
                         })
+
                     }).catch(err=>{
                         res.status(err.status).json({
                             message:`Err: ${err.message}`,

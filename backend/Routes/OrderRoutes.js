@@ -107,7 +107,7 @@ router.get("/order-info/:ide",async(req,res)=>{
     })
 });
 router.post("/order-update",(req,res)=>{
-    let { ide } = req.params;
+    let { ide } = req.body;
     order_detailss.find({ide}).then(async(cornt)=>{
         const data = cornt[0].product;
         IncrementProduct(data).then(corn=>{
