@@ -53,7 +53,17 @@ router.post("/", async (req, res) => {
                 message:"Please all details are needed",
                 status:400
             })
-        }else if(account_name)
+        }else if(account_name.length < 5){
+            res.status(400).json({
+                message:"Please account name invalid",
+                status:400
+            })
+        }else if(bank_name.length < 4){
+            res.status(400).json({
+                message:"Bank name too short",
+                status:400
+            })
+        }
     } catch (err) {
 
     }
