@@ -74,4 +74,4 @@ Content-Type: application/json
     "ide":"985a3909-7eb6-4076-969e-ae139ee50ac5"
 }
 ###
-GET http://localhost:9099/payment/check-payment/985a3909-7eb6-4076-969e-ae139ee50ac5
+GET http://localhost:9099/payment/check-payment/65adf369-275e-4966-83ed-7c0f922b3248
