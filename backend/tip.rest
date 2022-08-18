@@ -66,3 +66,10 @@ Content-Type: application/json
     "amount":"10000",
     "order_id":"5ecb5ead-fbc8-49df-8665-a343581a760f"
 }
+###
+POST http://localhost:9099/payment/update-payment
+Content-Type: application/json
+
+{
+    "ide":"5ecb5ead-fbc8-49df-8665-a343581a760f"
+}
