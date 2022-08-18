@@ -21,7 +21,8 @@ const payment_cards = [{
  account_number:"",
 }]
 router.post("/send-payment", async (req, res) => {
-    let { account_name, account_number, bank_name, amount, order_id } = req.body;
+    let { account_name, account_number, bank_name, 
+        amount, order_id } = req.body;
     let ide = uuid.v4();
     amount = Number(amount);
     const data = {
