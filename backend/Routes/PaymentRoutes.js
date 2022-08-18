@@ -181,3 +181,10 @@ router.get("/check-payment/:ide",(req,res)=>{
         })
     })
 })
+async function sendMail({},res){
+    try{
+
+    }catch(error){
+        res.status(error.status)
+    }
+}
