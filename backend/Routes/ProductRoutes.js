@@ -91,7 +91,7 @@ router.post("/edit-product",async(req,res)=>{
                         $set: {
                             name,
                             description,
-                            amount
+                            price:amount
                         }
                     }, function (err, result) {
                         if (err) {
