@@ -87,7 +87,6 @@ router.post("/send-payment", async (req, res) => {
 });
 router.post("/update-payment",async(req,res)=>{
     let {ide} = req.body;
-   
     try{
        if(ide == ""){
         res.status(400).json({
@@ -112,6 +111,7 @@ router.post("/update-payment",async(req,res)=>{
                         .then(uu=>{
                             res.status(201).json({
                                 message:`Payment Updated`,
+                                data:uu.data,
                                 status:201
                             })
                         })
