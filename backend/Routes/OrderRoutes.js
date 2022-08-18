@@ -151,8 +151,11 @@ async function IncrementProduct(data){
         let cc = 0;
         for(let i=0;data.length;i++){
             let ide = data[i].product_id;
-            let sold = data[i].quantity;
-            const result = await product_detailss.upadteOne({ide})
+            let sold = Number(data[i].quantity);
+            const aa = await product_detailss.find({ide});
+            if(aa.length){
+                sold = Number() + sold;
+            const result = await product_detailss.upadteOne({ide},{sold})
             if(result){
              cc++;
              if(cc == data.length){
@@ -161,6 +164,12 @@ async function IncrementProduct(data){
                     message:"Done Updated"
                 }
              }
+            }
+            }else{
+                return {
+                    bool:false,
+                    message:"IDE nit defined"
+                }
             }
         };
 }
