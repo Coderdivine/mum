@@ -80,5 +80,12 @@ router.post("/send-payment", async (req, res) => {
     }
 });
 router.post("/update-payment",async(req,res)=>{
-
+    try{
+        
+    }catch(error){
+        res.status(error.message).json({
+            message:`Err: ${error.message}`,
+            status:error.message
+        });
+    }
 });
