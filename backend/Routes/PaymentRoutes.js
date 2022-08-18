@@ -16,6 +16,7 @@ const contact_service = [{
 router.post("/", async (req, res) => {
     let { account_name, account_number, bank_name, amount, order_id } = req.body;
     let ide = uuid.v4();
+    amount = Number(amount);
     const data = {
         contact_service,
         account_name,
@@ -62,6 +63,10 @@ router.post("/", async (req, res) => {
             res.status(400).json({
                 message:"Bank name too short",
                 status:400
+            })
+        }else if(typeof amount !== "number"){
+            res.status().json({
+                message:""
             })
         }
     } catch (err) {
