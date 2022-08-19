@@ -126,12 +126,14 @@ httpRequest.onreadystatechange = function()
                     }
                 }
                 //contentTitle[item[i]-1].price
-                let show = contentTitle.filter(x=> x.ide == (item[i]-1))
-                console.log("item",(item[i]-1))
+                let show = contentTitle.filter(x=> x.ide == (item[i]))
+                console.log("item",(item[i]))
+               // console.log("item",(item[i-1].ide))
                 if(show){
+                    show //= show[0]
                     console.log("show",show);
-                    totalAmount += Number(show.price) * itemCounter
-                    dynamicCartSection(show,itemCounter)
+                    totalAmount += Number(show[0].price) * itemCounter
+                    dynamicCartSection(show[0],itemCounter)
                     i += (itemCounter-1)
                 }
             }
