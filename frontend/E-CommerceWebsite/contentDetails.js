@@ -134,8 +134,7 @@ let httpRequest = new XMLHttpRequest()
             console.log(contentDetails.message)
             contentDetails = contentDetails.data
             {
-                console.log(contentDetails);
-                console.log(contentDetails.length);
+                
                 console.log("contentDetails",contentDetails)
                 dynamicContentDetails(contentDetails)
             }
