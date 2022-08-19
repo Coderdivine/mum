@@ -131,6 +131,8 @@ let httpRequest = new XMLHttpRequest()
         {
             console.log('connected!!');
             let contentDetails = JSON.parse(this.responseText)
+            console.log(contentDetails.message)
+            contentDetails = contentDetails.data
             {
                 console.log(contentDetails);
                 console.log(contentDetails.length);
