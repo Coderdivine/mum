@@ -21,7 +21,7 @@ function dynamicContentDetails(ob)
     let imgTag = document.createElement('img')
      imgTag.id = 'imgDetails'
      //imgTag.id = ob.photos
-     imgTag.src = ob.preview
+     imgTag.src = ob.image
 
     imageSectionDiv.appendChild(imgTag)
 
@@ -43,7 +43,7 @@ function dynamicContentDetails(ob)
     detailsDiv.id = 'details'
 
     let h3DetailsDiv = document.createElement('h3')
-    let h3DetailsText = document.createTextNode('Rs ' + ob.price)
+    let h3DetailsText = document.createTextNode('NGN ' + ob.price)
     h3DetailsDiv.appendChild(h3DetailsText)
 
     let h3 = document.createElement('h3')
@@ -145,5 +145,7 @@ let httpRequest = new XMLHttpRequest()
     }
 }
 
-httpRequest.open('GET', 'https://5d76bf96515d1a0014085cf9.mockapi.io/product/'+id, true)
+httpRequest.open('GET', 'http://localhost:9099/product/product-info/'+id, true)
 httpRequest.send();
+//http://localhost:9099/product/product-info/7c7068cc-bde9-46f7-bf26-3f8f2ea32136
+//'https://5d76bf96515d1a0014085cf9.mockapi.io/product/'

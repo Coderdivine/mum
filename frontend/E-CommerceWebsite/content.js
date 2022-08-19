@@ -9,13 +9,13 @@ function dynamicClothingSection(ob) {
 
   let boxLink = document.createElement("a");
   // boxLink.href = '#'
-  boxLink.href = "/contentDetails.html?" + ob.id;
+  boxLink.href = "/contentDetails.html?" + ob.ide;
   // console.log('link=>' + boxLink);
 
   let imgTag = document.createElement("img");
   // imgTag.id = 'image1'
   // imgTag.id = ob.photos
-  imgTag.src = ob.preview;
+  imgTag.src = ob.image;
 
   let detailsDiv = document.createElement("div");
   detailsDiv.id = "details";
@@ -29,7 +29,7 @@ function dynamicClothingSection(ob) {
   h4.appendChild(h4Text);
 
   let h2 = document.createElement("h2");
-  let h2Text = document.createTextNode("rs  " + ob.price);
+  let h2Text = document.createTextNode("NGN  " + ob.price);
   h2.appendChild(h2Text);
 
   boxDiv.appendChild(boxLink);
@@ -61,15 +61,16 @@ httpRequest.onreadystatechange = function() {
     if (this.status == 200) {
       // console.log('call successful');
       contentTitle = JSON.parse(this.responseText);
+      console.log(contentTitle.message)
+      contentTitle = contentTitle.data
       console.log(contentTitle);
-                console.log(contentTitle.length);
-                console.log("contentTitle",contentTitle)
       if (document.cookie.indexOf(",counter=") >= 0) {
         var counter = document.cookie.split(",")[1].split("=")[1];
         document.getElementById("badge").innerHTML = counter;
       }
+      
       for (let i = 0; i < contentTitle.length; i++) {
-        if (contentTitle[i].isAccessory) {
+        if (contentTitle[i].sold_out == true) {
           console.log(contentTitle[i]);
           containerAccessories.appendChild(
             dynamicClothingSection(contentTitle[i])
@@ -88,7 +89,9 @@ httpRequest.onreadystatechange = function() {
 };
 httpRequest.open(
   "GET",
-  "https://5d76bf96515d1a0014085cf9.mockapi.io/product",
+  "http://localhost:9099/product/all-product",
   true
 );
 httpRequest.send();
+//http://localhost:9099
+//"https://5d76bf96515d1a0014085cf9.mockapi.io/product",
