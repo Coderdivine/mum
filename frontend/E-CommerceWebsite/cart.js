@@ -101,7 +101,9 @@ httpRequest.onreadystatechange = function()
         if(this.status == 200)
         {
             // console.log('call successful');
-            contentTitle = JSON.parse(this.responseText)
+            contentTitle = JSON.parse(this.responseText);
+            console.log(contentTitle.message)
+            contentTitle = contentTitle.data;
 
             let counter = Number(document.cookie.split(',')[1].split('=')[1])
             document.getElementById("totalItem").innerHTML = ('Total Items: ' + counter)
