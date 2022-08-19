@@ -135,9 +135,9 @@ httpRequest.onreadystatechange = function()
         }
 }
 
-httpRequest.open('GET', 'https://5d76bf96515d1a0014085cf9.mockapi.io/product', true)
+httpRequest.open('GET', 'http://localhost:9099/product/all-product', true)
 httpRequest.send()
-
+//'https://5d76bf96515d1a0014085cf9.mockapi.io/product'
 
 
 
