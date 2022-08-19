@@ -2,16 +2,16 @@ POST http://localhost:9099/product/product-details
 Content-Type: application/json
 
 {   
-    "name":"150",
+    "name":"Lowrider",
     "rate":"5",
     "quantity":"90",
-    "brand":"GUCCI",
-    "category":"boxers",
-    "price":"1200",
-    "description":"This is a description for a gucci boxer worth 1200 :)",
+    "brand":"AXGURA",
+    "category":"cars",
+    "price":"222200",
+    "description":"Get a crafted lowrider car",
     "sizes":"3,12,14",
     "color":"red,blue,yellow",
-    "image":"https://cloudinary.com/cloud",
+    "image":"https://res.cloudinary.com/axgura/image/upload/v1660116564/q9hyrfuotobvnybugk99.jpg",
     "weight":"5"
 }
 ###

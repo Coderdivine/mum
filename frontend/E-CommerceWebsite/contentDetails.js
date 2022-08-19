@@ -63,7 +63,8 @@ function dynamicContentDetails(ob)
     productPreviewDiv.appendChild(h3ProductPreviewDiv)
 
     let i;
-    for(i=0; i<ob.image.length; i++)
+    if(ob.image.length){
+        for(i=0; i<ob.image.length; i++)
     {
         let imgTagProductPreviewDiv = document.createElement('img')
         imgTagProductPreviewDiv.id = 'previewImg'
@@ -76,6 +77,7 @@ function dynamicContentDetails(ob)
             
         }
         productPreviewDiv.appendChild(imgTagProductPreviewDiv)
+    }
     }
 
     let buttonDiv = document.createElement('div')
