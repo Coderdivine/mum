@@ -150,7 +150,7 @@ let httpRequest = new XMLHttpRequest()
             {
                 
                 console.log("contentDetails",contentDetails)
-                dynamicContentDetails(contentDetails)
+                dynamicContentDetails(contentDetails[0])
             }
         }
         else

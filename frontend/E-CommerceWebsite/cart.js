@@ -125,9 +125,15 @@ httpRequest.onreadystatechange = function()
                         itemCounter +=1;
                     }
                 }
-                totalAmount += Number(contentTitle[item[i]-1].price) * itemCounter
-                dynamicCartSection(contentTitle[item[i]-1],itemCounter)
-                i += (itemCounter-1)
+                //contentTitle[item[i]-1].price
+                let show = contentTitle.filter(x=> x.ide == (item[i]-1))
+                console.log("item",(item[i]-1))
+                if(show){
+                    console.log("show",show);
+                    totalAmount += Number(show.price) * itemCounter
+                    dynamicCartSection(show,itemCounter)
+                    i += (itemCounter-1)
+                }
             }
             amountUpdate(totalAmount)
         }
