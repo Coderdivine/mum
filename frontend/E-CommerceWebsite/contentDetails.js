@@ -63,15 +63,15 @@ function dynamicContentDetails(ob)
     productPreviewDiv.appendChild(h3ProductPreviewDiv)
 
     let i;
-    for(i=0; i<ob.photos.length; i++)
+    for(i=0; i<ob.image.length; i++)
     {
         let imgTagProductPreviewDiv = document.createElement('img')
         imgTagProductPreviewDiv.id = 'previewImg'
-        imgTagProductPreviewDiv.src = ob.photos[i]
+        imgTagProductPreviewDiv.src = ob.image[i]
         imgTagProductPreviewDiv.onclick = function(event)
         {
             console.log("clicked" + this.src)
-            imgTag.src = ob.photos[i]
+            imgTag.src = ob.image[i]
             document.getElementById("imgDetails").src = this.src 
             
         }
