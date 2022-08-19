@@ -87,7 +87,7 @@ buttonText = document.createTextNode('Place Order')
 buttonTag.onclick = function()
 {
     console.log("clicked");
-    buttonTag.accessKey.click()
+   // buttonTag.a.click()
 }  
 //dynamicCartSection()
 // console.log(dynamicCartSection());
