@@ -86,7 +86,8 @@ buttonTag.appendChild(buttonLink)
 buttonText = document.createTextNode('Place Order')
 buttonTag.onclick = function()
 {
-    console.log("clicked")
+    console.log("clicked");
+    buttonTag.accessKey.click()
 }  
 //dynamicCartSection()
 // console.log(dynamicCartSection());
