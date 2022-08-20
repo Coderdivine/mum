@@ -27,7 +27,8 @@
     margin: 0;
     /* min-block-size */
     width: 100%;
-    padding: 5vmin;
+    /* padding: 5vmin; */
+    padding:2px;
     place-items: center;
   }
   
