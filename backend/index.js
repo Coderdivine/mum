@@ -10,7 +10,7 @@ const PaymentRoutes = require("./Routes/PaymentRoutes");
 const ProductRoutes = require("./Routes/ProductRoutes");
 
 const mongoose = require("mongoose");
-// "mongodb+srv://chimdi:chimdindu2@cluster0.5zspaed.mongodb.net/?retryWrites=true&w=majority" || 'mongodb://localhost:27017/mum'
+//"mongodb+srv://chimdi:chimdindu2@cluster0.5zspaed.mongodb.net/?retryWrites=true&w=majority" || 'mongodb://localhost:27017/mum'
 mongoose.connect("mongodb+srv://chimdi:chimdindu2@cluster0.5zspaed.mongodb.net/?retryWrites=true&w=majority");
 const port = process.env.PORT || 9099;
 const db = mongoose.connection;
