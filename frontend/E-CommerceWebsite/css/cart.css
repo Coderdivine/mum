@@ -25,7 +25,8 @@
     font-family: var(--font-family-base);
     line-height: 1.5;
     margin: 0;
-    min-block-size: 100%;
+    /* min-block-size */
+    width: 100%;
     padding: 5vmin;
     place-items: center;
   }
