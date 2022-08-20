@@ -176,6 +176,7 @@
     border-radius: 2em;
     block-size: 812px;
     /* 812px */
+    width:100%;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.0625);
     inline-size: 375px;
     overflow: auto;
