@@ -71,8 +71,8 @@ async function Order(){
         })
     }
 }
-btn.addEventListener("click",function(){
-
+btn.addEventListener("click",async function(){
+ await Order()
 })
 // DYNAMIC CODE TO SHOW THE SELECTED ITEMS IN YOUR CART
 function dynamicCartSection(ob,itemCounter)
