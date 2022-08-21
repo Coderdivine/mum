@@ -37,6 +37,8 @@ async function Order(){
     email = email.value;
     type = type;
     let company = "";
+    console.log(pickup);
+    console.log(delivery);
     if(pickup){
         type = true;
     }else{
