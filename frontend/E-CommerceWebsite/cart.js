@@ -42,7 +42,7 @@ async function Order(){
         if(!type){
             type = "pickup";
         }else{
-            
+            type = "delivery";
         }
         data = {}
     }
