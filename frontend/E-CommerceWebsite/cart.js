@@ -19,7 +19,7 @@ let type = document.getElementById("type");
 let card = document.getElementById("card");
 let cartContainer = document.getElementById('cartContainer')
 firstname.addEventListener("onChange",function(){});
-address.addEventListener("onChange",function(){card.innerHTML = `${}`});
+address.addEventListener("onChange",function(){card.innerHTML = `${firstname.value} <br/> ${address.value}`});
 let boxContainerDiv = document.createElement('div')
 boxContainerDiv.id = 'boxContainer'
 async function Order(){
