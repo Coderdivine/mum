@@ -1,6 +1,6 @@
 console.clear();
 let urls = "http://localhost:9099";
-
+let product;
 if(document.cookie.indexOf(',counter=')>=0)
 {
     let counter = document.cookie.split(',')[1].split('=')[1]
