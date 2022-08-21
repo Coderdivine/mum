@@ -189,7 +189,7 @@ httpRequest.onreadystatechange = function()
                 //contentTitle[item[i]-1].price
                 let show = contentTitle.filter(x=> x.ide == (item[i]))
                 console.log("item",(item[i]))
-                let amount = show[0].price *;
+                let amount = show[0].price * Number();
                 let corn = {
                     name:show[0].name,
                     size:show[0].sizes,
