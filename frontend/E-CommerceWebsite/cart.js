@@ -44,7 +44,9 @@ async function Order(){
         }else{
             type = "delivery";
         }
-        data = {}
+        data = {
+            
+        };
     }
 }
 btn.addEventListener("click",function(){
