@@ -56,7 +56,12 @@ async function Order(){
             company,
             product
         };
-        axios.post(urls,data).then
+        axios.post(urls,data).then(res=>{
+
+        }).catch(err=>{
+            console.log(err);
+            alert("")
+        })
     }
 }
 btn.addEventListener("click",function(){
