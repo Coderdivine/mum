@@ -18,7 +18,8 @@ let email = document.getElementById("email");
 let type = document.getElementById("type");
 let card = document.getElementById("card");
 let cartContainer = document.getElementById('cartContainer')
-firstname.addEventListener("onCange",function(){});
+firstname.addEventListener("onChange",function(){});
+address.addEventListener("onChange",function(){});
 let boxContainerDiv = document.createElement('div')
 boxContainerDiv.id = 'boxContainer'
 async function Order(){
