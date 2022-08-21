@@ -60,7 +60,7 @@ async function Order(){
         axios.post(urls,data).then(res=>{
             console.log(res.data);
             alert("Order Successfully placed")
-            window.location =  `https://`
+           // window.location =  `/payment.html`;
         }).catch(err=>{
             console.log(err);
             alert("Something went wrong");
