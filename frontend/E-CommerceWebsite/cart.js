@@ -41,6 +41,8 @@ async function Order(){
     }else{
         if(!type){
             type = "pickup";
+        }else{
+            
         }
         data = {}
     }
