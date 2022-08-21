@@ -16,6 +16,7 @@ let city = document.getElementById("city");
 let phone_number = document.getElementById("phone");
 let email = document.getElementById("email");
 let type = document.getElementById("type");
+let card = document.getElementById("card");
 let cartContainer = document.getElementById('cartContainer')
 
 let boxContainerDiv = document.createElement('div')
