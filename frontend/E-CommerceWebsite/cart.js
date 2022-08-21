@@ -37,6 +37,11 @@ async function Order(){
     email = email.value;
     type = type;
     let company = "";
+    if(pickup){
+        type = true;
+    }else{
+        type
+    }
     if(firstname.length < 1){
         alert("Firstname needed")
     }else if(firstname.length < 4 || lastname.length < 4){
