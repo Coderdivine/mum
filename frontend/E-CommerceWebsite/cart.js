@@ -45,7 +45,16 @@ async function Order(){
             type = "delivery";
         }
         data = {
-            
+            firstname,
+            lastname,
+            country,
+            address,
+            city,
+            phone_number,
+            email,
+            type,
+            company,
+            product
         };
     }
 }
