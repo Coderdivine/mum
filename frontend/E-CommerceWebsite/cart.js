@@ -6,12 +6,37 @@ if(document.cookie.indexOf(',counter=')>=0)
     document.getElementById("badge").innerHTML = counter
 }
 
-
+let btn = document.getElementById("buy_now");
+let firstname = document.getElementById("firstname");
+let lastname = document.getElementById("lastname");
+let country = document.getElementById("country");
+let address = document.getElementById("address");
+let city = document.getElementById("city");
+let phone_number = document.getElementById("phone");
+let email = document.getElementById("email");
+let type = document.getElementById("type");
 let cartContainer = document.getElementById('cartContainer')
 
 let boxContainerDiv = document.createElement('div')
 boxContainerDiv.id = 'boxContainer'
+async function Order(){
+    firstname = firstname.value;
+    lastname = lastname.value;
+    country = country.value;
+    address = address.value;
+    city = city.value;
+    phone_number = phone_number.value;
+    email = email.value;
+    type = type.value;
+    let company = "";
+    let product;
+    if(firstname.length < 1){
 
+    }else if(firstname)
+}
+btn.addEventListener("click",function(){
+
+})
 // DYNAMIC CODE TO SHOW THE SELECTED ITEMS IN YOUR CART
 function dynamicCartSection(ob,itemCounter)
 {
