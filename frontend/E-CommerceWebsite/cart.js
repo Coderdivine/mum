@@ -175,6 +175,7 @@ httpRequest.onreadystatechange = function()
 
             let i;
             let totalAmount = 0
+            product = [];
             for(i=0; i<counter; i++)
             {
                 let itemCounter = 1
