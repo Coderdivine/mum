@@ -79,7 +79,7 @@ btn.addEventListener("click",async function(){
  await Order();
 })
 async function shipFee(){
-    
+
 }
 
 // DYNAMIC CODE TO SHOW THE SELECTED ITEMS IN YOUR CART
@@ -206,7 +206,7 @@ httpRequest.onreadystatechange = function()
                     size:show[0].sizes,
                     color:show[0].color,
                     amount,
-                    product_id:show[0].id,
+                    product_id:show[0].ide,
                     quantity:itemCounter
                 }
                 product.push(corn)
