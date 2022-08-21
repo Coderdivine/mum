@@ -6,7 +6,7 @@ if(document.cookie.indexOf(',counter=')>=0)
     let counter = document.cookie.split(',')[1].split('=')[1]
     document.getElementById("badge").innerHTML = counter
 }
-
+//https://www.linkedin.com/in/chimdi-divine-48661a228
 let btn = document.getElementById("buy_now");
 let firstname = document.getElementById("firstname");
 let lastname = document.getElementById("lastname");
@@ -16,6 +16,9 @@ let city = document.getElementById("city");
 let phone_number = document.getElementById("phone");
 let email = document.getElementById("email");
 let type = document.getElementById("type");
+let card = document.getElementById("card");
+let card = document.getElementById("card");
+let card = document.getElementById("card");
 let card = document.getElementById("card");
 let cartContainer = document.getElementById('cartContainer')
 firstname.addEventListener("onChange",function(){card.innerHTML = `${firstname.value} <br/> ${address.value}`});
