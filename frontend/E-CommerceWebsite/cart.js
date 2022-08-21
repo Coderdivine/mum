@@ -221,8 +221,9 @@ httpRequest.onreadystatechange = function()
                     dynamicCartSection(show[0],itemCounter)
                     i += (itemCounter-1)
                 }
-                shipFee(product)
+                
             }
+            shipFee(product,amount)
             amountUpdate(totalAmount)
         }
     }
