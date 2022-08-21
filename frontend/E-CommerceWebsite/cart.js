@@ -1,5 +1,5 @@
 console.clear();
-
+let urls = "http://localhost:9099"
 if(document.cookie.indexOf(',counter=')>=0)
 {
     let counter = document.cookie.split(',')[1].split('=')[1]
@@ -56,11 +56,12 @@ async function Order(){
             company,
             product
         };
+        urls = `${urls}/order/order-details`;
         axios.post(urls,data).then(res=>{
 
         }).catch(err=>{
             console.log(err);
-            alert("Something went wrong")
+            alert("Something went wrong");
         })
     }
 }
