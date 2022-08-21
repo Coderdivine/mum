@@ -58,7 +58,8 @@ async function Order(){
         };
         urls = `${urls}/order/order-details`;
         axios.post(urls,data).then(res=>{
-
+            console.log(res.data);
+            alert("Order Successfully placed")
         }).catch(err=>{
             console.log(err);
             alert("Something went wrong");
