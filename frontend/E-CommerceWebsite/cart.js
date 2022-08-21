@@ -189,6 +189,10 @@ httpRequest.onreadystatechange = function()
                 //contentTitle[item[i]-1].price
                 let show = contentTitle.filter(x=> x.ide == (item[i]))
                 console.log("item",(item[i]))
+                let corn = {
+                    item
+                }
+                product.push(item[1])
                // console.log("item",(item[i-1].ide))
                 if(show){
                     show //= show[0]
