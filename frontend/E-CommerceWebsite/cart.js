@@ -78,7 +78,9 @@ btn.addEventListener("click",async function(){
     console.log("clicked")
  await Order();
 })
-async function shipFee(){}
+async function shipFee(){
+    
+}
 
 // DYNAMIC CODE TO SHOW THE SELECTED ITEMS IN YOUR CART
 function dynamicCartSection(ob,itemCounter)
