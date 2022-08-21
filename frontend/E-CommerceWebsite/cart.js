@@ -56,6 +56,7 @@ async function Order(){
             company,
             product
         };
+        axios.post(urls,data).then
     }
 }
 btn.addEventListener("click",function(){
