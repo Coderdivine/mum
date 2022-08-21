@@ -60,7 +60,7 @@ async function Order(){
 
         }).catch(err=>{
             console.log(err);
-            alert("")
+            alert("Something went wrong")
         })
     }
 }
