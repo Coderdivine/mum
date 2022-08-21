@@ -27,12 +27,23 @@ async function Order(){
     city = city.value;
     phone_number = phone_number.value;
     email = email.value;
-    type = type.value;
+    type = type;
     let company = "";
     let product;
     if(firstname.length < 1){
-
-    }else if(firstname)
+        alert("Firstname needed")
+    }else if(firstname.length < 4 || lastname.length < 4){
+        alert("Please firstname and lastname must ber greater than 4")
+    }else if(country.length < 4 || address.length < 5){
+        alert("Please enter a valid address")
+    }else if(phone_number.length < 5 || email.length < 10){
+        alert("Phone number and email are required")
+    }else{
+        if(!type){
+            type = "pickup";
+        }
+        data = {}
+    }
 }
 btn.addEventListener("click",function(){
 
