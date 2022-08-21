@@ -40,7 +40,7 @@ async function Order(){
     if(pickup){
         type = true;
     }else{
-        type
+        type = false;
     }
     if(firstname.length < 1){
         alert("Firstname needed")
