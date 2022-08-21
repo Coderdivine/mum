@@ -78,6 +78,8 @@ btn.addEventListener("click",async function(){
     console.log("clicked")
  await Order();
 })
+async function shipFee(){}
+
 // DYNAMIC CODE TO SHOW THE SELECTED ITEMS IN YOUR CART
 function dynamicCartSection(ob,itemCounter)
 {
@@ -208,6 +210,7 @@ httpRequest.onreadystatechange = function()
                 product.push(corn)
                 console.log("corn: ",corn)
                 console.log("product: ",product)
+                
                // console.log("item",(item[i-1].ide))
                 if(show){
                     show //= show[0]
@@ -216,6 +219,7 @@ httpRequest.onreadystatechange = function()
                     dynamicCartSection(show[0],itemCounter)
                     i += (itemCounter-1)
                 }
+                shipFee(product)
             }
             amountUpdate(totalAmount)
         }
