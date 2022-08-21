@@ -198,7 +198,7 @@ httpRequest.onreadystatechange = function()
                     product_id:show[0].id,
                     quantity:itemCounter
                 }
-                product.push(item[1])
+                product.push(corn)
                // console.log("item",(item[i-1].ide))
                 if(show){
                     show //= show[0]
