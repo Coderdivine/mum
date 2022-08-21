@@ -127,7 +127,7 @@ totalDiv.appendChild(totalh2)
 // TO UPDATE THE TOTAL AMOUNT
 function amountUpdate(amount)
 {
-    totals = `NGN ${amount} `;
+    totals .innerHTML= `NGN ${amount} `;
     let totalh4 = document.createElement('h4')
     // let totalh4Text = document.createTextNode(amount)
     let totalh4Text = document.createTextNode('Amount: NGN ' + amount)
