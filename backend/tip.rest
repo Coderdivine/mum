@@ -1,14 +1,14 @@
-POST http://localhost:9099/product/product-details
+POST https://ax-mum.herokuapp.com/product/product-details
 Content-Type: application/json
 
 {   
-    "name":"Lowrider",
+    "name":"G wagon",
     "rate":"5",
-    "quantity":"90",
+    "quantity":"91",
     "brand":"AXGURA",
     "category":"cars",
-    "price":"222200",
-    "description":"Get a crafted lowrider car",
+    "price":"1000000",
+    "description":"Get a crafted G WAGON car",
     "sizes":"3,12,14",
     "color":"red,blue,yellow",
     "image":"https://res.cloudinary.com/axgura/image/upload/v1660116564/q9hyrfuotobvnybugk99.jpg",

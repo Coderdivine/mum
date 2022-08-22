@@ -52,9 +52,13 @@ async function Order(){
         alert("Please enter a valid address")
     }else if(phone_number.length < 5 || email.length < 10){
         alert("Phone number and email are required")
-    }else if(product !== "object"){
-        alert("Seems you don't have any product")
-    }else{
+    // }else if(product !== "object"){
+    //     console.log(product)
+    //     alert("Seems you don't have any product")
+    // }
+}
+    else{
+        console.log(product);
         if(!type){
             type = "pickup";
         }else{
