@@ -27,6 +27,7 @@ btn.addEventListener("click",function(){
         window.location = "/";
     }
     else{
+        amount = sessionStorage.getItem("amount");
         const data = {
             account_name,
             account_number,
