@@ -36,7 +36,7 @@ async function Order(){
     phone_number = phone_number.value;
     email = email.value;
     type = type;
-    let company = "";
+    let company = "Nigeria";
     console.log(pickup.checked);
     if(pickup.checked == true){
         type = true;
