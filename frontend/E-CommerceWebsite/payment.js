@@ -71,6 +71,6 @@ btn_two.addEventListener("click",function(){
     }else{
         alert("Please fil out the form again");
         console.log(btn.is_disabled);
-    }
+    };
 });
 
