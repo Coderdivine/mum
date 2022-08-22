@@ -105,7 +105,7 @@ function dynamicCartSection(ob,itemCounter)
     boxContainerDiv.appendChild(boxDiv)
 
     let boxImg = document.createElement('img')
-    boxImg.src = ob.preview
+    boxImg.src = ob.image
     boxDiv.appendChild(boxImg)
 
     let boxh3 = document.createElement('h3')
@@ -163,19 +163,19 @@ let buttonDiv = document.createElement('div')
 buttonDiv.id = 'button'
 totalDiv.appendChild(buttonDiv)
 
-let buttonTag = document.createElement('button')
-buttonDiv.appendChild(buttonTag)
+// let buttonTag = document.createElement('button')
+// buttonDiv.appendChild(buttonTag)
 
-let buttonLink = document.createElement('a')
-buttonLink.href = '/orderPlaced.html?'
-buttonTag.appendChild(buttonLink)
+// let buttonLink = document.createElement('a')
+// buttonLink.href = '/orderPlaced.html?'
+// buttonTag.appendChild(buttonLink)
 
-buttonText = document.createTextNode('Place Order')
-buttonTag.onclick = function()
-{
-    console.log("clicked");
-   // buttonTag.a.click()
-}  
+// buttonText = document.createTextNode('Place Order')
+// buttonTag.onclick = function()
+// {
+//     console.log("clicked");
+//    // buttonTag.a.click()
+// }  
 //dynamicCartSection()
 // console.log(dynamicCartSection());
 
