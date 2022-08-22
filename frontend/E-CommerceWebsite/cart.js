@@ -54,7 +54,7 @@ async function Order(){
     // }else if(product !== "object"){
     //     console.log(product)
     //     alert("Seems you don't have any product")
-    // ///}
+    // }
 }
     else{
         console.log(product);
