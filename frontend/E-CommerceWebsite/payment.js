@@ -49,6 +49,7 @@ btn_two.addEventListener("click",function(){
     if(btn.is_disabled){
         let is_ = sessionStorage.getItem("order");
         if(true == is_){
+            let ide;
             urls = `http://localhost:9099/payment/update-payment`
             axios.get(urls,{ide}).then(res=>{
                 alert(response.data.message);
