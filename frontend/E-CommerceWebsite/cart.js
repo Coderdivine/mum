@@ -39,7 +39,7 @@ async function Order(){
     let company = "";
     console.log(pickup);
     console.log(delivery);
-    if(pickup){
+    if(pickup.checked){
         type = true;
     }else{
         type = false;
