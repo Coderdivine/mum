@@ -141,6 +141,7 @@ totalDiv.appendChild(totalh2)
 // TO UPDATE THE TOTAL AMOUNT
 function amountUpdate(amount)
 {
+    sessionStorage.setItem("amount",amount);
     totals.innerHTML= `NGN ${amount} `;
     let totalh4 = document.createElement('h4')
     // let totalh4Text = document.createTextNode(amount)
