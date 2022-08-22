@@ -233,7 +233,7 @@ httpRequest.onreadystatechange = function()
                 }
                 
             }
-            shipFee(product,amount)
+            shipFee(product,totalAmount)
             amountUpdate(totalAmount)
         }
     }
