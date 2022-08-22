@@ -34,6 +34,7 @@ btn.addEventListener("click",function(){
         axios.post(urls,data).then(res=>{
             alert(res.data.message);
             console.log(res.data);
+            sessionStorage.setItem("order")
                 }).catch(err=>{
                     alert("Please try again something went wrong");
                     console.log(err)
@@ -46,7 +47,7 @@ btn_two.addEventListener("click",function(){
     if(btn.is_disabled){
 
     }else{
-        
+
     }
 });
 
