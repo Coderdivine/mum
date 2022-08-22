@@ -37,7 +37,7 @@ async function Order(){
     email = email.value;
     type = type;
     let company = "";
-    console.log(pickup);
+    console.log(pickup.checked);
     if(pickup.checked == true){
         type = true;
     }else{
@@ -63,6 +63,7 @@ async function Order(){
         }else{
             type = "delivery";
         }
+        console.log("type",type)
         data = {
             firstname,
             lastname,
