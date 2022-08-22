@@ -182,8 +182,8 @@ totalDiv.appendChild(buttonDiv)
 //     console.log("clicked");
 //    // buttonTag.a.click()
 // }  
-//dynamicCartSection()
-// console.log(dynamicCartSection());
+dynamicCartSection()
+console.log(dynamicCartSection());
 
 // BACKEND CALL
 let httpRequest = new XMLHttpRequest()
@@ -247,6 +247,7 @@ httpRequest.onreadystatechange = function()
             }
             shipFee(product,totalAmount)
             amountUpdate(totalAmount)
+            sessionStorage.setItem("amount",totalAmount);
         }
     }
         else
