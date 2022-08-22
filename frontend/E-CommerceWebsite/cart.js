@@ -101,6 +101,7 @@ btn.addEventListener("click",async function(){
 async function shipFee(product,a){
     ship_fee.innerHTML = product.length  * 1500;
     totals.innerHTML = a + (product.length * 1500)
+    return a + (product.length * 1500)
 }
 
 // DYNAMIC CODE TO SHOW THE SELECTED ITEMS IN YOUR CART
@@ -162,6 +163,8 @@ function amountUpdate(amount)
     totalDiv.appendChild(totalh4)
     totalDiv.appendChild(buttonDiv)
     console.log(totalh4);
+    
+
 }
 
 
