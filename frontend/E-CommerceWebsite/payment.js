@@ -11,15 +11,15 @@ btn.addEventListener("click",function(){
     account_number = account_number.value;
     bank_name = bank_name.value;
     if(account_name.length < 4){
-
+        alert("Account name needed")
     }else if(account_number.length < 4){
-
-    }else if(bank_name.length < 4){
-
-    }else if(amount !== "number"){
-
-    }else if(order_id !== "string"){
-
+        alert("Invaild account number")
+    }else if(bank_name.length < 2){
+        alert("Bank name is invalid")
+    }else if(typeof amount !== "number"){
+        alert("Please amount is undefined")
+    }else if(typeof order_id !== "string"){
+        alert("Order identity not found")
     }
     else{
         const data = {
