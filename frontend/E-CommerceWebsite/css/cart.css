@@ -20,7 +20,7 @@
   }
   
   .checkout {
-    background-color: var(--color-background);
+    /* background-color: var(--color-background); */
     display: grid;
     font-family: var(--font-family-base);
     line-height: 1.5;
