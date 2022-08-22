@@ -58,7 +58,7 @@ async function Order(){
 }
     else{
         console.log(product);
-        if(!type){
+        if(type){
             type = "pickup";
         }else{
             type = "delivery";
