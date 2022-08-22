@@ -31,6 +31,7 @@ btn.addEventListener("click",function(){
         };
         
         urls = `${urls}/payment/send-payment`;
+        console.log(urls);
         axios.post(urls,data).then(res=>{
             alert(res.data.message);
             console.log(res.data);
@@ -48,6 +49,12 @@ btn_two.addEventListener("click",function(){
     if(btn.is_disabled){
         let is_ = sessionStorage.getItem("order");
         if(true == is_){
+            urls = 
+            axios.get("").then(res=>{
+
+            }).catch(err=>{
+                alert("SOmething went wrong")
+            })
 
         }else{
             alert("Please Order expire");
