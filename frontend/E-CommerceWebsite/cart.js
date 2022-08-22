@@ -26,7 +26,7 @@ let cartContainer = document.getElementById('cartContainer')
 firstname.addEventListener("onChange",function(){card.innerHTML = `${firstname.value} <br/> ${address.value}`});
 address.addEventListener("onChange",function(){card.innerHTML = `${firstname.value} <br/> ${address.value}`});
 let boxContainerDiv = document.createElement('div')
-boxContainerDiv.id = 'boxContainer'
+boxContainerDiv.id = 'boxContainer';
 async function Order(){
     firstname = firstname.value;
     lastname = lastname.value;

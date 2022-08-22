@@ -160,7 +160,8 @@ let httpRequest = new XMLHttpRequest()
     }
 }
 
-httpRequest.open('GET', 'http://localhost:9099/product/product-info/'+id, true)
+httpRequest.open('GET', 'https://ax-mum.herokuapp.com/product/product-info/'+id, true)
 httpRequest.send();
-//http://localhost:9099/product/product-info/7c7068cc-bde9-46f7-bf26-3f8f2ea32136
+
+//https://ax-mum.herokuapp.com/product/product-info/7c7068cc-bde9-46f7-bf26-3f8f2ea32136
 //'https://5d76bf96515d1a0014085cf9.mockapi.io/product/'
