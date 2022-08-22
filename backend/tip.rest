@@ -15,6 +15,19 @@ Content-Type: application/json
     "weight":"5"
 }
 ###
+
+POST https://waitlist-axgura.herokuapp.com/waitlist/waitlist-user
+Content-Type: application/json
+
+{
+    "name":"AXGURA",
+    "email":"axgurah@gmail.com",
+    "country":"Nigeria",
+    "invited_link":"ded64687-2491-456f-8614-5ac83f67cf33",
+    "phone_number":"09161933278"
+}
+
+###
 GET http://localhost:9099/product/all-product
 ###
 GET http://localhost:9099/product/product-info/7c7068cc-bde9-46f7-bf26-3f8f2ea32136
