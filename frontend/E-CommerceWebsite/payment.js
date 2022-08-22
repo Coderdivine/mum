@@ -1,6 +1,6 @@
 console.clear();
 let id = location.search.split('?')[1]
-console.log(id)
+console.log(id);
 let account_name = document.getElementById("acc_name");
 let account_number = document.getElementById("acc_number");
 let bank_name = document.getElementById("bank_name");
