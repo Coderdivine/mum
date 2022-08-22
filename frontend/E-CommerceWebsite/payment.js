@@ -51,7 +51,7 @@ btn.addEventListener("click",function(){
 
 });
 btn_two.addEventListener("click",function(){
-    //check id first btn is disabled
+    //check id first btn is disabled;
     if(btn.is_disabled){
         let is_ = sessionStorage.getItem("order");
         if(true == is_){
