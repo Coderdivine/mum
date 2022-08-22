@@ -50,7 +50,7 @@ async function Order(){
     }else if(country.length < 4 || address.length < 5){
         alert("Please enter a valid address");
     }else if(phone_number.length < 5 || email.length < 10){
-        alert("Phone number and email are required")
+        alert("Phone number and email are required");
     // }else if(product !== "object"){
     //     console.log(product)
     //     alert("Seems you don't have any product")
