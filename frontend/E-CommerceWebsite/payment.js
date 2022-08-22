@@ -51,8 +51,8 @@ btn_two.addEventListener("click",function(){
         if(true == is_){
             urls = `http://localhost:9099/payment/update-payment`
             axios.get(urls,{ide}).then(res=>{
-                aletr(response.data.message);
-                
+                alert(response.data.message);
+                console.log("res",res.data);
             }).catch(err=>{
                 alert("Something went wrong")
             })
