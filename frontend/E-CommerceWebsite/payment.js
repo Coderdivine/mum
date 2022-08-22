@@ -49,11 +49,12 @@ btn_two.addEventListener("click",function(){
     if(btn.is_disabled){
         let is_ = sessionStorage.getItem("order");
         if(true == is_){
-            urls = 
-            axios.get("").then(res=>{
-
+            urls = `http://localhost:9099/payment/update-payment`
+            axios.get(urls,{ide}).then(res=>{
+                aletr(response.data.message);
+                
             }).catch(err=>{
-                alert("SOmething went wrong")
+                alert("Something went wrong")
             })
 
         }else{
