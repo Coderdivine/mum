@@ -214,7 +214,7 @@ httpRequest.onreadystatechange = function()
                 let itemCounter = 1
                 for(let j = i+1; j<counter; j++)
                 {   
-                    if(Number(item[j]) == Number(item[i]))
+                    if(item[j] == item[i])
                     {
                         itemCounter +=1;
                     }
