@@ -44,7 +44,7 @@ async function Order(){
         type = false;
     }
     if(firstname.length < 1){
-        alert("Firstname needed")
+        alert("Firstname needed");
     }else if(firstname.length < 4 || lastname.length < 4){
         alert("Please firstname and lastname must ber greater than 4")
     }else if(country.length < 4 || address.length < 5){
