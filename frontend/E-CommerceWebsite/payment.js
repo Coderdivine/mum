@@ -5,7 +5,7 @@ let bank_name = document.getElementById("bank_name");
 let amount;
 let order_id;
 let btn = document.getElementById("btn");
-let urls = "http://localhost:9099/"
+let urls = "http://localhost:9099"
 btn.addEventListener("click",function(){
     account_name = account_name.value;
     account_number = account_number.value;
@@ -22,6 +22,9 @@ btn.addEventListener("click",function(){
 
     }
     else{
+        const data = {
+
+        };
         urls = `${urls}/payment/send-payment`;
         axios.post(urls,data).then(res=>{
 
