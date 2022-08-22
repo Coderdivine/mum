@@ -12,12 +12,12 @@ body {
 	display: flex;
     flex-direction: column;
     background-color: #DFDBE5;
-    background-image: url("https://wallpaperaccess.com/full/3063067.png");
+    /* background-image: url("https://wallpaperaccess.com/full/3063067.png"); */
     color:#963E7B;
 }
 
 .card {
-	width: 60rem;
+	width: 80rem;
     margin: auto;
     background: white;
     position:center;
