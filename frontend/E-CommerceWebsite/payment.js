@@ -23,11 +23,15 @@ btn.addEventListener("click",function(){
     }
     else{
         const data = {
-
+            account_name,
+            account_number,
+            amount,
+            order_id
         };
+        
         urls = `${urls}/payment/send-payment`;
         axios.post(urls,data).then(res=>{
-
+            
         })
     }
 
