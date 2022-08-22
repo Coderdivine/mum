@@ -63,7 +63,7 @@ async function Order(){
         }else{
             type = "delivery";
         }
-        console.log("type",type);
+        console.log("type",type)
         data = {
             firstname,
             lastname,
