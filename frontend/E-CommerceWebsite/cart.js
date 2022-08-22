@@ -76,7 +76,7 @@ async function Order(){
             company,
             product
         };
-        urls = `${urls}/order/order-details`
+        urls = `${urls}/order/order-details`;
         console.log(urls);
         console.log(data);
         axios.post(urls,data).then(res=>{
