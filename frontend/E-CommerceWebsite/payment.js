@@ -67,7 +67,8 @@ btn_two.addEventListener("click",function(){
             alert("Please Order expire");
             }
     }else{
-        alert("Please fil out the form again")
+        alert("Please fil out the form again");
+        console.log(btn.is_disabled);
     }
 });
 
