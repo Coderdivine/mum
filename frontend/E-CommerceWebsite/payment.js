@@ -31,8 +31,12 @@ btn.addEventListener("click",function(){
         
         urls = `${urls}/payment/send-payment`;
         axios.post(urls,data).then(res=>{
-            
-        })
+            alert(res.data.message);
+            console.log(res.data);
+                }).catch(err=>{
+                    alert("Please try again something went wrong");
+                    console.log(err)
+                })
     }
 
 })
