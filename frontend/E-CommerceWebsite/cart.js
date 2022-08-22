@@ -23,8 +23,8 @@ let pickup = document.getElementById("pickup");
 let delivery = document.getElementById("delivery");
 let totals = document.getElementById("totals");
 let cartContainer = document.getElementById('cartContainer')
-firstname.addEventListener("onChange",function(){card.innerHTML = `${firstname.value} <br/> ${address.value}`});
-address.addEventListener("onChange",function(){card.innerHTML = `${firstname.value} <br/> ${address.value}`});
+firstname.addEventListener("change",function(){card.innerHTML = `${firstname.value} <br/> ${address.value}`});
+address.addEventListener("change",function(){card.innerHTML = `${firstname.value} <br/> ${address.value}`});
 let boxContainerDiv = document.createElement('div')
 boxContainerDiv.id = 'boxContainer';
 async function Order(){
