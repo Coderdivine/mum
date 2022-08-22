@@ -5,6 +5,7 @@ let bank_name = document.getElementById("bank_name");
 let amount;
 let order_id;
 let btn = document.getElementById("btn");
+let btn_two = document.getElementById("btn_two");
 let urls = "http://localhost:9099"
 btn.addEventListener("click",function(){
     account_name = account_name.value;
@@ -39,5 +40,8 @@ btn.addEventListener("click",function(){
                 })
     }
 
+})
+btn_two.addEventListener("click",function(){
+    //check id first btn is disabled
 })
 
