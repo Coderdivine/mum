@@ -250,8 +250,8 @@ httpRequest.onreadystatechange = function()
             }
             shipFee(product,totalAmount)
             amountUpdate(totalAmount)
-            let ff_ = shipFee(product,totalAmount) +
-            sessionStorage.setItem("amount",totalAmount);
+            let ff_ = shipFee(product,totalAmount) + totalAmount;
+            sessionStorage.setItem("amount",ff_);
         }
     }
         else
