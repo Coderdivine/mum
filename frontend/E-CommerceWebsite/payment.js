@@ -14,6 +14,9 @@ btn.addEventListener("click",function(){
 
     }else if(account_number.length < 4){
 
+    }else if(bank_name.length < 4){
+
     }
+
 })
 
