@@ -1,9 +1,10 @@
 console.clear();
+let id = location.search.split('?')[1]
 let account_name = document.getElementById("acc_name");
 let account_number = document.getElementById("acc_number");
 let bank_name = document.getElementById("bank_name");
 let amount;
-let order_id;
+let order_id = id;
 let btn = document.getElementById("btn");
 let btn_two = document.getElementById("btn_two");
 let urls = "http://localhost:9099";
@@ -21,6 +22,9 @@ btn.addEventListener("click",function(){
         alert("Please amount is undefined")
     }else if(typeof order_id !== "string"){
         alert("Order identity not found")
+    }else if(!sessionStorage.getItem("amount")){
+        alert("Amount undefined");
+        window.location = "/";
     }
     else{
         const data = {
@@ -49,7 +53,7 @@ btn_two.addEventListener("click",function(){
     if(btn.is_disabled){
         let is_ = sessionStorage.getItem("order");
         if(true == is_){
-            let ide;
+            let ide = id;
             urls = `http://localhost:9099/payment/update-payment`
             axios.get(urls,{ide}).then(res=>{
                 alert(response.data.message);
