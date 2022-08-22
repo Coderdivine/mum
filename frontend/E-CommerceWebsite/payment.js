@@ -43,7 +43,7 @@ btn.addEventListener("click",function(){
             alert(res.data.message);
             console.log(res.data);
             sessionStorage.setItem("order",true);
-            btn.setAttribute("disabled",true);
+            btn.disabled = true;
             btn_two.style = "display:grid;"
                 }).catch(err=>{
                     alert("Please try again something went wrong");
@@ -54,7 +54,7 @@ btn.addEventListener("click",function(){
 });
 btn_two.addEventListener("click",function(){
     //check id first btn is disabled;
-    if(btn.is_disabled){
+    if(btn.disabled == true){
         let is_ = sessionStorage.getItem("order");
         if(true == is_){
             let ide = id;
