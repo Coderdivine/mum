@@ -10,6 +10,10 @@ btn.addEventListener("click",function(){
     account_name = account_name.value;
     account_number = account_number.value;
     bank_name = bank_name.value;
-    if(account_name)
+    if(account_name.length < 4){
+
+    }else if(account_number.length < 4){
+
+    }
 })
 
