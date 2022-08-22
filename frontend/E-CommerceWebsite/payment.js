@@ -18,7 +18,7 @@ btn.addEventListener("click",function(){
 
     }else if(amount !== "number"){
 
-    }else if(){
+    }else if(order_id !== "string"){
 
     }
     else{
