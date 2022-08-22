@@ -35,6 +35,7 @@ btn.addEventListener("click",function(){
             amount,
             order_id
         };
+        console.log(data)
         
         urls = `${urls}/payment/send-payment`;
         console.log(urls);
