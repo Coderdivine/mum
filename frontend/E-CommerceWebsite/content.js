@@ -89,9 +89,9 @@ httpRequest.onreadystatechange = function() {
 };
 httpRequest.open(
   "GET",
-  "http://localhost:9099/product/all-product",
+  "https://ax-mum.herokuapp.com/product/all-product",
   true
 );
 httpRequest.send();
-//http://localhost:9099
+//https://ax-mum.herokuapp.com
 //"https://5d76bf96515d1a0014085cf9.mockapi.io/product",

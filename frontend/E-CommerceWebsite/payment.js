@@ -8,7 +8,7 @@ let amount;
 let order_id = id;
 let btn = document.getElementById("btn");
 let btn_two = document.getElementById("btn_two");
-let urls = "http://localhost:9099";
+let urls = "https://ax-mum.herokuapp.com";
 btn.addEventListener("click",function(){
     account_name = account_name.value;
     account_number = account_number.value;
@@ -57,7 +57,7 @@ btn_two.addEventListener("click",function(){
         let is_ = sessionStorage.getItem("order");
         if(true == is_){
             let ide = id;
-            urls = `http://localhost:9099/payment/update-payment`;
+            urls = `https://ax-mum.herokuapp.com/payment/update-payment`;
             axios.get(urls,{ide}).then(res=>{
                 alert(response.data.message);
                 console.log("res",res.data);

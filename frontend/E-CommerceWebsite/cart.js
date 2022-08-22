@@ -1,5 +1,5 @@
 console.clear();
-let urls = "http://localhost:9099";
+let urls = "https://ax-mum.herokuapp.com";
 let product;
 if(document.cookie.indexOf(',counter=')>=0)
 {
@@ -244,7 +244,7 @@ httpRequest.onreadystatechange = function()
         }
 }
 
-httpRequest.open('GET', 'http://localhost:9099/product/all-product', true)
+httpRequest.open('GET', 'https://ax-mum.herokuapp.com/product/all-product', true)
 httpRequest.send()
 //'https://5d76bf96515d1a0014085cf9.mockapi.io/product'
 
