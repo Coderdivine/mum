@@ -80,9 +80,14 @@ async function Order(){
         console.log(urls);
         console.log(data);
         axios.post(urls,data).then(res=>{
+           if(type == "pickup"){
+            alert(`${res.data.message}`)
+            window.location = '/orderPlaced.html?';
+           }else{
             console.log(res.data);
             alert("Order Successfully placed")
            window.location =  `/payment.html?${res.data.ide}`;
+           }
         }).catch(err=>{
             console.log(err);
             alert("Something went wrong");
