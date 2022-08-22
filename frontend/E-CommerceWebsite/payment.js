@@ -43,5 +43,8 @@ btn.addEventListener("click",function(){
 });
 btn_two.addEventListener("click",function(){
     //check id first btn is disabled
+    if(btn.is_disabled){
+
+    }
 });
 
