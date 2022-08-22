@@ -16,8 +16,13 @@ btn.addEventListener("click",function(){
 
     }else if(bank_name.length < 4){
 
-    }else{
-        
+    }else if(amount !== "number"){
+
+    }else if(){
+
+    }
+    else{
+
     }
 
 })
