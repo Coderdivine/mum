@@ -56,7 +56,7 @@ btn_two.addEventListener("click",function(){
         let is_ = sessionStorage.getItem("order");
         if(true == is_){
             let ide = id;
-            urls = `http://localhost:9099/payment/update-payment`
+            urls = `http://localhost:9099/payment/update-payment`;
             axios.get(urls,{ide}).then(res=>{
                 alert(response.data.message);
                 console.log("res",res.data);
