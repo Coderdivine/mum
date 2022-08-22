@@ -23,12 +23,12 @@
                   <form action="">
                     <h1>CheckOut</h1>
                     <h2>Payment Information</h2>
-                    <p>Cardholder Name</p>
-                    <input type="text" class="inputbox" name="name" required />
-                    <p>Card Number</p>
-                    <input type="number" class="inputbox" name="card_number" id="card_number" required />
+                    <p>Account Name</p>
+                    <input type="text" id="acc_name" class="inputbox" name="name" required />
+                    <p>Account Number</p>
+                    <input type="number" id="acc_number" class="inputbox" name="card_number" id="card_number" required />
         
-                    <p>Card Type</p>
+                    <!-- <p>Card Type</p>
                     <select class="inputbox" name="card_type" id="card_type" required>
                       <option value="">--Select a Card Type--</option>
                       <option value="Visa">Visa</option>
@@ -43,8 +43,9 @@
                     <p class="expcvv_text2">CVV</p>
                     <input type="password" class="inputbox" name="cvv" id="cvv" required />
                 </div>
-                    <p></p>
-                    <button type="submit" class="button">CheckOut</button>
+                    <p></p> -->
+                    <button id="btn" type="submit" class="button">Continue</button>
+                    <button id="btn_two" style="display:none;" type="submit" class="button">Paid</button>
                   </form>
                 </div>
               </div>
