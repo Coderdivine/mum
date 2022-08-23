@@ -56,6 +56,8 @@ btn.addEventListener("click",function(){
            <p style="font-size:15px;">Bank Name</p>
            <p class="inputbox" style="font-weight:400px;font-size:12px;">PALMPAY</p>         
            <p>Amount : NGN1000</p>
+           <p></p>
+           <small></small>
            </div>
           `
 
