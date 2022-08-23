@@ -26,6 +26,7 @@ btn.addEventListener("click",function(){
         const data = {
             account_name,
             account_number,
+            bank_name,
             amount,
             order_id
         };
