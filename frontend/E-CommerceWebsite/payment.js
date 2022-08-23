@@ -8,6 +8,7 @@ let amount;
 let order_id = id;
 let btn = document.getElementById("btn");
 let btn_two = document.getElementById("btn_two");
+let main_change = document.getElementById("main_change")
 let urls = "https://ax-mum.herokuapp.com";
 btn.addEventListener("click",function(){
     account_name = account_name.value;
