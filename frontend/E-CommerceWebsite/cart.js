@@ -172,19 +172,19 @@ let buttonDiv = document.createElement('div')
 buttonDiv.id = 'button'
 totalDiv.appendChild(buttonDiv)
 
-// let buttonTag = document.createElement('button')
-// buttonDiv.appendChild(buttonTag)
+let buttonTag = document.createElement('button')
+buttonDiv.appendChild(buttonTag)
 
-// let buttonLink = document.createElement('a')
+let buttonLink = document.createElement('a')
 // buttonLink.href = '/orderPlaced.html?'
 // buttonTag.appendChild(buttonLink)
 
 // buttonText = document.createTextNode('Place Order')
-// buttonTag.onclick = function()
-// {
-//     console.log("clicked");
-//    // buttonTag.a.click()
-// }  
+buttonTag.onclick = function()
+{
+    console.log("clicked");
+   // buttonTag.a.click()
+}  
 // dynamicCartSection()
 // console.log(dynamicCartSection());
 
