@@ -42,6 +42,16 @@ btn.addEventListener("click",function(){
             btn.disabled = true;
             btn.style = "display:none;";
             btn_two.style = "display:grid;";
+
+            main_change.innerHTML = "";
+            let boxDiv = document.createElement('div')
+            boxDiv.id = 'box'
+            .appendChild(boxDiv)
+            
+
+
+
+
                 }).catch(err=>{
                     alert("Please try again something went wrong");
                     console.log(err)
