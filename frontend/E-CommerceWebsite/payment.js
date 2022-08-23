@@ -23,11 +23,9 @@ btn.addEventListener("click",function(){
         alert("Please amount is undefined")
     }else if(typeof order_id !== "string"){
         alert("Order identity not found")
-    }else if(!sessionStorage.getItem("amount")){
-        alert("Amount undefined");
-        window.location = "/";
-    }
-    else{
+    }else if(sessionStorage.getItem("amount")){
+        
+        //window.location = "/";
         amount = sessionStorage.getItem("amount");
         const data = {
             account_name,
