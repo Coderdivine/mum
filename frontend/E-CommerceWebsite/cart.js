@@ -128,7 +128,7 @@ function dynamicCartSection(ob,itemCounter)
 
     // console.log(boxContainerDiv);
 
-    buttonLink.appendChild(buttonText)
+    // buttonLink.appendChild(buttonText)
     cartContainer.appendChild(boxContainerDiv)
     cartContainer.appendChild(totalContainerDiv)
     // let cartMain = document.createElement('div')
