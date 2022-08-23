@@ -44,7 +44,8 @@ btn.addEventListener("click",function(){
             btn_two.style = "display:grid;";
 
             main_change.innerHTML = "";
-            
+            //please pay ${amount} to this account
+            //after 15:00 this order will expire.
             
 
 
