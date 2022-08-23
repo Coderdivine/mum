@@ -111,9 +111,9 @@ function dynamicCartSection(ob,itemCounter)
     boxDiv.id = 'box'
     boxContainerDiv.appendChild(boxDiv)
 
-    // let boxImg = document.createElement('img')
-    // boxImg.src = ob.image
-    // boxDiv.appendChild(boxImg)
+    let boxImg = document.createElement('img')
+    boxImg.src = ob.image
+    boxDiv.appendChild(boxImg)
 
     let boxh3 = document.createElement('h3')
     let h3Text = document.createTextNode(ob.name + ' × ' + itemCounter)
