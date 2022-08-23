@@ -19,10 +19,6 @@ btn.addEventListener("click",function(){
         alert("Invaild account number")
     }else if(bank_name.length < 2){
         alert("Bank name is invalid")
-    }else if(typeof amount !== "number"){
-        alert("Please amount is undefined")
-    }else if(typeof order_id !== "string"){
-        alert("Order identity not found")
     }else if(sessionStorage.getItem("amount")){
         
         //window.location = "/";
