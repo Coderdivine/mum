@@ -69,7 +69,7 @@ GET http://localhost:9099/order/all-order-info
 ###
 GET http://localhost:9099/order/order-info/065b6377-1491-4396-a893-43d686dff8f7
 ###
-POST http://localhost:9099/payment/send-payment
+POST https://ax-mum.herokuapp.com/payment/send-payment
 Content-Type: application/json
 
 {
