@@ -250,7 +250,7 @@ httpRequest.onreadystatechange = function()
             }
             shipFee(product,totalAmount)
             amountUpdate(totalAmount)
-            let ff_ = shipFee(product,totalAmount) + totalAmount;
+            let ff_ = totalAmount + (product.length * 1500);
             sessionStorage.setItem("amount",ff_);
             sessionStorage.setItem("amount",ff_);
             console.log(ff_);
