@@ -57,7 +57,8 @@ btn.addEventListener("click",function(){
            <p class="inputbox" style="font-weight:400px;font-size:12px;">${ans.payment_cards[0].account_bank}</p>         
            <p>Amount : NGN${ans.amount}</p>
            <p>Reference Number</p>
-           <small>${ans.ref}</small>
+           <small>${ans.ref}</small><br/>
+           <small>You have <pre>15:00</pre> left</small>
            </div>
           `
 
