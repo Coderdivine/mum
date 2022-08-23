@@ -39,7 +39,7 @@ btn.addEventListener("click",function(){
             console.log(res.data);
             sessionStorage.setItem("order",true);
             btn.disabled = true;
-            btn_two.style = "display:none;";
+            btn.style = "display:none;";
             btn_two.style = "display:grid;";
                 }).catch(err=>{
                     alert("Please try again something went wrong");
