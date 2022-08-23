@@ -44,9 +44,7 @@ btn.addEventListener("click",function(){
             btn_two.style = "display:grid;";
 
             main_change.innerHTML = "";
-            let boxDiv = document.createElement('div')
-            boxDiv.id = 'box'
-            .appendChild(boxDiv)
+            
             
 
 
