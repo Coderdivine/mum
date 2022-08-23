@@ -50,12 +50,12 @@ btn.addEventListener("click",function(){
             main_change.innerHTML = ` <div id="main_change" class="main_change">
             <h2>Please make payment to</h2>
            <p style="font-size:15px;">Account Name</p>
-           <p class="inputbox" style="font-weight:400px;font-size:12px;">EZECHUKWU</p>
+           <p class="inputbox" style="font-weight:400px;font-size:12px;">${ans.payment_cards[0].account_name}</p>
            <p style="font-size:15px;">Account Number</p>
-           <p class="inputbox" style="font-weight:400px;font-size:12px;">123456789</p>
+           <p class="inputbox" style="font-weight:400px;font-size:12px;">${ans.payment_cards[0].account_number}</p>
            <p style="font-size:15px;">Bank Name</p>
-           <p class="inputbox" style="font-weight:400px;font-size:12px;">PALMPAY</p>         
-           <p>Amount : NGN1000</p>
+           <p class="inputbox" style="font-weight:400px;font-size:12px;">${ans.payment_cards[0].account_bank}</p>         
+           <p>Amount : NGN${ans.amount}</p>
            <p></p>
            <small></small>
            </div>
