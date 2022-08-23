@@ -46,7 +46,16 @@ btn.addEventListener("click",function(){
             main_change.innerHTML = "";
             //please pay ${amount} to this account
             //after 15:00 this order will expire.
-            
+            ` <div id="main_change" class="main_change">
+            <h2>Please make payment to</h2>
+           <p style="font-size:15px;">Account Name</p>
+           <p class="inputbox" style="font-weight:400px;font-size:12px;">EZECHUKWU</p>
+           <p style="font-size:15px;">Account Number</p>
+           <p class="inputbox" style="font-weight:400px;font-size:12px;">123456789</p>
+           <p style="font-size:15px;">Bank Name</p>
+           <p class="inputbox" style="font-weight:400px;font-size:12px;">PALMPAY</p>         
+          </div>
+          `
 
 
 
