@@ -44,6 +44,7 @@ btn.addEventListener("click",function(){
             btn_two.style = "display:grid;";
 
             main_change.innerHTML = "";
+            const ans = res.data.data;
             //please pay ${amount} to this account
             //after 15:00 this order will expire.
             ` <div id="main_change" class="main_change">
