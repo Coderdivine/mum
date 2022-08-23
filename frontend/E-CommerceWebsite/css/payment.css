@@ -11,7 +11,7 @@ body {
 	width: 100%;
 	display: flex;
     flex-direction: column;
-    background-color: #DFDBE5;
+    /* background-color: #DFDBE5; */
     /* background-image: url("https://wallpaperaccess.com/full/3063067.png"); */
     color:#963E7B;
 }
