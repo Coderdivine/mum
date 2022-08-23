@@ -253,6 +253,7 @@ httpRequest.onreadystatechange = function()
             let ff_ = shipFee(product,totalAmount) + totalAmount;
             sessionStorage.setItem("amount",ff_);
             sessionStorage.setItem("amount",ff_);
+            console.log(ff_);
         }
     }
         else
