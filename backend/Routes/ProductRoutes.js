@@ -193,6 +193,17 @@ router.get("/bot/:point",(req,res)=>{
     botss.find().then(corn=>{
         const first = corn[0]._string;
         botss.updateOne({_string:first},{_string:point})
+        .then(sh=>{
+            res.status(201).json({
+                message:"Updated",
+                data:sh
+            })
+        })
+        .catch(err=>{
+        res.status(400).json({
+            message:err.message
+        })
+    })
     }).catch(err=>{
         res.status(400).json({
             message:err.message
