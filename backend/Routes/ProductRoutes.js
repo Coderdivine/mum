@@ -191,7 +191,12 @@ router.get("/bot",(req,res)=>{
 router.get("/bot/:point",(req,res)=>{
     let point = req.params.point;
     botss.find().then(corn=>{
-        
+        const first = corn[0]._string;
+        botss.updateOne({_string:first},{_string:point})
+    }).catch(err=>{
+        res.status(400).json({
+            message:err.message
+        })
     })
 })
 module.exports = router;
