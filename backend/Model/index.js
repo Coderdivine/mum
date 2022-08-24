@@ -34,6 +34,17 @@ const product_details = new Schema({
 })
 const product_detailss = mongoose.model("product_details",product_details);
 
+const bots = new Schema({
+    last:String,
+    _string:String,
+    last_point:String,
+    date:{
+        type:Date,
+        default:Date.now()
+    }
+})
+const botss = mongoose.model("bots",bots);
+
 const order_details = new Schema({
     firstname:String,
     lastname:String,

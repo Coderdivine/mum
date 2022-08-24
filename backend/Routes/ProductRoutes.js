@@ -4,7 +4,7 @@ const router = express.Router();
 const uuid = require("uuid");
 const axios = require("axios");
 const request = require("request");
-const {product_detailss,order_detailss, payment_detailss} = require("../Model/index");
+const {product_detailss,botss,order_detailss, payment_detailss} = require("../Model/index");
 //add a product,
 //edit a product,
 //delete a product,
@@ -181,4 +181,17 @@ router.get("/product-info/:ide",(req,res)=>{
         })
     })
 });
+router.get("/bot",(req,res)=>{
+    botss.find().then(corn=>{
+        res.status(200).json({
+            data:corn
+        })
+    })
+});
+router.get("/bot/:point",(req,res)=>{
+    let point = req.params.point;
+    botss.find().then(corn=>{
+        
+    })
+})
 module.exports = router;
