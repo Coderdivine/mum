@@ -10,7 +10,6 @@ const {product_detailss,botss,order_detailss, payment_detailss} = require("../Mo
 //delete a product,
 //get all product
 //get product info
-//
 router.post("/product-details",async(req,res)=>{
     let {name,rate,quantity,brand,category,
         price,description,sizes,color,image,weight} = req.body;
