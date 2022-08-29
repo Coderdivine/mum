@@ -36,6 +36,7 @@ btn.addEventListener("click",function(){
         urls = `${urls}/payment/send-payment`;
         console.log(urls);
         axios.post(urls,data).then(res=>{
+            id = res.data.ref;
             alert(res.data.message);
             console.log(res.data);
             sessionStorage.setItem("order",true);
@@ -79,7 +80,7 @@ btn_two.addEventListener("click",function(){
         if(is_){
             let ide = id;
             urls = `https://ax-mum.herokuapp.com/payment/update-payment`;
-            axios.get(urls,{ide}).then(res=>{
+            axios.post(urls,{ide}).then(res=>{
                 alert(response.data.message);
                 console.log("res",res.data);
             }).catch(err=>{
