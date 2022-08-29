@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Teko&display=swap');
 
 #orderContainer
 {
-    font-family: 'Lato', sans-serif;
+    font-family:  Poppin, "Teko";
     width: 80%;
     padding-top: 250px;
     padding-bottom: 150px;
