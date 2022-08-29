@@ -36,7 +36,7 @@ btn.addEventListener("click",function(){
         urls = `${urls}/payment/send-payment`;
         console.log(urls);
         axios.post(urls,data).then(res=>{
-            id = res.data.ref;
+            id = res.data.data.ref;
             alert(res.data.message);
             console.log(res.data);
             sessionStorage.setItem("order",true);
