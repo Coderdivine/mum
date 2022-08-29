@@ -76,7 +76,7 @@ btn_two.addEventListener("click",function(){
     //check id first btn is disabled;
     if(btn.disabled == true){
         let is_ = sessionStorage.getItem("order");
-        if(true == is_){
+        if(is_){
             let ide = id;
             urls = `https://ax-mum.herokuapp.com/payment/update-payment`;
             axios.get(urls,{ide}).then(res=>{
@@ -87,7 +87,7 @@ btn_two.addEventListener("click",function(){
             })
 
         }else{
-            alert("Please Order expire");
+            alert("Please Order is not valid");
             }
     }else{
         alert("Please fil out the form again");
