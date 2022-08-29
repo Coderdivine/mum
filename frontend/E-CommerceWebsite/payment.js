@@ -50,6 +50,7 @@ btn.addEventListener("click",function(){
             //after 15:00 this order will expire.
             main_change.innerHTML = ` <div id="main_change" class="main_change">
             <h2>Please make payment to</h2>
+            <small>Please make payment under 15 mins</small>
            <p style="font-size:15px;">Account Name</p>
            <p class="inputbox" style="font-weight:400px;font-size:12px;">${ans.payment_cards[0].account_name}</p>
            <p style="font-size:15px;">Account Number</p>
