@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Teko&display=swap');
+
 body
 {
     margin: 0;
-    font-family: 'Lato', sans-serif;
+    font-family:  Poppin, "Teko";
 }
 
 #containerFooter
