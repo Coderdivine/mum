@@ -41,6 +41,17 @@ btn.addEventListener("click",function(){
         alert("Please enter a  name that's more than 3 letters")
     }else if(description.value.length < 10){
         alert("Please enter a description that's more than 10 letters")
+    }else if(img_json.length == 0){
+        alert("Please upload a image before making request")
+    }else{
+        names = names.value;
+        description = description.value;
+        brand = brand.value;
+        category = category.value;
+        price = price.value;
+        rate = rate.value;
+        quantity = quantity.value;
+        names = names.value;
     }
 
 })
