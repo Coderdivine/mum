@@ -8,9 +8,9 @@ const {product_detailss,order_detailss, payment_detailss} = require("../Model/in
 //add a order, stiil need to calc del price.
 //get order info,
 const payment_cards = [{
- account_name:"",
- account_bank:"",
- account_number:"",
+ account_name:"Ezechukwu Uchechukwu",
+ account_bank:"Sterling Bank PLC",
+ account_number:"0000000000",
 }];
 router.post("/order-details",async(req,res)=>{
     let {firstname,lastname,country,address,city,phone_number
