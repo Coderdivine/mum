@@ -630,32 +630,6 @@ async function sendMail({email,message,data},res){
                                             </td>
                                           </tr>
                                         </tbody></table>
-                                        <!--[if mso | IE]>
-                                </td>
-                              
-                                <td>
-                              <![endif]-->
-                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
-                                          <tbody><tr>
-                                            <td style="padding:4px;">
-                                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:24px;">
-                                                <tbody><tr>
-                                                  <td style="font-size:0;height:24px;vertical-align:middle;width:24px;">
-                                                    <a href="#" target="_blank" style="color: #009BF9; text-decoration: none; word-break: normal;">
-                                                      <img alt="youtube-logo" height="24" src="https://codedmails.com/images/social/color/youtube-logo-transparent.png" style="border-radius:3px;display:block;" width="24" />
-                                                    </a>
-                                                  </td>
-                                                </tr>
-                                              </tbody></table>
-                                            </td>
-                                          </tr>
-                                        </tbody></table>
-                                        <!--[if mso | IE]>
-                                </td>
-                              
-                            </tr>
-                          </table>
-                        <![endif]-->
                                       </td>
                                     </tr>
                                   </tbody></table>
