@@ -1,4 +1,4 @@
-let name = document.getElementById("name");
+let names = document.getElementById("name");
 let description = document.getElementById("description");
 let brand = document.getElementById("brand");
 let category = document.getElementById("category");
@@ -37,9 +37,9 @@ img_btn.addEventListener("click",async function(){
 btn.addEventListener("click",function(){
     if(brand.value.length < 3){
         alert("Please enter a brand name that's more than 3 letters")
-    }else if(name.value.length < 3){
+    }else if(names.value.length < 3){
 
-    }else if(brand.value.length < 3){
+    }else if(description.value.length < 3){
 
     }
 
