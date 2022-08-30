@@ -25,14 +25,14 @@
             <p class="card-description">
               Fill in the required details
             </p>
-            <form class="forms-sample">
+            <div class="forms-sample">
               <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" placeholder="Name">
               </div>
               <div class="form-group">
                 <label for="description">Description</label>
-                <input type="email" class="form-control" id="description" placeholder="Description">
+                <textarea class="form-control" id="description" rows="4"></textarea>
               </div>
               <div class="form-group">
                 <label for="brand">Brand</label>
@@ -47,11 +47,11 @@
                 </div>
               <div class="form-group">
                 <label>File upload</label>
-                <input type="file" name="img[]" class="file-upload-default">
+                <input type="file" name="img[]" id="image" class="file-upload-default">
                 <div class="input-group col-xs-12">
                   <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
                   <span class="input-group-append">
-                    <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                    <button class="file-upload-browse btn btn-primary" id="img_btn" type="button">Upload</button>
                   </span>
                 </div>
               </div>
@@ -73,12 +73,8 @@
                 <input type="text" class="form-control" id="sizes" placeholder="sizes">
               </div>
               <div class="form-group">
-                <label for="weight">Weight</label>
-                <input type="text" class="form-control" id="weight" placeholder="weight">
-              </div>
-              <div class="form-group">
-                <label for="exampleFormControlSelect1">Large select</label>
-                <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                <label for="weight">Select item weight</label>
+                <select class="form-control form-control-lg" id="weight">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -86,12 +82,9 @@
                   <option>5</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="exampleTextarea1">Textarea</label>
-                <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary me-2">Submit</button>
-            </form>
+              
+              <button type="click" id="btn" class="btn btn-primary me-2">Submit</button>
+            </div>
           </div>
         </div>
       </div>
