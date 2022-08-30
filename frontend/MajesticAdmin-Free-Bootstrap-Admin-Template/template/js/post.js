@@ -10,7 +10,7 @@ let image = document.getElementById("image");
 let weight = document.getElementById("weight");
 let btn = document.getElementById("btn");
 let img_btn = document.getElementById("img_btn");
-let img_json = [];
+let img_json = localStorage.getItem("img_json")?JSON.parse(localStorage.getItem("img_json")):[];
 img_btn.addEventListener("click",async function(){
     if(image.files[0]){
         const form = new FormData();
@@ -33,4 +33,4 @@ img_btn.addEventListener("click",async function(){
     }else{
         alert("Please choose a image first")
     }
-})
+});
