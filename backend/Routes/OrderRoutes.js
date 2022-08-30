@@ -234,13 +234,13 @@ async function sendMail({email,message,data},res){
                                   </tr>
                                   <tr>
                                     <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; width: 60%; padding-top: 10px;" width="60%">${x.name}</td>
-                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; width: 20%;" width="20%" align="right">${x.product_id}</td>
+                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; width: 20%;" width="20%" align="right">id: ${x.product_id}</td>
                                     <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; width: 20%;" width="20%" align="right">NGN${amount}</td>
                                   </tr>
                                   <tr>
                                     <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal;">Product description</td>
-                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; padding: 0 0 10px;" align="right">1</td>
-                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; padding: 0 0 10px;" align="right">€10.02</td>
+                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; padding: 0 0 10px;" align="right">size: ${x.size}</td>
+                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; padding: 0 0 10px;" align="right">color: ${x.color}</td>
                                   </tr>
                                   
                                 </tbody></table>
