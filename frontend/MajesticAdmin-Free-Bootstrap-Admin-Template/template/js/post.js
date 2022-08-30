@@ -60,6 +60,13 @@ btn.addEventListener("click",function(){
             quantity,sizes,weight,
             image:JSON.stringify(img_json);
         }
+        axios.post("https://ax-mum.herokuapp.com/product/product-details",data)
+        .then(res=>{
+            alert(res.data.message);
+            localStorage.setItem("img_json",[]);
+        }).catch(err=>{
+            alert(`Something went wrong: ${err.message}`)
+        });
     }
 
 })
