@@ -11,10 +11,10 @@ let weight = document.getElementById("weight");
 let btn = document.getElementById("btn");
 let img_btn = document.getElementById("img_btn");
 let img_json = [];
-img_btn.addEventListener("click",function(){
+img_btn.addEventListener("click",async function(){
     if(image.files[0]){
         const form = new FormData();
-        form.append("file",img);
+        form.append("file",image.files[0]);
         form.append("upload_preset","jawkxoys");
         axios({
             method:"POST",
