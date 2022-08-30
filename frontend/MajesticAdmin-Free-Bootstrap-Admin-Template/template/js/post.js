@@ -28,8 +28,7 @@ img_btn.addEventListener("click",async function(){
             console.log(img_json);
             localStorage.setItem("img_json",JSON.stringify(img_json));
           }).catch((err)=>{
-            setMsg("Please select an image");
-            playSound("cancel")
+            alert(`Please select an image: ${err.message}`)
           })
     }else{
         alert("Please choose a image first")
