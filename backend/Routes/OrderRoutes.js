@@ -238,23 +238,11 @@ async function sendMail({email,message,data},res){
                                     <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; width: 20%;" width="20%" align="right">NGN${amount}</td>
                                   </tr>
                                   <tr>
-                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal;"> The Second Product </td>
+                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal;">Product description</td>
                                     <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; padding: 0 0 10px;" align="right">1</td>
                                     <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; padding: 0 0 10px;" align="right">€10.02</td>
                                   </tr>
-                                  <tr>
-                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; border-bottom-width: 1px; border-bottom-color: #555; border-bottom-style: solid; padding-top: 10px;"></td>
-                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; border-bottom-width: 1px; border-bottom-color: #555; border-bottom-style: solid; padding-top: 10px;"></td>
-                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; border-bottom-width: 1px; border-bottom-color: #555; border-bottom-style: solid; padding-top: 10px;"></td>
-                                  </tr>
-                                  <tr>
-                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; padding: 10px 0; text-align: left;" colspan="2" align="left">VAT</td>
-                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; padding: 10px 0; text-align: right;" align="right">€0</td>
-                                  </tr>
-                                  <tr>
-                                    <td style="word-break: normal; color: #fff; font-size: 20px; line-height: 30px; border-top: 1px solid #555; font-weight: 500; padding: 10px 0px 0px 0px; text-align: left;" colspan="2" align="left">Total</td>
-                                    <td style="word-break: normal; color: #fff; font-size: 20px; line-height: 30px; border-top: 1px solid #555; font-weight: 500; text-align: right; padding: 10px 0px 0px 0px;" align="right">€29.02</td>
-                                  </tr>
+                                  
                                 </tbody></table>
                               </td>
                             </tr>
