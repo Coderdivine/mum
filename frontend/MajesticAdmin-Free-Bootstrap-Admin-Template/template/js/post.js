@@ -4,4 +4,6 @@ let brand = document.getElementById("brand");
 let category = document.getElementById("category");
 let price = document.getElementById("price");
 let rate = document.getElementById("rate");
+let quantity = document.getElementById("quantity");
+let sizes = document.getElementById("sizes");
 let name = document.getElementById("name");
