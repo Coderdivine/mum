@@ -634,13 +634,6 @@ async function sendMail({email,message,data},res){
                                     </tr>
                                   </tbody></table>
                                 </div>
-                                <!--[if mso | IE]>
-                              </td>
-                            
-                          </tr>
-                        
-                                    </table>
-                                  <![endif]-->
                               </td>
                             </tr>
                           </tbody>
