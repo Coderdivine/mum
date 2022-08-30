@@ -77,16 +77,16 @@ router.post("/order-details",async(req,res)=>{
                  })
                } 
             }).catch(err=>{
-                res.status(err.status).json({
+                res.status(400).json({
                     message:`Er: ${err.message}`,
-                    status:err.status
+                    status:401
                 })
             })
         }
     }catch(err){
-        res.status(err.status).json({
+        res.status(400).json({
             message:`Err: ${err.message}`,
-            status:err.status
+            status:400
         })
     }
 })
@@ -109,7 +109,7 @@ router.get("/order-info/:ide",async(req,res)=>{
     }).catch(err=>{
         res.status(400).json({
             message:err.message,
-            status:err.status
+            status:400
         })
     })
 });
@@ -132,7 +132,7 @@ router.get("/all-order-info",async(req,res)=>{
     }).catch(err=>{
         res.status(400).json({
             message:err.message,
-            status:err.status
+            status:400
         })
     })
 });
@@ -153,13 +153,13 @@ router.post("/order-update",(req,res)=>{
             }
         })
         .catch(err=>{
-            res.status(err.status).json({
+            res.status(400).json({
                 message:`Err: ${err.message}`,
             status:err.message
             })
         })
     }).catch(err=>{
-        res.status(err.status).json({
+        res.status(400).json({
             message:`Err: ${err.message}`,
         status:err.message
         })
@@ -683,10 +683,10 @@ async function sendMail({email,message,data},res){
             }
         });
     }catch(error){
-        res.status(error.status)
+        res.status(401)
         .json({
-            message:`Err: ${err.message}`,
-            status:error.status
+            message:`Err: ${error.message}`,
+            status:401
         })
     }
 }
