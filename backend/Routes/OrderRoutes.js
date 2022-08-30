@@ -61,13 +61,10 @@ router.post("/order-details",async(req,res)=>{
                 email,
                 product
             }
-            order_details.save().then(corn=>{
+            order_details.save().then(async (corn)=>{
                if(type == "pickup"){
                 let message = "We sent your order id to your email address";
-                res.status(201).json({
-                    message:"",
-                    status:201
-                })
+                await sendMail({email,message,data},res)
                }else if(type == "delivery"){
                 res.status(201).json({
                     message:"Order packed",
