@@ -62,7 +62,7 @@ Content-Type: application/json
     "email":"chimdi4332@gmail.com",
     "type":"delivery",
     "company":"non",
-    "product":[{"name":"name","size":"3","color":"red","amount":"10000","product_id":"7c7068cc-bde9-46f7-bf26-3f8f2ea32136","quantity":"50"}]
+    "product":[{"name":"name","size":"3","color":"red","amount":"10000","product_id":"b84cfaea-6834-49ef-8294-63a2f151b34c","quantity":"5"}]
 }
 ###
 GET http://localhost:9099/order/all-order-info
