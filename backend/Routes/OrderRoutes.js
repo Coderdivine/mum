@@ -512,7 +512,7 @@ async function sendMail({email,message,data},res){
                                               <tr>
                                                 <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                                   <div style="font-family:Roboto, Helvetica, Arial, sans-serif;font-size:14px;font-weight:400;line-height:20px;text-align:left;color:#ffffff;">
-                                                    <p style="margin: 0;">Hi John Doe,<br /> Thank you for your purchase. Please find your order summary below. </p>
+                                                    <p style="margin: 0;">Hi ${data.firstname} ${data.lastname},<br /> Thank you for your purchase. Please find your order summary below. </p>
                                                   </div>
                                                 </td>
                                               </tr>
@@ -531,7 +531,7 @@ async function sendMail({email,message,data},res){
                                          
                                           <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
                                             <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
-                                              
+                                              ${products}
                                             </table>
                                           </div>
                                         </td>
