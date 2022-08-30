@@ -11,3 +11,6 @@ let weight = document.getElementById("weight");
 let btn = document.getElementById("btn");
 let img_btn = document.getElementById("img_btn");
 let img_json = [];
+img_btn.addEventListener("click",function(){
+    
+})
