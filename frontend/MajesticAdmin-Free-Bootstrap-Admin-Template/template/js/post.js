@@ -16,6 +16,7 @@ image.addEventListener("change",async function(){
         const form = new FormData();
         form.append("file",image.files[0]);
         form.append("upload_preset","jawkxoys");
+        console.log(form)
         axios({
             method:"POST",
             url:"https://api.cloudinary.com/v1_1/axgura/image/upload",
