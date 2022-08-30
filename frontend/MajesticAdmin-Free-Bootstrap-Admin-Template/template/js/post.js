@@ -8,3 +8,4 @@ let quantity = document.getElementById("quantity");
 let sizes = document.getElementById("sizes");
 let image = document.getElementById("image");
 let weight = document.getElementById("weight");
+let btn = document.getElementById("btn");
