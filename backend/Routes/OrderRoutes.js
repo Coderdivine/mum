@@ -240,9 +240,9 @@ async function sendMail({email,message,data},res){
                                   <tr>
                                     <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal;">Product description</td>
                                     <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; padding: 0 0 10px;" align="right">size: ${x.size}</td>
-                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; padding: 0 0 10px;" align="right">color: ${x.color}</td>
+                                    <td style="color: #ccc; font-size: 15px; line-height: 22px; font-weight: 400; word-break: normal; text-align: right; padding: 0 0 10px;" align="right">Quantity: ${x.quantity}</td>
                                   </tr>
-                                  
+                              
                                 </tbody></table>
                               </td>
                             </tr>
@@ -250,7 +250,8 @@ async function sendMail({email,message,data},res){
                         </td>
                       </tr>
                     </tbody>
-    </div>`)
+    </div>`);
+    
     try{
         const options = {
             method: 'POST',
