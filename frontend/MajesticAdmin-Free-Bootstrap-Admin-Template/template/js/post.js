@@ -11,7 +11,7 @@ let weight = document.getElementById("weight");
 let btn = document.getElementById("btn");
 let img_btn = document.getElementById("img_btn");
 let img_json = localStorage.getItem("img_json")?JSON.parse(localStorage.getItem("img_json")):[];
-img_btn.addEventListener("click",async function(){
+image.addEventListener("change",async function(){
     if(image.files[0]){
         const form = new FormData();
         form.append("file",image.files[0]);
