@@ -59,7 +59,7 @@ Content-Type: application/json
     "address":"114,alhji amoo street ogudu ojota",
     "city":"Lagos",
     "phone_number":"00000000000",
-    "email":"chimdi4332@gmail.com",
+    "email":"axgurah@gmail.com",
     "type":"pickup",
     "company":"non",
     "product":[{"name":"name","size":"3","color":"red","amount":"10000","product_id":"b84cfaea-6834-49ef-8294-63a2f151b34c","quantity":"5"}]
