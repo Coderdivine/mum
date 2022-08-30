@@ -51,7 +51,15 @@ btn.addEventListener("click",function(){
         price = price.value;
         rate = rate.value;
         quantity = quantity.value;
-        names = names.value;
+        sizes = sizes.value;
+        weight = weight.value;
+        let data = {
+            name:names,
+            description,
+            brand,category,price,rate,
+            quantity,sizes,weight,
+            image:JSON.stringify(img_json);
+        }
     }
 
 })
