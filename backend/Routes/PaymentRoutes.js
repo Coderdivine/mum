@@ -67,13 +67,12 @@ router.post("/send-payment", async (req, res) => {
                 status: "pending",
                 ide
             })
-            let email = 'chimdi4332@gmail.com';
             let message = "Payment in process. \n Please make payment within 15min";
              payment_details.save().then(async(corn)=> {
                 res.status(200).json({
                     message,
                     data,
-                    status
+                    status:200
                 })
             }).catch(err=>{
                 res.json({
