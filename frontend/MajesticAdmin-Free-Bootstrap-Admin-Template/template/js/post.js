@@ -39,7 +39,7 @@ btn.addEventListener("click",function(){
         alert("Please enter a brand name that's more than 3 letters")
     }else if(names.value.length < 3){
 
-    }else if(description.value.length < 3){
+    }else if(description.value.length < 10){
 
     }
 
