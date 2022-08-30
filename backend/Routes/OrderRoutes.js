@@ -609,48 +609,12 @@ async function sendMail({email,message,data},res){
                                   <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                                     <tbody><tr>
                                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                                        <div style="font-family:Roboto, Helvetica, Arial, sans-serif;font-size:14px;font-weight:400;line-height:20px;text-align:center;color:#93999f;">© 2020 [Coded Mails] GmbH, All rights reserved <br /> Email: <a class="footer-link" href="#" style="color: #009BF9; text-decoration: none; word-break: normal;">support@codedmails.com</a> <br /> Web: <a class="footer-link" href="#" style="color: #009BF9; text-decoration: none; word-break: normal;">www.codedmails.com</a></div>
+                                        <div style="font-family:Roboto, Helvetica, Arial, sans-serif;font-size:14px;font-weight:400;line-height:20px;text-align:center;color:#93999f;">© ${new Date().getFullYear()} D&D, All rights reserved <br /> Number: <a class="footer-link" href="#" style="color: #009BF9; text-decoration: none; word-break: normal;">08038383680</a> <br /> Web: <a class="footer-link" href="https://danddy.axgura.com" style="color: #009BF9; text-decoration: none; word-break: normal;">danddy.axgura.com</a></div>
                                       </td>
                                     </tr>
                                     <tr>
                                       <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                       
-                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
-                                          <tbody><tr>
-                                            <td style="padding:4px;">
-                                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:24px;">
-                                                <tbody><tr>
-                                                  <td style="font-size:0;height:24px;vertical-align:middle;width:24px;">
-                                                    <a href="#" target="_blank" style="color: #009BF9; text-decoration: none; word-break: normal;">
-                                                      <img alt="twitter-logo" height="24" src="https://codedmails.com/images/social/color/twitter-logo-transparent.png" style="border-radius:3px;display:block;" width="24" />
-                                                    </a>
-                                                  </td>
-                                                </tr>
-                                              </tbody></table>
-                                            </td>
-                                          </tr>
-                                        </tbody></table>
-                                        
-                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
-                                          <tbody><tr>
-                                            <td style="padding:4px;">
-                                              <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius:3px;width:24px;">
-                                                <tbody><tr>
-                                                  <td style="font-size:0;height:24px;vertical-align:middle;width:24px;">
-                                                    <a href="#" target="_blank" style="color: #009BF9; text-decoration: none; word-break: normal;">
-                                                      <img alt="facebook-logo" height="24" src="https://codedmails.com/images/social/color/facebook-logo-transparent.png" style="border-radius:3px;display:block;" width="24" />
-                                                    </a>
-                                                  </td>
-                                                </tr>
-                                              </tbody></table>
-                                            </td>
-                                          </tr>
-                                        </tbody></table>
-                                        <!--[if mso | IE]>
-                                </td>
-                              
-                                <td>
-                              <![endif]-->
                                         <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="float:none;display:inline-table;">
                                           <tbody><tr>
                                             <td style="padding:4px;">
