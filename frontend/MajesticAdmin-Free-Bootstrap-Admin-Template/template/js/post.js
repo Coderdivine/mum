@@ -6,4 +6,5 @@ let price = document.getElementById("price");
 let rate = document.getElementById("rate");
 let quantity = document.getElementById("quantity");
 let sizes = document.getElementById("sizes");
-let name = document.getElementById("name");
+let image = document.getElementById("image");
+let weight = document.getElementById("weight");
