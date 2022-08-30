@@ -221,7 +221,10 @@ async function IncrementProduct(data){
 
 };
 async function sendMail({email,message,data},res){
-    const products = data.product.map(x=>`
+    
+
+    try{
+        const products = data.product.map(x=>`
     <div>
     <tbody>
                       <tr>
@@ -252,8 +255,6 @@ async function sendMail({email,message,data},res){
                       </tr>
                     </tbody>
     </div>`);
-
-    try{
         const options = {
             method: 'POST',
             url: 'https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send',
