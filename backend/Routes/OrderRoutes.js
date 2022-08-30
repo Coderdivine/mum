@@ -53,6 +53,10 @@ router.post("/order-details",async(req,res)=>{
                 product,
                 date:Date.now()
             });
+            let data = {
+                payment_cards,
+                
+            }
             order_details.save().then(corn=>{
                if(type == "pickup"){
                 res.status(201).json({
