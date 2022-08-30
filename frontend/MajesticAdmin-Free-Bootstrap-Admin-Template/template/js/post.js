@@ -34,3 +34,11 @@ img_btn.addEventListener("click",async function(){
         alert("Please choose a image first")
     }
 });
+btn.addEventListener("click",function(){
+    if(){
+
+    }else if(){
+
+    }else if(){}
+})
+
