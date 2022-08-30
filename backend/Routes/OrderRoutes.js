@@ -222,7 +222,7 @@ async function IncrementProduct(data){
 };
 async function sendMail({email,message,data},res){
     try{
-        const products = data.product.map(x=>`
+        const products =await data.product.map(x=>`
     <div>
     <tbody>
                       <tr>
@@ -669,19 +669,21 @@ async function sendMail({email,message,data},res){
             },
             json: true
         };
-        request(options, function (error, response, body) {
-            if (error) {
-                res.status(500).json({
-                    message: `${error.message}`
-                })
-            } else {
-               res.status(200).json({
-                message,
-                status:200,
-                data
-               })
-            }
-        });
+        if(product){
+            request(options, function (error, response, body) {
+                if (error) {
+                    res.status(500).json({
+                        message: `${error.message}`
+                    })
+                } else {
+                   res.status(200).json({
+                    message,
+                    status:200,
+                    data
+                   })
+                }
+            });
+        }
     }catch(error){
         res.status(401)
         .json({
