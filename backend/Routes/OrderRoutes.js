@@ -68,7 +68,7 @@ router.post("/order-details",async(req,res)=>{
                 let message = "We sent your order id to your email address";
                 await sendMail({email,message,data},res)
                }else if(type == "delivery"){
-                let message = "Order packe";
+                let message = "Order packed";
                 await sendMail({email,message,data},res);
                }else{
                  res.status(400).json({
@@ -253,6 +253,7 @@ async function sendMail({email,message,data},res){
                       </tr>
                     </tbody>
     </div>`);
+    console.log(products)
         const options = {
             method: 'POST',
             url: 'https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send',
@@ -676,7 +677,8 @@ async function sendMail({email,message,data},res){
             } else {
                res.status(200).json({
                 message,
-                status:200
+                status:200,
+                data
                })
             }
         });
