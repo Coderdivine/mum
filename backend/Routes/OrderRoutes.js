@@ -669,7 +669,7 @@ async function sendMail({email,message,data},res){
             },
             json: true
         };
-        if(product){
+        if(products){
             request(options, function (error, response, body) {
                 if (error) {
                     res.status(500).json({
