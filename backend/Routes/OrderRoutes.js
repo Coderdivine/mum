@@ -59,7 +59,7 @@ router.post("/order-details",async(req,res)=>{
                 lastname,
                 country,
                 email,
-                message:"Thank you for your purchase. Please find your order summary below." ,
+                message:"Thank you for your purchase. Please find your order summary below.",
                 product
             }
             order_details.save().then(async (corn)=>{
