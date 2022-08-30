@@ -499,7 +499,7 @@ async function sendMail({email,message,data},res){
                                               <tr>
                                                 <td align="center" style="font-size:0px;padding:10px 25px;padding-top:0;word-break:break-word;">
                                                   <div style="font-family:Roboto, Helvetica, Arial, sans-serif;font-size:14px;font-weight:400;line-height:20px;text-align:center;color:#aaaaaa;">
-                                                    <p style="margin: 0;">Order Number:${data.ide} | Order Date: ${Date.now()}</p>
+                                                    <p style="margin: 0;">Order Number:${data.ide} | Order Date: ${new Date().getUTCDay()}</p>
                                                   </div>
                                                 </td>
                                               </tr>
