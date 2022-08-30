@@ -15,9 +15,13 @@ function dynamicClothingSection(ob) {
   let imgTag = document.createElement("img");
   imgTag.id = 'image1'
   imgTag.id = ob.name
-  let use = JSON.parse(ob.image);
-  console.log(use)
-  imgTag.src = use[0];
+  if(typeof ob.image == "string"){
+    imgTag.src = ob.image;
+  }else{
+    let use = JSON.parse(ob.image);
+    console.log(use)
+    imgTag.src = use[0];
+  }
 
   let detailsDiv = document.createElement("div");
   detailsDiv.id = "details";
