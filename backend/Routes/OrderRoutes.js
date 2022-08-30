@@ -10,7 +10,7 @@ const {product_detailss,order_detailss, payment_detailss} = require("../Model/in
 const payment_cards = [{
  account_name:"Ezechukwu Uchechukwu",
  account_bank:"Sterling Bank PLC",
- account_number:"",
+ account_number:"0073700400",
 }];
 router.post("/order-details",async(req,res)=>{
     let {firstname,lastname,country,address,city,phone_number
@@ -55,7 +55,7 @@ router.post("/order-details",async(req,res)=>{
             });
             let data = {
                 payment_cards,
-                
+
             }
             order_details.save().then(corn=>{
                if(type == "pickup"){
