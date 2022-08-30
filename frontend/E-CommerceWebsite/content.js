@@ -13,9 +13,10 @@ function dynamicClothingSection(ob) {
   // console.log('link=>' + boxLink);
 
   let imgTag = document.createElement("img");
-  // imgTag.id = 'image1'
-  // imgTag.id = ob.photos
-  imgTag.src = ob.image;
+  imgTag.id = 'image1'
+  imgTag.id = ob.name
+  let use = JSON.stringify(ob.image);
+  imgTag.src = use[0];
 
   let detailsDiv = document.createElement("div");
   detailsDiv.id = "details";
