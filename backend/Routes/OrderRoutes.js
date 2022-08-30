@@ -10,7 +10,7 @@ const {product_detailss,order_detailss, payment_detailss} = require("../Model/in
 const payment_cards = [{
  account_name:"Ezechukwu Uchechukwu",
  account_bank:"Sterling Bank PLC",
- account_number:"0000000000",
+ account_number:"",
 }];
 router.post("/order-details",async(req,res)=>{
     let {firstname,lastname,country,address,city,phone_number
