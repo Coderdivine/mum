@@ -20,9 +20,9 @@ function dynamicClothingSection(ob) {
     imgTag.src = ob.image;
   }else{
     console.log(ob.image)
-    let use = JSON.parse(ob.image);
-    console.log("image",use[0])
-    //imgTag.src = use[0];
+    // let use = JSON.parse(ob.image);
+    // console.log("image",use[0])
+    // //imgTag.src = use[0];
   }
 
   let detailsDiv = document.createElement("div");
