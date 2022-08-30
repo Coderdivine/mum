@@ -66,11 +66,8 @@ router.post("/order-details",async(req,res)=>{
                 let message = "We sent your order id to your email address";
                 await sendMail({email,message,data},res)
                }else if(type == "delivery"){
-                res.status(201).json({
-                    message:"Order packed",
-                    data:payment_cards,
-                    ide
-                })
+                let message = "Order packe";
+                await sendMail({email,message,data},res);
                }else{
                  res.status(400).json({
                     message:"Product type can't be read",
