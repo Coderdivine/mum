@@ -55,7 +55,11 @@ router.post("/order-details",async(req,res)=>{
             });
             let data = {
                 payment_cards,
-
+                firstname,
+                lastname,
+                country,
+                email,
+                product
             }
             order_details.save().then(corn=>{
                if(type == "pickup"){
