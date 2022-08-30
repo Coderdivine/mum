@@ -60,7 +60,7 @@ router.post("/order-details",async(req,res)=>{
             order_details.save().then(corn=>{
                if(type == "pickup"){
                 res.status(201).json({
-                    message:"We sent your order id to your email address",
+                    message:"",
                     status:201
                 })
                }else if(type == "delivery"){
