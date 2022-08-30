@@ -68,9 +68,13 @@ router.post("/send-payment", async (req, res) => {
                 ide
             })
             let email = 'chimdi4332@gmail.com';
-            let message = "Payment in process. \n Please to the account Number below if you haven't";
+            let message = "Payment in process. \n Please make payment within 15min";
              payment_details.save().then(async(corn)=> {
-                await sendMail({email,message,data},res);
+                res.status(200).json({
+                    message,
+                    data,
+                    status
+                })
             }).catch(err=>{
                 res.json({
                     message:`Err: ${err.message}`,

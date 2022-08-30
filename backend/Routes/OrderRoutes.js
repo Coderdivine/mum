@@ -214,5 +214,45 @@ async function IncrementProduct(data){
         }
     }
 
+};
+async function sendMail({email,message,data},res){
+    try{
+        const options = {
+            method: 'POST',
+            url: 'https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send',
+            headers: {
+                'content-type': 'application/json',
+                'X-RapidAPI-Host': 'rapidprod-sendgrid-v1.p.rapidapi.com',
+                'X-RapidAPI-Key': process.env.AUTH_KEY,
+                useQueryString: true
+            },
+            body: {
+                personalizations: [{ to: [{ email: email }], subject: `${message.length > 15 ? message.substring(0, 15) + "..." : message}` }],
+                from: { email: process.env.AUTH_PASS_EMAIL },
+                content: [{
+                    type: 'text/html', value:
+                    ``}]
+            },
+            json: true
+        };
+        request(options, function (error, response, body) {
+            if (error) {
+                res.status(500).json({
+                    message: `${error.message}`
+                })
+            } else {
+               res.status(200).json({
+                message,
+                status:200
+               })
+            }
+        });
+    }catch(error){
+        res.status(error.status)
+        .json({
+            message:`Err: ${err.message}`,
+            status:error.status
+        })
+    }
 }
 module.exports = router;
