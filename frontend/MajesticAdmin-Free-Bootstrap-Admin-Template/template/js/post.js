@@ -23,11 +23,10 @@ img_btn.addEventListener("click",async function(){
             header:{"Content-Type":"multipart/form-data"},
           })
           .then((response)=>{
-            setImg(response.data.secure_url)
+            img_json.push(response.data.secure_url)
             console.log(response.data.secure_url)
-            setCont(true);
-            setMsg("Uploaded");
-            getQueue()
+            console.log(img_json);
+            localStorage.setItem("img_json",JSON.stringify(img_json));
           }).catch((err)=>{
             setMsg("Please select an image");
             playSound("cancel")
