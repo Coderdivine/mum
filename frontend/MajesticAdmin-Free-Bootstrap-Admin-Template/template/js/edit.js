@@ -52,6 +52,6 @@ async function GetData(){
     }else{
         window.location = "/";
     }
-}
+};
 await GetData();
 
