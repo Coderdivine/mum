@@ -1,6 +1,6 @@
 console.clear()
 let id = location.search.split('?')[1]
-let data;
+let data,urls;
 async function GetData(){
     if(id){
         urls = `${urls}/product/${id}`
