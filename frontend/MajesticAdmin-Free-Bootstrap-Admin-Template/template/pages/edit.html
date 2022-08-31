@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Majestic Admin</title>
+        <!-- plugins:css -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="./../vendors/mdi/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="./../vendors/base/vendor.bundle.base.css">
+        <!-- endinject -->
+        <!-- plugin css for this page -->
+        <!-- End plugin css for this page -->
+        <!-- inject:css -->
+        <link rel="stylesheet" href="./../css/style.css">
+        
+        <!-- endinject -->
+        <link rel="shortcut icon" href="./../images/favicon.png" />
+      </head>
+<body>
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Post a Product</h4>
+            <p class="card-description">
+              Fill in the required details
+            </p>
+            <div class="forms-sample">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea class="form-control" id="description" rows="4"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="brand">Brand</label>
+                <input type="text" class="form-control" id="brand" placeholder="Brand">
+              </div>
+              <div class="form-group">
+                <label for="category">Category</label>
+                  <select class="form-control" id="category">
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+              <div class="form-group">
+                <label>File upload</label>
+                <input type="file" name="img[]" id="image" class="file-upload-default">
+                <div class="input-group col-xs-12">
+                  <!-- <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image"> -->
+                  <span class="input-group-append">
+                    <button class="file-upload-browse btn btn-primary" id="img_btn" type="button">Upload</button>
+                  </span>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label for="price">Price</label>
+                <input type="text" class="form-control" id="price" placeholder="Price">
+              </div>
+              <div class="form-group">
+                <label for="rate">Rate</label>
+                <input type="text" class="form-control" id="rate" placeholder="rate">
+              </div>
+              <div class="form-group">
+                <label for="quantity">quantity</label>
+                <input type="text" class="form-control" id="quantity" placeholder="qauntity">
+              </div>
+              <div class="form-group">
+                <label for="sizes">Sizes</label>
+                <input type="text" class="form-control" id="sizes" placeholder="sizes">
+              </div>
+              <div class="form-group">
+                <label for="weight">Select item weight</label>
+                <select class="form-control form-control-lg" id="weight">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              
+              <button type="click" id="btn" class="btn btn-primary me-2">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <script src="./../vendors/base/vendor.bundle.base.js"></script>
+      <!-- endinject -->
+      <!-- inject:js -->
+      <script src="./../js/off-canvas.js"></script>
+      <script src="./../js/hoverable-collapse.js"></script>
+      <script src="./../js/template.js"></script>
+      <!-- endinject -->
+      <!-- Custom js for this page-->
+      <script src="./../js/file-upload.js"></script>
+      <script src="./../js/edit.js"></script>
+</body>
+</html>
