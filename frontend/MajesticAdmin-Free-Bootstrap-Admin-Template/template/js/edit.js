@@ -86,9 +86,9 @@ async function GetData(){
             data = res.data[0];
                names.value = data.name;   
                description.value = data.description; 
-               description.value = data.description; 
-               description.value = data.description; 
-               description.value = data.description; 
+               brand.value = data.brand; 
+               category.value = data.category; 
+               price.value = data.price;
                description.value = data.description; 
          }
        }catch(er){
