@@ -53,11 +53,8 @@ async function GetData(){
             data = res.data[0];
                names.value = data.name;   
                description.value = data.description; 
-               brand.value = data.brand; 
-               category.value = data.category; 
                price.value = data.price;
-               rate.value = data.rate; 
-
+            console.table(data)
          }
        }catch(er){
         alert(`Error: ${er.message}`);
