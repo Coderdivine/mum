@@ -1,6 +1,14 @@
 console.clear()
-
 let id = location.search.split('?')[1]
+let data;
+async function GetData(){
+    if(id){
+        let response = await fetch(`https://api.github.com/users/${id}`)
+        data = await response.json()
+
+    }
+}
+
 console.log(id)
 let names = document.getElementById("name");
 let description = document.getElementById("description");
