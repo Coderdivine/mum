@@ -1,3 +1,7 @@
+console.clear()
+
+let id = location.search.split('?')[1]
+console.log(id)
 let names = document.getElementById("name");
 let description = document.getElementById("description");
 let brand = document.getElementById("brand");
