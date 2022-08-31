@@ -85,11 +85,11 @@ async function GetData(){
         if(res.data){
             data = res.data[0];
                names.value = data.name;   
-               names.value = data.name; 
-               names.value = data.name; 
-               names.value = data.name; 
-               names.value = data.name;  
-               names.value = data.name; 
+               description.value = data.description; 
+               description.value = data.description; 
+               description.value = data.description; 
+               description.value = data.description; 
+               description.value = data.description; 
          }
        }catch(er){
         alert(`Error: ${er.message}`);
