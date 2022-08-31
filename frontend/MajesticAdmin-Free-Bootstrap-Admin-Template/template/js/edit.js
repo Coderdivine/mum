@@ -23,7 +23,8 @@ btn.addEventListener("click",function(){
             amount:price
         };
         console.table(data);
-        axios.post("https://ax-mum.herokuapp.com/product/product-details",data)
+        urls =  "https://ax-mum.herokuapp.com/product/edit-product"
+        axios.post(urls,data)
         .then(res=>{
             alert(res.data.message);
             localStorage.setItem("img_json",[]);
