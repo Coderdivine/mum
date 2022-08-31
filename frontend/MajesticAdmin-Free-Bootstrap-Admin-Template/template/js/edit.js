@@ -6,6 +6,8 @@ async function GetData(){
         let response = await fetch(`https://api.github.com/users/${id}`)
         data = await response.json()
 
+    }else{
+        window.location = "/";
     }
 }
 
