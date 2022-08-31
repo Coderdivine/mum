@@ -4,11 +4,16 @@ let data,urls;
 urls = "https://ax-mum.herokuapp.com/";
 async function GetData(){
     if(id){
+       try{
         urls = `${urls}/product/${id}`
         const res = await axios.get(urls);
         if(res.data){
+            data = res.data;       
+         }
+       }catch(er){
+        al
+       }
 
-        }
     }else{
         window.location = "/";
     }
