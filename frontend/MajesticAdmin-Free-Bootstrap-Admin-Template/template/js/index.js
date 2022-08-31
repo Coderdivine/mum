@@ -8,6 +8,7 @@ let urls = "https://ax-mum.herokuapp.com";
 
 
 async function GetData(){
+    urls = `${urls}/product/all-product`
    axios.get(urls).then(res=>{
     let data = res.data.data[0];
    }).catch(err=>{
