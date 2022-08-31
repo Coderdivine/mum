@@ -6,9 +6,9 @@ async function GetData(){
     if(id){
         urls = `${urls}/product/${id}`
         const res = await axios.get(urls);
-        if(res.data){}
+        if(res.data){
 
-
+        }
     }else{
         window.location = "/";
     }
