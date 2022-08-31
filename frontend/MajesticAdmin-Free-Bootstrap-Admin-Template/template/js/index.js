@@ -7,16 +7,17 @@ let total_views = document.getElementById("total_views");
 let urls = "https://ax-mum.herokuapp.com";
 
 async function SumUp(data){
-    data && data.filter(n=> n.myCode == mycode )
-.forEach(list => {
-  sum+=Number(list.click);
+    let sum = 0;
+    await data && data.forEach(list => {
+  sum+=Number(list.price);
 });
 }
 async function GetData(){
-    urls = `${urls}/product/all-product`
+    urls = `${urls}/product/all-product`;
    axios.get(urls).then(async(res)=>{
     let data = res.data.data;
      await SumUp();
+     axios.get()
    }).catch(err=>{
     alert(`Error: ${err.message}`)
    })
