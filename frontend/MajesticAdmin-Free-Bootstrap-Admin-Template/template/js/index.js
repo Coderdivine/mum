@@ -43,8 +43,8 @@ async function GetOrderData(){
      let mapped = data.map(x=>`
      <td>${x.firstname} ${x.lastname}</td>
                             <td>${x.type}</td>
-                            <td>114, alahji amoo street</td>
-                            <td>$790</td>
+                            <td>${x.address}</td>
+                            <td>NGN ${x.amount}</td>
                             <td>09011100010</td>
                             <td>chimdi4332@gmail.com</td>
                             <td>7</td>
