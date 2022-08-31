@@ -8,19 +8,13 @@ let description = document.getElementById("description");
 let price = document.getElementById("price");
 let btn = document.getElementById("btn");
 btn.addEventListener("click",function(){
-    if(brand.value.length < 3){
-        alert("Please enter a brand name that's more than 3 letters")
-    }else if(names.value.length < 3){
-        alert("Please enter a  name that's more than 3 letters")
+    if(names.value.length < 3){
+        alert("Please enter a name that's more than 3 letters")
     }else if(description.value.length < 10){
         alert("Please enter a description that's more than 10 letters")
-    }else if(img_json.length == 0){
-        alert("Please upload a image before making request")
     }else{
         names = names.value;
         description = description.value;
-        brand = brand.value;
-        category = category.value;
         price = price.value;
         rate = rate.value;
         quantity = quantity.value;
@@ -29,7 +23,8 @@ btn.addEventListener("click",function(){
         let data = {
             name:names,
             description,
-            brand,category,price,rate,
+            amount:price,
+            rate,
             quantity,sizes,weight,
             image:JSON.stringify(img_json)
         };
@@ -54,7 +49,7 @@ async function GetData(){
                names.value = data.name;   
                description.value = data.description; 
                price.value = data.price;
-            console.table(data)
+                console.table(data)
          }
        }catch(er){
         alert(`Error: ${er.message}`);
