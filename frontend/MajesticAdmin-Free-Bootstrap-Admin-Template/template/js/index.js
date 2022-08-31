@@ -20,7 +20,11 @@ async function GetData(){
      urls = `https://ax-mum.herokuapp.com/order/all-order-info`
      const show_ = await axios.get(urls);
      if(show_.data){
-
+        data = show_.data;
+        let sum = 0;
+     await data && data.forEach(list => {
+          sum+=Number(list.price);
+     })
      }else{
         alert("Show was not found");
      }
