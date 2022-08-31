@@ -5,10 +5,10 @@ urls = "https://ax-mum.herokuapp.com/";
 async function GetData(){
     if(id){
        try{
-        urls = `${urls}/product/${id}`
+        urls = `${urls}/product/product-info/${id}`
         const res = await axios.get(urls);
         if(res.data){
-            data = res.data;       
+            data = res.data[0];       
          }
        }catch(er){
         alert(`Error: ${er.message}`);
@@ -16,6 +16,10 @@ async function GetData(){
     }else{
         window.location = "/";
     }
+}
+async function reFormation(){
+    await GetData();
+
 }
 
 console.log(id)
