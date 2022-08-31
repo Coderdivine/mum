@@ -35,7 +35,7 @@ async function GetData(){
 GetData()
 async function GetOrderData(){
     urls = "https://ax-mum.herokuapp.com";
-    urls = `${urls}/order/all-order-info";
+    urls = `${urls}/order/all-order-info`;
     axios.get(urls).then(res=>{
      let data = res.data.data;
      let mapped = data.map(x=>`
