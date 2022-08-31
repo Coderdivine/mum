@@ -2,23 +2,6 @@ console.clear()
 let id = location.search.split('?')[1]
 let data,urls;
 urls = "https://ax-mum.herokuapp.com/";
-async function GetData(){
-    if(id){
-       try{
-        urls = `${urls}/product/product-info/${id}`
-        const res = await axios.get(urls);
-        if(res.data){
-            data = res.data[0];       
-         }
-       }catch(er){
-        alert(`Error: ${er.message}`);
-       }
-    }else{
-        window.location = "/";
-    }
-}
-await GetData();
-
 console.log(id)
 let names = document.getElementById("name");
 let description = document.getElementById("description");
@@ -94,3 +77,21 @@ btn.addEventListener("click",function(){
     }
 
 });
+async function GetData(){
+    if(id){
+       try{
+        urls = `${urls}/product/product-info/${id}`;
+        const res = await axios.get(urls);
+        if(res.data){
+            data = res.data[0];
+                  
+         }
+       }catch(er){
+        alert(`Error: ${er.message}`);
+       }
+    }else{
+        window.location = "/";
+    }
+}
+await GetData();
+
