@@ -6,6 +6,10 @@ let urls = "https://ax-mum.herokuapp.com";
 
 
 async function GetData(){
-
+ 
 }
 GetData()
+async function GetOrderData(){
+ 
+}
+GetOrderData()
