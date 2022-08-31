@@ -89,7 +89,8 @@ async function GetData(){
                brand.value = data.brand; 
                category.value = data.category; 
                price.value = data.price;
-               description.value = data.description; 
+               rate.value = data.rate; 
+               
          }
        }catch(er){
         alert(`Error: ${er.message}`);
