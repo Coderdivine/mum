@@ -40,8 +40,15 @@ async function GetOrderData(){
     urls = `${urls}/product/all-product`;
     axios.get(urls).then(res=>{
      let data = res.data.data;
-     let mapped = data.map(x=>`<div>
-     </div>`);
+     let mapped = data.map(x=>`
+     <td>${x.firstname} ${x.lastname}</td>
+                            <td>${x.type}</td>
+                            <td>114, alahji amoo street</td>
+                            <td>$790</td>
+                            <td>09011100010</td>
+                            <td>chimdi4332@gmail.com</td>
+                            <td>7</td>
+     `);
      order.innerHTML = mapped;
     }).catch(err=>{
      alert(`Error: ${err.message}`)
