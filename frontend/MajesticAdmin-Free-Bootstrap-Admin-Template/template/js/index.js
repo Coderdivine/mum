@@ -17,6 +17,11 @@ async function GetData(){
 }
 GetData()
 async function GetOrderData(){
- 
+    urls = `${urls}/product/all-product`
+    axios.get(urls).then(res=>{
+     let data = res.data.data;
+    }).catch(err=>{
+     alert(`Error: ${err.message}`)
+    })
 }
 GetOrderData()
