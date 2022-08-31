@@ -11,7 +11,7 @@ async function GetData(){
             data = res.data;       
          }
        }catch(er){
-        al
+        alert(`Error: ${er.message}`);
        }
 
     }else{
