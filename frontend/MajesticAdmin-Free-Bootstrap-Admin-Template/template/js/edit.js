@@ -29,7 +29,7 @@ btn.addEventListener("click",function(){
         axios.post(urls,data)
         .then(res=>{
             alert(res.data.message)
-            console.log(res.data.data);
+            console.log(res.data);
         }).catch(err=>{
             alert(`Something went wrong: ${err.message}`)
         });
