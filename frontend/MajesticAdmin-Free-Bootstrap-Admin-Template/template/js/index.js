@@ -46,7 +46,7 @@ async function GetOrderData(){
                             <td>${x.address}</td>
                             <td>NGN ${x.amount}</td>
                             <td>${x.phone_number}</td>
-                            <td>chimdi4332@gmail.com</td>
+                            <td>${x.email}</td>
                             <td>7</td>
      `);
      order.innerHTML = mapped;
