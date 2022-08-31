@@ -16,10 +16,6 @@ btn.addEventListener("click",function(){
         names = names.value;
         description = description.value;
         price = price.value;
-        rate = rate.value;
-        quantity = quantity.value;
-        sizes = sizes.value;
-        weight = weight.value;
         let data = {
             ide:id,
             name:names,
