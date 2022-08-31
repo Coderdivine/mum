@@ -7,6 +7,8 @@ let names = document.getElementById("name");
 let description = document.getElementById("description");
 let price = document.getElementById("price");
 let btn = document.getElementById("btn");
+let ide = document.getElementById("id");
+ide.innerHTML = `<p></p>`
 btn.addEventListener("click",function(){
     if(names.value.length < 3){
         alert("Please enter a name that's more than 3 letters")
