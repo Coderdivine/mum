@@ -45,7 +45,7 @@ async function GetOrderData(){
                             <td>${x.type}</td>
                             <td>${x.address}</td>
                             <td>NGN ${x.amount}</td>
-                            <td>09011100010</td>
+                            <td>${x.phone_number}</td>
                             <td>chimdi4332@gmail.com</td>
                             <td>7</td>
      `);
