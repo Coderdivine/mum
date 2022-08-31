@@ -42,6 +42,7 @@ async function GetOrderData(){
      let data = res.data.data;
      let mapped = data.map(x=>`<div>
      </div>`);
+     order.innerHTML = mapped;
     }).catch(err=>{
      alert(`Error: ${err.message}`)
     })
