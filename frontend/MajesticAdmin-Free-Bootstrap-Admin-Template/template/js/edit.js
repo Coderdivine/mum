@@ -40,7 +40,7 @@ async function GetData(){
         urls = `${urls}/product/product-info/${id}`;
         const res = await axios.get(urls);
         if(res.data){
-            data = res.data[0];
+            data = res.data.data[0];
                names.value = data.name;   
                description.value = data.description; 
                price.value = data.price;
