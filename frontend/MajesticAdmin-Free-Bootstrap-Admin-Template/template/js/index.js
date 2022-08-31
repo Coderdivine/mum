@@ -17,7 +17,13 @@ async function GetData(){
    axios.get(urls).then(async(res)=>{
     let data = res.data.data;
      await SumUp();
-     axios.get()
+     urls = `https://ax-mum.herokuapp.com/order/all-order-info`
+     const show_ = await axios.get(urls);
+     if(show_.data){
+
+     }else{
+        alert("Show was not found");
+     }
    }).catch(err=>{
     alert(`Error: ${err.message}`)
    })
