@@ -84,7 +84,7 @@ async function GetData(){
         const res = await axios.get(urls);
         if(res.data){
             data = res.data[0];
-                  
+               names.value = data.name;   
          }
        }catch(er){
         alert(`Error: ${er.message}`);
