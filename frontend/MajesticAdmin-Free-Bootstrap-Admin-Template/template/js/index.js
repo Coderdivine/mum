@@ -8,9 +8,10 @@ let urls = "https://ax-mum.herokuapp.com";
 
 async function SumUp(data){
     let sum = 0;
-    await data && data.forEach(list => {
+    const val = await data && data.forEach(list => {
   sum+=Number(list.price);
 });
+total_views.innerHTML = val
 }
 async function GetData(){
     urls = `${urls}/product/all-product`;
