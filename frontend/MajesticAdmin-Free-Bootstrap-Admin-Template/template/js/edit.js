@@ -3,6 +3,7 @@ let id = location.search.split('?')[1]
 let data;
 async function GetData(){
     if(id){
+        urls = `${urls}/product/${id}`
         await axios.get("htt")
 
     }else{
