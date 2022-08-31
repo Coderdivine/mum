@@ -41,7 +41,7 @@ async function GetOrderData(){
     axios.get(urls).then(res=>{
      let data = res.data.data;
      let mapped = data.map(x=>`
-     <td><a href="">${x.firstname} ${x.lastname}</a></td>
+     <td><a href=""pages/product.html>${x.firstname} ${x.lastname}</a></td>
                             <td>${x.type}</td>
                             <td>${x.address}</td>
                             <td>NGN ${x.amount}</td>
