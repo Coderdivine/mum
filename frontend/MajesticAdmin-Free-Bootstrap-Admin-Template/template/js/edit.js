@@ -39,7 +39,7 @@ btn.addEventListener("click",function(){
 async function GetData(){
     if(id){
        try{
-        urls = `${urls}/product/product-info/${id}`;
+        urls = `${urls}product/product-info/${id}`;
         const res = await axios.get(urls);
         if(res.data){
             data = res.data.data[0];
