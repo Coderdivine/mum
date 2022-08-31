@@ -1,10 +1,11 @@
 console.clear()
 let id = location.search.split('?')[1]
 let data,urls;
+urls = "https://ax-mum.herokuapp.com/";
 async function GetData(){
     if(id){
         urls = `${urls}/product/${id}`
-        await axios.get("htt")
+        await axios.get(urls)
 
     }else{
         window.location = "/";
