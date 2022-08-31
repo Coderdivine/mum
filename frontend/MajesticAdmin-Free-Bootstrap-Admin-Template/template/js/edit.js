@@ -2,7 +2,7 @@ console.clear()
 let id = location.search.split('?')[1]
 let data,urls;
 urls = "https://ax-mum.herokuapp.com/";
-console.log(id)
+console.log(id);
 let names = document.getElementById("name");
 let description = document.getElementById("description");
 let price = document.getElementById("price");
