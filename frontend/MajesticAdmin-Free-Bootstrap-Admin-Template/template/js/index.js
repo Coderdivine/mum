@@ -11,7 +11,7 @@ async function GetData(){
    axios.get(urls).then(res=>{
     let data = res.data.data[0];
    }).catch(err=>{
-
+    alert(`Error: ${err.message}`)
    })
 }
 GetData()
