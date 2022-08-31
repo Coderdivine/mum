@@ -17,10 +17,7 @@ async function GetData(){
         window.location = "/";
     }
 }
-async function reFormation(){
-    await GetData();
-
-}
+await GetData();
 
 console.log(id)
 let names = document.getElementById("name");
