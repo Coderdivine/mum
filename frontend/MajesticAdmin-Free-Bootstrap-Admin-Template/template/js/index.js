@@ -19,7 +19,7 @@ async function GetData(){
      urls = `https://ax-mum.herokuapp.com/order/all-order-info`
      const show_ = await axios.get(urls);
      if(show_.data){
-        data = show_.data;
+        data = show_.data.data;
         let sum = 0;
     const val =  await data && data.forEach(list => {
           sum+=Number(list.price);
