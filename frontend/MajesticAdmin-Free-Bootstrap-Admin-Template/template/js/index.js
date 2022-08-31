@@ -22,9 +22,11 @@ async function GetData(){
      if(show_.data){
         data = show_.data;
         let sum = 0;
-     await data && data.forEach(list => {
+    const val =  await data && data.forEach(list => {
           sum+=Number(list.price);
      })
+
+     total_sales.innerHTML = val;
      }else{
         alert("Show was not found");
      }
