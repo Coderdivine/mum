@@ -15,7 +15,7 @@ async function GetData(){
     urls = `${urls}/product/all-product`;
    axios.get(urls).then(async(res)=>{
     let data = res.data.data;
-     await SumUp();
+     await SumUp(data);
      urls = `https://ax-mum.herokuapp.com/order/all-order-info`
      const show_ = await axios.get(urls);
      if(show_.data){
