@@ -14,7 +14,7 @@ async function SumUp(data){
 }
 async function GetData(){
     urls = `${urls}/product/all-product`
-   axios.get(urls).then(res=>{
+   axios.get(urls).then(async(res)=>{
     let data = res.data.data;
      await SumUp();
    }).catch(err=>{
