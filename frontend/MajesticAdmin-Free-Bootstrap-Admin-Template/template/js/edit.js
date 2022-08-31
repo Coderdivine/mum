@@ -5,7 +5,8 @@ urls = "https://ax-mum.herokuapp.com/";
 async function GetData(){
     if(id){
         urls = `${urls}/product/${id}`
-        await axios.get(urls)
+        await axios.get(urls);
+        if(res.data){}
 
     }else{
         window.location = "/";
