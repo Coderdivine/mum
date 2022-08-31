@@ -9,9 +9,9 @@ let urls = "https://ax-mum.herokuapp.com";
 
 async function GetData(){
    axios.get(urls).then(res=>{
-
+    let data = res.data.data[0];
    }).catch(err=>{
-    
+
    })
 }
 GetData()
