@@ -47,7 +47,7 @@ async function GetOrderData(){
                             <td>NGN ${x.amount}</td>
                             <td>${x.phone_number}</td>
                             <td>${x.email}</td>
-                            <td>7</td>
+                            <td>${x.product.length}</td>
      `);
      order.innerHTML = mapped;
     }).catch(err=>{
