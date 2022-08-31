@@ -21,12 +21,10 @@ btn.addEventListener("click",function(){
         sizes = sizes.value;
         weight = weight.value;
         let data = {
+            ide:id,
             name:names,
             description,
-            amount:price,
-            rate,
-            quantity,sizes,weight,
-            image:JSON.stringify(img_json)
+            amount:price
         };
         console.table(data);
         axios.post("https://ax-mum.herokuapp.com/product/product-details",data)
