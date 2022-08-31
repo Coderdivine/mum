@@ -13,7 +13,6 @@ async function GetData(){
        }catch(er){
         alert(`Error: ${er.message}`);
        }
-
     }else{
         window.location = "/";
     }
