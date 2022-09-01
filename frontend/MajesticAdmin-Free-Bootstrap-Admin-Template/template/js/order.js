@@ -118,7 +118,7 @@ console.log(id)
         
 
     }
-    async function runFor(you){
+    async function runFor(cell){
         for(let i=0;i<cell.length;i++){
             console.log(`ID ${i} =>`,cell[i].product_id)
          axios.get(`https://ax-mum.herokuapp.com/product/product-info/${cell[i].product_id}`)
@@ -132,7 +132,7 @@ console.log(id)
     } 
 async function GetData(cell){
    let post = [];
- await 
+ await runFor(cell)
  console.log("hEY")
  console.table(post);
 if(post.length){
