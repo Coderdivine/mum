@@ -52,7 +52,7 @@ async function GetOrderData() {
                             
                             <td>${x.phone_number}</td>
                             <td>${x.email}</td></tr>
-     `);
+     `).reverse();
         order.innerHTML = mapped;
     }).catch(err => {
         alert(`Error: ${err.message}`)
