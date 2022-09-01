@@ -66,7 +66,14 @@ router.post("/order-details",async(req,res)=>{
             order_details.save().then(async (corn)=>{
                if(type == "pickup"){
                 let message = "We sent your order id to your email address";
-                await sendMail({email,message,data},res)
+                mum_notification = new mum_notifications({
+                  firstname,
+                  lastname,
+                  type
+                })
+                mum_notification.save().then({
+                  await sendMail({email,message,data},res)
+                })
                }else if(type == "delivery"){
                 let message = "Order packed";
                 await sendMail({email,message,data},res);
