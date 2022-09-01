@@ -15,6 +15,7 @@ console.log(id)
         .then(async(res)=>{
             let data = res.data.data;
             console.log(data);
+            GetData(x.product)}`)
             let mapped = data.map(async(x)=>`
             <table class="min-w-max w-full table-auto">
                     <thead>
@@ -105,7 +106,7 @@ console.log(id)
                         </tr>
                     </tbody>
                 </table>
-                ${GetData(x.product)}`)}
+                
               `)
                 card.innerHTML = mapped;
                
