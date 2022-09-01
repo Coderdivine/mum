@@ -98,7 +98,8 @@ Tailwind -->
                 </a>
             </div>
                 </div>`)
-        }).catch(err=>{
+                card.innerHTML = mapped;
+            }).catch(err=>{
             alert(`Error: ${err.message}`);
         })
         posts = [
