@@ -24,7 +24,7 @@ async function GetData() {
             let sum = 0;
             if (data[0].product) {
                 const val = await data && data.forEach(list => {
-                    list.product.map(el=>{
+                    list.product.forEach(el=>{
                         sum += Number(el.amount);
                        console.log("Total_sales",Number(list.price))
                     })
