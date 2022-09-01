@@ -126,6 +126,7 @@ async function GetData(cell){
  .then(res=>{
     let data = res.data.data;
     post.push(data[0]);
+    post.push(data[0]);
     console.log(data[0]);
  }).catch(console.log)
  }
