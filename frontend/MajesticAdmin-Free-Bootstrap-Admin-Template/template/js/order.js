@@ -126,8 +126,8 @@ console.log(id)
          .then(res=>{
             let data = res.data.data;
             posts.push(data[0]);
-            posts.push(data[0]);
             console.log(data[0]);
+            return true
          }).catch(console.log)
          }
          console.log("[DONE] press ctrl+c")
