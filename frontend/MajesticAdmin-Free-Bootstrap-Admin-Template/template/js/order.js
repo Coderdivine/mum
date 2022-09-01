@@ -12,12 +12,12 @@ console.log(id)
     }
     async function xData() {
         axios.get(`https://ax-mum.herokuapp.com/order/order-info/${id}`)
-        .then(async(res)=>{
+        .then(res=>{
             let data = res.data.data;
             console.log(data);
             let celo = data[0].product;
             await GetData(celo);
-            let mapped = data.map(async(x)=>`
+            let mapped = data.map(x=>`
             <table class="min-w-max w-full table-auto">
                     <thead>
                         <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
@@ -110,7 +110,7 @@ console.log(id)
                 
               `)}
               `)
-        card.innerHTML = mapped;
+         card.innerHTML = mapped;
                
             }).catch(err=>{
             alert(`Error: ${err.message}`);
