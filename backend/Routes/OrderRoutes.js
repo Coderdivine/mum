@@ -236,7 +236,7 @@ async function IncrementProduct(data){
 };
 async function sendMail({email,message,data},res){
     try{
-        const products =await data.product.map(x=>`
+        const products = await data.product.map(x=>`
     <div>
     <tbody>
                       <tr>
