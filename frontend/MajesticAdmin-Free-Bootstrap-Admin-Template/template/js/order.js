@@ -115,4 +115,7 @@ console.log(id)
         
 
     }
+async function GetData(){
+    
+}
     xData()
