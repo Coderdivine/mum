@@ -108,7 +108,8 @@ console.log(id)
                 </table>
                 
               `)}
-              `)}
+              `)
+
                 card.innerHTML = mapped;
                
             }).catch(err=>{
