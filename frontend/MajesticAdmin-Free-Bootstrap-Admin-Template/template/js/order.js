@@ -3,7 +3,7 @@ console.log(id)
     let post,card,sub_card;
     let sum =0;
     card = document.getElementById("card");
-    card = document.getElementById("card")
+    sub_card = document.getElementById("sub_card")
     async function convert(x){
        var cont =  x.product && x.product.forEach(list => {
               sum += Number(list.amount);
