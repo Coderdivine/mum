@@ -49,14 +49,13 @@ console.log(id)
                             </td>
                             <td class="py-3 px-6 text-center">
                                 <div class="flex item-center justify-center">
-                                   NGN 10,000,000
-                                   ${convert(x)}
+                                   NGN ${convert(x)}
                                 </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-
+            ${GetData(x.product)}
                 ${x.product.map(el=>`
                     <table class="min-w-max w-full table-auto">
                     <thead>
