@@ -84,9 +84,9 @@ async function Order(){
             alert(`${res.data.message}`)
             window.location = '/orderPlaced.html?';
            }else{
-            console.log(res.data);
+            console.log(res.data.data.ide);
             alert("Order Successfully placed")
-           window.location =  `/payment.html?${res.data.ide}`;
+           window.location =  `/payment.html?${res.data.data.ide}`;
            }
         }).catch(err=>{
             console.log(err);
