@@ -107,7 +107,8 @@ console.log(id)
                     </tbody>
                 </table>
                 
-              `)
+              `)}
+              `)}
                 card.innerHTML = mapped;
                
             }).catch(err=>{
