@@ -17,9 +17,12 @@ function dynamicClothingSection(ob) {
   imgTag.id = ob.name
   if(typeof ob.image !== "string"){
     let use = JSON.parse(ob.image);
-  console.log(use)
+  console.log(use);
+    imgTag.src = ob.image
   }else{
-
+    // let use = JSON.parse(ob.image);
+    // console.log("image",use[0])
+    imgTag.src = ob.image
   }
     console.table(ob.image);
 
