@@ -8,6 +8,7 @@ async function SumUp(data) {
     let sum = 0;
     const val = await data && data.forEach(list => {
         sum += Number(list.price);
+        console.log("total_views",Number(list.price))
     });
     total_views.innerHTML = val;
 }
