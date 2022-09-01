@@ -278,10 +278,13 @@ async function sendMail({email,message,data},res){
                 useQueryString: true
             },
             body: {
-                personalizations: [{ to: [{ email: email }], subject: `${message.length > 15 ? message.substring(0, 15) + "..." : message}` }],
+                personalizations: [{ to: [{ email: email }],
+                 subject: `${message.length > 15 ? message.substring(0, 15) + "..." : message}` }
+                ],
                 from: { email: process.env.AUTH_PASS_EMAIL },
                 content: [{
-                    type: 'text/html', value:
+                    type: 'text/html',
+                     value:
                     `
                     <!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head>
                     <title> Notificatin [Coded Mails] </title>
