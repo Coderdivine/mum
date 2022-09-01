@@ -104,7 +104,7 @@ console.log(id)
                         </tr>
                     </tbody>
                 </table>
-                ${await GetData(x.product)}`)}
+                ${GetData(x.product)}`)}
               `)
                 card.innerHTML = mapped;
                
