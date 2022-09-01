@@ -30,7 +30,7 @@
     let post,card;
     card = document.getElementById("card")
     async function xData() {
-        axios.get("https://ax-mum.herokuapp.com/product/all-product")
+        axios.get(`https://ax-mum.herokuapp.com/order/order-info/${ide}`)
         .then(res=>{
             let data = res.data.data;
             let mapped = data.map(x=>`<div>
