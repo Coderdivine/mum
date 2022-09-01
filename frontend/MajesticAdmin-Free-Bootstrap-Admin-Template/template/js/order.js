@@ -12,7 +12,7 @@ console.log(id)
     }
     async function xData() {
         axios.get(`https://ax-mum.herokuapp.com/order/order-info/${id}`)
-        .then(res=>{
+        .then(async(res)=>{
             let data = res.data.data;
             console.log(data);
             let celo = data[0].product;
