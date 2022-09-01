@@ -118,18 +118,21 @@ console.log(id)
         
 
     }
+    async function runFor(you){
+        for(let i=0;i<cell.length;i++){
+            console.log(`ID ${i} =>`,cell[i].product_id)
+         axios.get(`https://ax-mum.herokuapp.com/product/product-info/${cell[i].product_id}`)
+         .then(res=>{
+            let data = res.data.data;
+            post.push(data[0]);
+            post.push(data[0]);
+            console.log(data[0]);
+         }).catch(console.log)
+         }
+    } 
 async function GetData(cell){
    let post = [];
- for(let i=0;i<cell.length;i++){
-    console.log(`ID ${i} =>`,cell[i].product_id)
- axios.get(`https://ax-mum.herokuapp.com/product/product-info/${cell[i].product_id}`)
- .then(res=>{
-    let data = res.data.data;
-    post.push(data[0]);
-    post.push(data[0]);
-    console.log(data[0]);
- }).catch(console.log)
- }
+ await 
  console.log("hEY")
  console.table(post);
 if(post.length){
