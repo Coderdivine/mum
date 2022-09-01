@@ -4,7 +4,7 @@ console.log(id);
 let account_name = document.getElementById("acc_name");
 let account_number = document.getElementById("acc_number");
 let bank_name = document.getElementById("bank_name");
-let amount;
+let amount =1000;
 let order_id = id;
 let btn = document.getElementById("btn");
 let btn_two = document.getElementById("btn_two");
