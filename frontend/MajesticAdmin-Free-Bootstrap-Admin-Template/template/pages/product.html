@@ -63,29 +63,14 @@
 </section>
 
 <script>
+    let post;
     function xData() {
         
         function shuffle(array) {
-            let currentIndex = array.length,
-                randomIndex;
-
-            // While there remain elements to shuffle.
-            while (currentIndex != 0) {
-                // Pick a remaining element.
-                randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex--;
-
-                // And swap it with the current element.
-                [array[currentIndex], array[randomIndex]] = [
-                    array[randomIndex],
-                    array[currentIndex],
-                ];
-            }
-
-            return array;
+           
         }
 
-        const posts = [
+        posts = [
             {
                 image:
                     "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085",
@@ -116,14 +101,5 @@
             },
         ];
 
-        return {
-            posts: [
-                ...shuffle(posts),
-                ...shuffle(posts),
-                ...shuffle(posts),
-                ...shuffle(posts),
-                ...shuffle(posts),
-            ],
-        };
     }
 </script>
