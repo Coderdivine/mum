@@ -117,6 +117,8 @@ console.log(id)
     }
 async function GetData(cell){
    let post = [];
+ for(let i=0;i<cell.length){
 
+ }
 }
     xData()
