@@ -11,10 +11,10 @@ console.log(id)
     }
     async function xData() {
         axios.get(`https://ax-mum.herokuapp.com/order/order-info/${id}`)
-        .then(res=>{
+        .then(async(res)=>{
             let data = res.data.data;
             console.log(data);
-            let mapped = data.map(x=>`
+            let mapped = data.map(async(x)=>`
             <table class="min-w-max w-full table-auto">
                     <thead>
                         <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
@@ -104,7 +104,7 @@ console.log(id)
                         </tr>
                     </tbody>
                 </table>
-                ${GetData(x.product)}`)}
+                ${await GetData(x.product)}`)}
               `)
                 card.innerHTML = mapped;
                
