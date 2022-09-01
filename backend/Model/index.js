@@ -128,5 +128,6 @@ const payment_detailss = mongoose.model("payment_details",payment_details);
 module.exports = {
     product_detailss,
     order_detailss,
-    payment_detailss
+    payment_detailss,
+    mum_notifications
 };
