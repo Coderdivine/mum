@@ -85,6 +85,7 @@ btn_two.addEventListener("click",function(){
                 console.log("res",res.data);
             }).catch(err=>{
                 alert("Something went wrong")
+                console.log(err)
             })
 
         }else{
