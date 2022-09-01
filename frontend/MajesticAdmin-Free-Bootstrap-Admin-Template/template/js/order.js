@@ -57,7 +57,7 @@ console.log(id)
                     </tbody>
                 </table>
 
-                ${x.produxt.map(el=>`
+                ${x.product.map(el=>`
                     <table class="min-w-max w-full table-auto">
                     <thead>
                         <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
