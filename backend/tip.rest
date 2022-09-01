@@ -67,7 +67,7 @@ Content-Type: application/json
 ###
 GET http://localhost:9099/order/all-order-info
 ###
-GET http://localhost:9099/order/order-info/065b6377-1491-4396-a893-43d686dff8f7
+GET http://localhost:9099/order/order-info/89c135bf-1983-4a89-8031-8e3750849c12
 ###
 POST http://localhost:9099/payment/send-payment
 Content-Type: application/json
