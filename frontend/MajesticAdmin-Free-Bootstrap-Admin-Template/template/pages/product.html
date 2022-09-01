@@ -100,7 +100,8 @@ Tailwind -->
             </div>
                 </div>`)
                 card.innerHTML = mapped;
-                console.log(data)
+                console.table(data)
+                console.log(mapped)
             }).catch(err=>{
             alert(`Error: ${err.message}`);
         });
