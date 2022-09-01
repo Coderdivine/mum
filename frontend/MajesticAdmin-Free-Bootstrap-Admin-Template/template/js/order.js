@@ -119,6 +119,9 @@ async function GetData(cell){
    let post = [];
  for(let i=0;i<cell.length;i++){
  axios.get(`https://ax-mum.herokuapp.com/product/product-info/${cell[i].product_id}`)
+ .then(res=>{
+
+ }).catch(console.log)
  }
 }
     xData()
