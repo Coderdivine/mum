@@ -34,33 +34,9 @@ const product_details = new Schema({
 })
 const product_detailss = mongoose.model("product_details",product_details);
 const mum_notification = new Schema({
-    name:String,
-    rate:String,
-    sold_out:{
-        type:Boolean,
-        required:false
-    },
-    quantity:String,
-    sold:String,
-    brand:{
-        type:String,
-        required:false
-    },
-    category:{
-        type:String,
-        required:true
-    },
-    ide:String,
-    price:Number,
-    description:{
-        type:String,
-        required:true
-    },
-    sizes:String,
-    color:String,
-    image:String,
-    weight:String,
-    date:{
+    firstname:String,
+    lastname:String,
+     date:{
         type:Date,
         default:Date.now()
     }
