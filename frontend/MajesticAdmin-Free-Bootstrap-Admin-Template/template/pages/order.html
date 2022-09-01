@@ -215,7 +215,9 @@ let id = location.search.split('?')[1];
                         </tr>
                     </tbody>
                 </table>
-                <table class="min-w-max w-full table-auto">
+
+                ${x.produxt.map(el=>`
+                    <table class="min-w-max w-full table-auto">
                     <thead>
                         <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                             <th class="py-3 px-6 text-left">Product Name</th>
@@ -276,7 +278,8 @@ let id = location.search.split('?')[1];
                             </td>
                         </tr>
                     </tbody>
-                </table>`)
+                </table>`)}
+              `)
                 card.innerHTML = mapped;
                 console.table(data);
             }).catch(err=>{
