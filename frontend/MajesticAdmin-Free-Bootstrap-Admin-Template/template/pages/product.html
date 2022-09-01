@@ -26,11 +26,10 @@ Tailwind -->
     <!-- Card Grid -->
     <div
         class="grid grid-flow-row gap-8 text-neutral-600 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <template x-for="post in posts">
+        <template>
             <!-- Card Item -->
             <div
-                class="my-8 rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1"
-                x-for="(post, index) in posts">
+                class="my-8 rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1">
                 <!-- Clickable Area -->
                 <a _href="link" class="cursor-pointer">
                     <figure>
