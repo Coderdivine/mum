@@ -121,6 +121,7 @@ console.log(id)
 async function GetData(cell){
    let post = [];
  for(let i=0;i<cell.length;i++){
+    console.log(`${i}`,cell[i].product_id)
  axios.get(`https://ax-mum.herokuapp.com/product/product-info/${cell[i].product_id}`)
  .then(res=>{
     let data = res.data.data;
