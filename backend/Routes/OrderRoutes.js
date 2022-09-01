@@ -76,7 +76,14 @@ router.post("/order-details",async(req,res)=>{
                 })
                }else if(type == "delivery"){
                 let message = "Order packed";
-                await sendMail({email,message,data},res);
+                let mum_notification = new mum_notifications({
+                  firstname,
+                  lastname,
+                  type
+                })
+                mum_notification.save().then(async()=>{
+                  await sendMail({email,message,data},res);
+                })
                }else{
                  res.status(400).json({
                     message:"Product type can't be read",
