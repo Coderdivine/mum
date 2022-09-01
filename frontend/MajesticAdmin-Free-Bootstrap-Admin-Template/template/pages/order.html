@@ -170,6 +170,11 @@
 let id = location.search.split('?')[1];
     let post,card;
     card = document.getElementById("card")
+    async function convert(x){
+        x.product && x.product.forEach(list => {
+              sum += Number(list.amount);
+                                        })
+    }
     async function xData() {
         axios.get(`https://ax-mum.herokuapp.com/order/order-info/${id}`)
         .then(res=>{
