@@ -16,10 +16,10 @@ const contact_service = [{
     address: "SHOP GA 11 Lagos island",
 }];
 const payment_cards = [{
- account_name:"",
- account_bank:"",
- account_number:"",
-}]
+    account_name:"Ezechukwu Uchechukwu",
+    account_bank:"Sterling Bank PLC",
+    account_number:"0073700400",
+   }];
 router.post("/send-payment", async (req, res) => {
     let { account_name, account_number, bank_name, 
         amount, order_id } = req.body;
