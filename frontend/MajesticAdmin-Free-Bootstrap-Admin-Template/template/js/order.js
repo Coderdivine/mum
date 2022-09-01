@@ -45,7 +45,7 @@ console.log(id)
                             </td>
                             <td class="py-3 px-6 text-center">
                                 <div class="flex items-center justify-center">
-                                ${x.product.map(e=>`<span>${e.product_id}</span>`)}
+                                ${x.product.map(e=>`<td><span>${e.product_id}</span></td>`)}
                                 </div>
                             </td>
                             <td class="py-3 px-6 text-center">
@@ -133,49 +133,52 @@ console.log(id)
          console.log("[DONE] press ctrl+c")
     } 
 async function GetData(cell){
- await runFor(cell)
- console.log("hEY")
- console.table(posts);
-if(posts.length){
-    sub_card.innerHTML = posts.map(x=>`
-    <div>
-                   <div
-                   class="my-8 rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1">
-                   <!-- Clickable Area -->
-                   <a  class="cursor-pointer">
-                       <figure>
-                           <!-- Image -->
-                           <img
-                               src=${x.image}
-                               class="rounded-t h-72 w-full object-cover" />
-   
-                           <figcaption class="p-4">
-                               <!-- Title -->
-                               <p
-                                   class="text-lg mb-4 font-bold leading-relaxed text-gray-800 dark:text-gray-300"
-                                   >
-                                   <!-- Post Title -->
-                                   ${x.name}
-                               </p>
-   
-                               <!-- Description -->
-                               <small
-                                   class="leading-5 text-gray-500 dark:text-gray-400"
-                               >
-                                ${x.description}
-                                   <!-- Post Description -->
-                               </small>
-                               <small
-                                   class="leading-5 text-gray-500 dark:text-gray-400"
-                               >
-                                ${x.price}
-                                   <!-- Post Description -->
-                               </small>
-                           </figcaption>
-                          </figure>
-                   </a>
-               </div>
-      </div>`)
-}
+ const show = await runFor(cell)
+ if(show){
+    console.log("hEY")
+    console.table(posts);
+   if(posts.length){
+       sub_card.innerHTML = posts.map(x=>`
+       <div>
+                      <div
+                      class="my-8 rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1">
+                      <!-- Clickable Area -->
+                      <a  class="cursor-pointer">
+                          <figure>
+                              <!-- Image -->
+                              <img
+                                  src=${x.image}
+                                  class="rounded-t h-72 w-full object-cover" />
+      
+                              <figcaption class="p-4">
+                                  <!-- Title -->
+                                  <p
+                                      class="text-lg mb-4 font-bold leading-relaxed text-gray-800 dark:text-gray-300"
+                                      >
+                                      <!-- Post Title -->
+                                      ${x.name}
+                                  </p>
+      
+                                  <!-- Description -->
+                                  <small
+                                      class="leading-5 text-gray-500 dark:text-gray-400"
+                                  >
+                                   ${x.description}
+                                      <!-- Post Description -->
+                                  </small>
+                                  <small
+                                      class="leading-5 text-gray-500 dark:text-gray-400"
+                                  >
+                                   ${x.price}
+                                      <!-- Post Description -->
+                                  </small>
+                              </figcaption>
+                             </figure>
+                      </a>
+                  </div>
+         </div>`)
+   }
+ }
+
 }
     xData()
