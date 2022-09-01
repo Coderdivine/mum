@@ -1,6 +1,7 @@
 let id = location.search.split('?')[1];
 console.log(id)
     let post,card;
+    let sum =0;
     card = document.getElementById("card")
     async function convert(x){
        var cont =  x.product && x.product.forEach(list => {
