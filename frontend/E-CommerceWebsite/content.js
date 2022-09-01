@@ -78,12 +78,12 @@ httpRequest.onreadystatechange = function() {
         if (contentTitle[i].sold_out == true) {
           console.log(contentTitle[i]);
           containerAccessories.appendChild(
-            dynamicClothingSection(contentTitle[contentTitle-1])
+            dynamicClothingSection(contentTitle[i])
           );
         } else {
           console.log(contentTitle[i]);
           containerClothing.appendChild(
-            dynamicClothingSection(contentTitle[contentTitle-1])
+            dynamicClothingSection(contentTitle[i])
           );
         }
       }
