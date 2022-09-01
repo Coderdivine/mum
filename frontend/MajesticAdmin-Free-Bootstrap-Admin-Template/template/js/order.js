@@ -120,7 +120,8 @@ async function GetData(cell){
  for(let i=0;i<cell.length;i++){
  axios.get(`https://ax-mum.herokuapp.com/product/product-info/${cell[i].product_id}`)
  .then(res=>{
-
+    let data = res.data.data;
+    post.push(data[0]);
  }).catch(console.log)
  }
 }
