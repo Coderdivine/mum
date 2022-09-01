@@ -168,6 +168,7 @@
 <script>
     console.clear()
 let id = location.search.split('?')[1];
+console.log(id)
     let post,card;
     card = document.getElementById("card")
     async function convert(x){
@@ -180,6 +181,7 @@ let id = location.search.split('?')[1];
         axios.get(`https://ax-mum.herokuapp.com/order/order-info/${id}`)
         .then(res=>{
             let data = res.data.data;
+            console.table(data);
             let mapped = data.map(x=>`
             <table class="min-w-max w-full table-auto">
                     <thead>
@@ -274,7 +276,7 @@ let id = location.search.split('?')[1];
                 </table>`)}
               `)
                 card.innerHTML = mapped;
-                console.table(data);
+               
             }).catch(err=>{
             alert(`Error: ${err.message}`);
         });
