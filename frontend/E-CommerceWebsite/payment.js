@@ -81,7 +81,7 @@ btn_two.addEventListener("click",function(){
             let ide = id;
             urls = `https://ax-mum.herokuapp.com/payment/update-payment`;
             axios.post(urls,{ide}).then(res=>{
-                alert(response.data.message);
+                alert(res.data.message);
                 console.log("res",res.data);
             }).catch(err=>{
                 alert("Something went wrong")
