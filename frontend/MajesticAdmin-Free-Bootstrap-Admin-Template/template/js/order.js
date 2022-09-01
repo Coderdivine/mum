@@ -2,6 +2,7 @@ let id = location.search.split('?')[1];
 console.log(id)
     let post,card,sub_card;
     let sum =0;
+    let posts = [];
     card = document.getElementById("card");
     sub_card = document.getElementById("sub_card")
     async function convert(x){
@@ -124,19 +125,18 @@ console.log(id)
          axios.get(`https://ax-mum.herokuapp.com/product/product-info/${cell[i].product_id}`)
          .then(res=>{
             let data = res.data.data;
-            post.push(data[0]);
-            post.push(data[0]);
+            posts.push(data[0]);
+            posts.push(data[0]);
             console.log(data[0]);
          }).catch(console.log)
          }
     } 
 async function GetData(cell){
-   let post = [];
  await runFor(cell)
  console.log("hEY")
- console.table(post);
+ console.table(posts);
 if(post.length){
-    sub_card.innerHTML = post.map(x=>`
+    sub_card.innerHTML = posts.map(x=>`
     <div>
                    <div
                    class="my-8 rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1">
