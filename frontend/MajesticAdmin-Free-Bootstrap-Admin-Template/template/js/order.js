@@ -127,6 +127,7 @@ async function GetData(cell){
     post.push(data[0]);
  }).catch(console.log)
  }
+ console.table(post);
 if(post.length){
     sub_card.innerHTML = post.map(x=>`
     <div>
