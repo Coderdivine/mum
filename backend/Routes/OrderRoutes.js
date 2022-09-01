@@ -71,7 +71,7 @@ router.post("/order-details",async(req,res)=>{
                   lastname,
                   type
                 })
-                mum_notification.save().then({
+                mum_notification.save().then(async()=>{
                   await sendMail({email,message,data},res)
                 })
                }else if(type == "delivery"){
