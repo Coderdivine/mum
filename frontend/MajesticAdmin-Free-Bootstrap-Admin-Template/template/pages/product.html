@@ -64,9 +64,10 @@ Tailwind -->
     card = document.getElementById("card")
     async function xData() {
         axios.get("https://ax-mum.herokuapp.com/product/all-product").then(res=>{
-
+            let data = res.data.data;
+            let mapped = data.map(x=>``)
         }).catch(err=>{
-            alert(`Error: ${}`);
+            alert(`Error: ${err.message}`);
         })
         posts = [
             {
