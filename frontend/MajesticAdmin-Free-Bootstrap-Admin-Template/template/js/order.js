@@ -55,7 +55,6 @@ console.log(id)
                         </tr>
                     </tbody>
                 </table>
-            ${GetData(x.product)}
                 ${x.product.map(el=>`
                     <table class="min-w-max w-full table-auto">
                     <thead>
@@ -104,7 +103,8 @@ console.log(id)
                             </td>
                         </tr>
                     </tbody>
-                </table>`)}
+                </table>
+                ${GetData(x.product)}`)}
               `)
                 card.innerHTML = mapped;
                
@@ -124,7 +124,7 @@ async function GetData(cell){
  }).catch(console.log)
  }
 if(post.length){
-    post.map(x=>`
+    return post.map(x=>`
     <div>
                    <div
                    class="my-8 rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1">
