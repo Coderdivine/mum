@@ -65,6 +65,8 @@ Tailwind -->
     async function xData() {
         axios.get("https://ax-mum.herokuapp.com/product/all-product").then(res=>{
 
+        }).catch(err=>{
+            alert(`Error: ${}`);
         })
         posts = [
             {
