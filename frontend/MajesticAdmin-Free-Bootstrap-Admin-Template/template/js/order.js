@@ -13,7 +13,7 @@ console.log(id)
         axios.get(`https://ax-mum.herokuapp.com/order/order-info/${id}`)
         .then(res=>{
             let data = res.data.data;
-            console.table(data);
+            console.log(data);
             let mapped = data.map(x=>`
             <table class="min-w-max w-full table-auto">
                     <thead>
