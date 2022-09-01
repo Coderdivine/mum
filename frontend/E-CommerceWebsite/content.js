@@ -20,9 +20,10 @@ function dynamicClothingSection(ob) {
    // console.log(use[0].substring(4,(use[0].length-4)))
     //imgTag.src = use[0].toString();
     console.log("use => 0",use[1])
+  }else{
+    console.log(ob.image)
+    imgTag.src = ob.image
   }
-  console.log(ob.image)
-  imgTag.src = ob.image
 
   let detailsDiv = document.createElement("div");
   detailsDiv.id = "details";
