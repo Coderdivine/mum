@@ -173,7 +173,7 @@ let id = location.search.split('?')[1];
     async function convert(x){
         x.product && x.product.forEach(list => {
               sum += Number(list.amount);
-                                        })
+      })
     }
     async function xData() {
         axios.get(`https://ax-mum.herokuapp.com/order/order-info/${id}`)
