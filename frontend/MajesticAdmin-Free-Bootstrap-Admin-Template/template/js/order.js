@@ -109,8 +109,7 @@ console.log(id)
                 
               `)}
               `)
-
-                card.innerHTML = mapped;
+        card.innerHTML = mapped;
                
             }).catch(err=>{
             alert(`Error: ${err.message}`);
