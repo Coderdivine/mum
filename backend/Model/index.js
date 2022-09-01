@@ -36,6 +36,7 @@ const product_detailss = mongoose.model("product_details",product_details);
 const mum_notification = new Schema({
     firstname:String,
     lastname:String,
+    type:String,
      date:{
         type:Date,
         default:Date.now()
