@@ -27,10 +27,12 @@
 </section>
 
 <script>
+    console.clear()
+let id = location.search.split('?')[1];
     let post,card;
     card = document.getElementById("card")
     async function xData() {
-        axios.get(`https://ax-mum.herokuapp.com/order/order-info/${ide}`)
+        axios.get(`https://ax-mum.herokuapp.com/order/order-info/${id}`)
         .then(res=>{
             let data = res.data.data;
             let mapped = data.map(x=>`<div>
