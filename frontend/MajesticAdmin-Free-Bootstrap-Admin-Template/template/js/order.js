@@ -124,5 +124,40 @@ async function GetData(cell){
     post.push(data[0]);
  }).catch(console.log)
  }
+ post.map(x=>`
+ <div>
+                <div
+                class="my-8 rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1">
+                <!-- Clickable Area -->
+                <a  class="cursor-pointer">
+                    <figure>
+                        <!-- Image -->
+                        <img
+                            src=${x.image}
+                            class="rounded-t h-72 w-full object-cover" />
+
+                        <figcaption class="p-4">
+                            <!-- Title -->
+                            <p
+                                class="text-lg mb-4 font-bold leading-relaxed text-gray-800 dark:text-gray-300"
+                                >
+                                <!-- Post Title -->
+                                ${x.name}
+                            </p>
+
+                            <!-- Description -->
+                            <small
+                                class="leading-5 text-gray-500 dark:text-gray-400"
+                            >
+                             ${x.description}
+                                <!-- Post Description -->
+                            </small>
+                        </figcaption>
+                        <button class="bg-[#d2691e] text-white rounded-md py-2 px-8 inline-flex items-center justify-center text-grey-400 hover:text-gray-500 hover:bg-[#d2691e] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                            <a href="pages/edit.html?${x.ide}">Edit</a></button>
+                    </figure>
+                </a>
+            </div>
+                </div>`)
 }
     xData()
