@@ -15,7 +15,8 @@ console.log(id)
         .then(async(res)=>{
             let data = res.data.data;
             console.log(data);
-            await GetData(x.product);
+            let celo = data[0].product;
+            await GetData(celo);
             let mapped = data.map(async(x)=>`
             <table class="min-w-max w-full table-auto">
                     <thead>
