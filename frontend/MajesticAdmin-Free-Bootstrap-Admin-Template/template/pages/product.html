@@ -65,7 +65,39 @@ Tailwind -->
     async function xData() {
         axios.get("https://ax-mum.herokuapp.com/product/all-product").then(res=>{
             let data = res.data.data;
-            let mapped = data.map(x=>``)
+            let mapped = data.map(x=>`<div>
+                <div
+                class="my-8 rounded shadow-lg shadow-gray-200 dark:shadow-gray-900 bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1">
+                <!-- Clickable Area -->
+                <a href="" class="cursor-pointer">
+                    <figure>
+                        <!-- Image -->
+                        <img
+                            src=""
+                            class="rounded-t h-72 w-full object-cover" />
+
+                        <figcaption class="p-4">
+                            <!-- Title -->
+                            <p
+                                class="text-lg mb-4 font-bold leading-relaxed text-gray-800 dark:text-gray-300"
+                                >
+                                <!-- Post Title -->
+                                POST TITLE
+                            </p>
+
+                            <!-- Description -->
+                            <small
+                                class="leading-5 text-gray-500 dark:text-gray-400"
+                            >
+                            DESCRIPTION POST
+                                <!-- Post Description -->
+                            </small>
+                        </figcaption>
+                        <button class="bg-[#d2691e] text-white rounded-md py-2 px-8 inline-flex items-center justify-center text-grey-400 hover:text-gray-500 hover:bg-[#d2691e] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">Edit</button>
+                    </figure>
+                </a>
+            </div>
+                </div>`)
         }).catch(err=>{
             alert(`Error: ${err.message}`);
         })
