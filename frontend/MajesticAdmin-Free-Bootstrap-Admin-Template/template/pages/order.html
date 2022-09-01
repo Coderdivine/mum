@@ -210,6 +210,9 @@ let id = location.search.split('?')[1];
                             <td class="py-3 px-6 text-center">
                                 <div class="flex item-center justify-center">
                                    NGN 10,000,000
+                                   ${data && data.forEach(list => {
+                                        sum += Number(list.price);
+                                        })}
                                 </div>
                             </td>
                         </tr>
