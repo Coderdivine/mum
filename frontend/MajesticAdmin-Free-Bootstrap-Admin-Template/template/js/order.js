@@ -130,12 +130,13 @@ console.log(id)
             console.log(data[0]);
          }).catch(console.log)
          }
+         console.log("[DONE] press ctrl+c")
     } 
 async function GetData(cell){
  await runFor(cell)
  console.log("hEY")
  console.table(posts);
-if(post.length){
+if(posts.length){
     sub_card.innerHTML = posts.map(x=>`
     <div>
                    <div
