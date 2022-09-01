@@ -43,9 +43,8 @@ btn.addEventListener("click",function(){
             btn.disabled = true;
             btn.style = "display:none;";
             btn_two.style = "display:grid;";
-
-            ;
             const ans = res.data.data;
+            console.log(ans)
             //please pay ${amount} to this account
             //after 15:00 this order will expire.
             main_change.innerHTML = ` <div id="main_change" class="main_change">
