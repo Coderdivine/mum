@@ -32,7 +32,7 @@ router.post("/order-details",async(req,res)=>{
                 message:"Please input a vaild phone number",
                 status:400
             })
-        }else if(email = "" || email.length < 8){
+        }else if(email == "" || email.length < 8){
             res.status(400).json({
                 message:"Please input a valid email address",
                 status:400
