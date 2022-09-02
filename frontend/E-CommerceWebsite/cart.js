@@ -110,11 +110,19 @@ function dynamicCartSection(ob,itemCounter)
     let boxDiv = document.createElement('div')
     boxDiv.id = 'box'
     boxContainerDiv.appendChild(boxDiv)
+    if(ob.image[0] !== "h"){
+        let use = JSON.parse(ob.image);
+       // console.log(use[0].substring(4,(use[0].length-4)))
+        imgTag.src = use[0].toString();
+        console.log("use => 0",use[1])
+      }else{
+        console.log(ob.image)
+        let boxImg = document.createElement('img')
+        boxImg.src = ob.image
+        boxDiv.appendChild(boxImg)
 
-    let boxImg = document.createElement('img')
-    boxImg.src = ob.image
-    boxDiv.appendChild(boxImg)
-
+      }
+    
     let boxh3 = document.createElement('h3')
     let h3Text = document.createTextNode(ob.name + ' × ' + itemCounter)
     // let h3Text = document.createTextNode(ob.name)
@@ -141,7 +149,7 @@ function dynamicCartSection(ob,itemCounter)
 let totalContainerDiv = document.createElement('div')
 totalContainerDiv.id = 'totalContainer'
 
-let totalDiv = document.createElement('div')
+//let totalDiv = document.createElement('div')
 // totalDiv.id = 'total'
 // totalContainerDiv.appendChild(totalDiv)
 
