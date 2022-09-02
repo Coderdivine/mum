@@ -154,13 +154,13 @@ let totalContainerDiv = document.createElement('div')
 totalContainerDiv.id = 'totalContainer'
 
 let totalDiv = document.createElement('div')
-// totalDiv.id = 'total'
-// totalContainerDiv.appendChild(totalDiv)
+totalDiv.id = 'total'
+totalContainerDiv.appendChild(totalDiv)
 
-// let totalh2 = document.createElement('h2')
-// let h2Text = document.createTextNode('Total Amount')
-// totalh2.appendChild(h2Text)
-// totalDiv.appendChild(totalh2)
+let totalh2 = document.createElement('h2')
+let h2Text = document.createTextNode('Total Amount')
+totalh2.appendChild(h2Text)
+totalDiv.appendChild(totalh2)
 // TO UPDATE THE TOTAL AMOUNT
 function amountUpdate(amount)
 {
