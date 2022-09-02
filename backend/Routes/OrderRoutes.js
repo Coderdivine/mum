@@ -179,6 +179,9 @@ router.post("/order-update",(req,res)=>{
         })
     });
 })
+router.get("/get-notification",(req,res)=>{
+  
+})
 async function IncrementProduct(data){
     try{
         console.log("data",data);
