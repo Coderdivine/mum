@@ -79,7 +79,7 @@ async function New_Order(){
                     ${x.type}
                   </p>
                 </div>
-              </a>`);
+              </a>`).reverse();
              new_order.innerHTML =  cook;
     }).catch(err=>{
         console.log(`${err.message}`)
