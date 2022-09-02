@@ -183,7 +183,11 @@ router.get("/get-notification",(req,res)=>{
   try{
     mum_notifications.find()
     .then(put=>{
-
+      res.status(200).json({
+        message:"Notification",
+        data:put,
+        status:200
+      })
     }).catch(err=>{
       res.status(400).json({
         message:"Notification",
