@@ -83,6 +83,7 @@ btn_two.addEventListener("click",function(){
             axios.post(urls,{ide}).then(res=>{
                 alert(res.data.message);
                 console.log("res",res.data);
+                window.location = '/orderPlaced.html?';
             }).catch(err=>{
                 alert("Something went wrong")
                 console.log(err)
