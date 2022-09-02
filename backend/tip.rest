@@ -80,7 +80,7 @@ Content-Type: application/json
     "order_id":"065b6377-1491-4396-a893-43d686dff8f7"
 }
 ###
-POST https://ax-mum.herokuapp.com/payment/update-payment
+POST http://localhost:9099/payment/update-payment
 Content-Type: application/json
 
 {
