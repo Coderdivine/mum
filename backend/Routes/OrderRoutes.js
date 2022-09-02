@@ -182,6 +182,15 @@ router.post("/order-update",(req,res)=>{
 router.get("/get-notification",(req,res)=>{
   try{
     mum_notifications.find()
+    .then(put=>{
+
+    }).catch(err=>{
+      res.status(400).json({
+        message:"Notification",
+        data:put
+      })
+    })
+
   }catch(err){
 
   }
