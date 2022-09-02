@@ -181,9 +181,9 @@ router.post("/order-update",(req,res)=>{
 })
 router.get("/get-notification",(req,res)=>{
   try{
-
+    mum_notifications.find()
   }catch(err){
-    
+
   }
 })
 async function IncrementProduct(data){
