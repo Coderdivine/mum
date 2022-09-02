@@ -78,7 +78,7 @@ btn_two.addEventListener("click",function(){
     if(btn.disabled == true){
         let is_ = sessionStorage.getItem("order");
         if(is_){
-            let ide = id
+            let ide = id;
             urls = `https://ax-mum.herokuapp.com/payment/update-payment`;
             axios.post(urls,{ide}).then(res=>{
                 alert(res.data.message);
