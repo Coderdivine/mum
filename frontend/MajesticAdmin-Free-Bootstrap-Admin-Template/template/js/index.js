@@ -64,7 +64,7 @@ async function New_Order(){
     axios.get("http:localhost:9099/order/get-notification")
     .then(res=>{
         let datas = res.data.data;
-        datas.map(x=>`
+       let cook = datas.map(x=>`
         <a class="dropdown-item">
                 <div class="item-thumbnail">
                   <div class="item-icon bg-info">
@@ -78,7 +78,7 @@ async function New_Order(){
                   </p>
                 </div>
               </a>`);
-              
+             new_order.innerHTML =  cook;
     }).catch(err=>{
         console.log(`${err.message}`)
     })
