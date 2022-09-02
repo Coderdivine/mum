@@ -20,6 +20,7 @@ const payment_cards = [{
     account_bank:"Sterling Bank PLC",
     account_number:"0073700400",
    }];
+
 router.post("/send-payment", async (req, res) => {
     let { account_name, account_number, bank_name, 
         amount, order_id } = req.body;
