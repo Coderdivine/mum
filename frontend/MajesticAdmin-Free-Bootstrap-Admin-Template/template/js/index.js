@@ -62,6 +62,8 @@ GetOrderData()
 async function New_Order(){
     axios.get("http:localhost:9099/order/get-notification")
     .then(res=>{
-        
+        let datas = res.data.data;
+    }).catch(err=>{
+        console.log(`${err.message}`)
     })
 }
