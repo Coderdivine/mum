@@ -114,7 +114,11 @@ function dynamicCartSection(ob,itemCounter)
         let use = JSON.parse(ob.image);
        // console.log(use[0].substring(4,(use[0].length-4)))
         imgTag.src = use[0].toString();
-        console.log("use => 0",use[1])
+        console.log("use => 0",use[1]);
+        let boxImg = document.createElement('img')
+        boxImg.src = use[0]
+        boxDiv.appendChild(boxImg)
+
       }else{
         console.log(ob.image)
         let boxImg = document.createElement('img')
