@@ -80,11 +80,11 @@ function dynamicContentDetails(ob)
         {
             let imgTagProductPreviewDiv = document.createElement('img')
             imgTagProductPreviewDiv.id = 'previewImg'
-            imgTagProductPreviewDiv.src = use[i]
+            imgTagProductPreviewDiv.src = use[i];
             imgTagProductPreviewDiv.onclick = function(event)
             {
                 console.log("clicked" + this.src)
-                imgTag.src = ob.image[i]
+                imgTag.src = use[i];
                 document.getElementById("imgDetails").src = this.src 
                 
             }
