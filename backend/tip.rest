@@ -87,6 +87,6 @@ Content-Type: application/json
     "ide":"e9427fde-07b9-464c-ad3a-1c348a000c69"
 }
 ###
-GET http://localhost:9099/payment/get-notification
+GET http://localhost:9099/order/get-notification
 ####
 GET http://localhost:9099/payment/check-payment/e9427fde-07b9-464c-ad3a-1c348a000c69
