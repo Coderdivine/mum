@@ -116,7 +116,7 @@ function dynamicCartSection(ob,itemCounter)
         imgTag.src = use[0].toString();
         console.log("use => 0",use[1]);
         let boxImg = document.createElement('img')
-        boxImg.src = use[0]
+        boxImg.src = use[0];
         boxDiv.appendChild(boxImg)
 
       }else{
