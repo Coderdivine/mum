@@ -46,7 +46,7 @@ async function GetOrderData() {
         let data = res.data.data;
         let mapped = data.map(x => `
      <tr>
-     <td><a href="pages/product.html">${x.firstname} ${x.lastname}</a></td>
+     <td><a href="pages/order.html/${x.ide}">${x.firstname} ${x.lastname}</a></td>
                             <td>${x.type}</td>
                             <td>${x.address}</td>
                             
