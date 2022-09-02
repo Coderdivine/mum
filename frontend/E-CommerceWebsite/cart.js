@@ -153,7 +153,7 @@ function dynamicCartSection(ob,itemCounter)
 let totalContainerDiv = document.createElement('div')
 totalContainerDiv.id = 'totalContainer'
 
-//let totalDiv = document.createElement('div')
+let totalDiv = document.createElement('div')
 // totalDiv.id = 'total'
 // totalContainerDiv.appendChild(totalDiv)
 
