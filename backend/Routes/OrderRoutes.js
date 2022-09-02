@@ -187,7 +187,8 @@ router.get("/get-notification",(req,res)=>{
     }).catch(err=>{
       res.status(400).json({
         message:"Notification",
-        data:put
+        data:put,
+        status:400
       })
     })
 
