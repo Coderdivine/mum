@@ -193,7 +193,10 @@ router.get("/get-notification",(req,res)=>{
     })
 
   }catch(err){
-
+    res.status(500).json({
+      message:`${err.message}`,
+      status:500
+    })
   }
 })
 async function IncrementProduct(data){
