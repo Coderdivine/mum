@@ -291,7 +291,7 @@ async function sendMail({email,message,data},res){
                       </tr>
                     </tbody>
     </div>`);
-    console.log(products)
+    //console.log(products)
         const options = {
             method: 'POST',
             url: 'https://rapidprod-sendgrid-v1.p.rapidapi.com/mail/send',
