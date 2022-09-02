@@ -92,9 +92,7 @@ function dynamicContentDetails(ob)
             productPreviewDiv.appendChild(imgTagProductPreviewDiv)
         }
       }else{
-        
-      }
-    let imgTagProductPreviewDiv = document.createElement('img')
+        let imgTagProductPreviewDiv = document.createElement('img')
     imgTagProductPreviewDiv.id = 'previewImg'
     imgTagProductPreviewDiv.src = ob.image
     imgTagProductPreviewDiv.onclick = function(event)
@@ -106,6 +104,8 @@ function dynamicContentDetails(ob)
     }
     productPreviewDiv.appendChild(imgTagProductPreviewDiv)
 
+      }
+    
 
     let buttonDiv = document.createElement('div')
     buttonDiv.id = 'button'
