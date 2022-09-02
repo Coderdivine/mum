@@ -71,22 +71,28 @@ function dynamicContentDetails(ob)
     productPreviewDiv.appendChild(h3ProductPreviewDiv)
 
     let i;
-    if(ob.image.length){
-        for(i=0; i<ob.image.length; i++)
-    {
-        let imgTagProductPreviewDiv = document.createElement('img')
-        imgTagProductPreviewDiv.id = 'previewImg'
-        imgTagProductPreviewDiv.src = ob.image[i]
-        imgTagProductPreviewDiv.onclick = function(event)
+    if(ob.image[0] !== "h"){
+        let use = JSON.parse(ob.image);
+       // console.log(use[0].substring(4,(use[0].length-4)))
+        //imgTag.src = use[0].toString();
+        console.log("use => 0",use[1])
+        for(i=0; i<use.length; i++)
         {
-            console.log("clicked" + this.src)
-            imgTag.src = ob.image[i]
-            document.getElementById("imgDetails").src = this.src 
-            
+            let imgTagProductPreviewDiv = document.createElement('img')
+            imgTagProductPreviewDiv.id = 'previewImg'
+            imgTagProductPreviewDiv.src = use[i]
+            imgTagProductPreviewDiv.onclick = function(event)
+            {
+                console.log("clicked" + this.src)
+                imgTag.src = ob.image[i]
+                document.getElementById("imgDetails").src = this.src 
+                
+            }
+            productPreviewDiv.appendChild(imgTagProductPreviewDiv)
         }
-        productPreviewDiv.appendChild(imgTagProductPreviewDiv)
-    }
-    }
+      }else{
+        
+      }
     let imgTagProductPreviewDiv = document.createElement('img')
     imgTagProductPreviewDiv.id = 'previewImg'
     imgTagProductPreviewDiv.src = ob.image
