@@ -29,7 +29,7 @@ async function GetData() {
                        console.log("Total_sales",Number(el.amount))
                     })
                 })
-                total_sales.innerHTML = val;
+                //total_sales.innerHTML = val;
             }
         } else {
             alert("Show was not found");
