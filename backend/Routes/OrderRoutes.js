@@ -311,7 +311,7 @@ async function sendMail({email,message,data},res){
                      value:
                     `
                     <!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head>
-                    <title> Notificatin [Coded Mails] </title>
+                    <title> Notificatin [D&D] </title>
                     <!--[if !mso]><!-- -->
                     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                     <!--<![endif]-->
