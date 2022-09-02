@@ -78,6 +78,7 @@ function dynamicContentDetails(ob)
         console.log("use => 0",use[1])
         for(i=0; i<use.length; i++)
         {
+            console.log(use[i])
             let imgTagProductPreviewDiv = document.createElement('img')
             imgTagProductPreviewDiv.id = 'previewImg'
             imgTagProductPreviewDiv.src = use[i];
