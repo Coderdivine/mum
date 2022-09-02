@@ -21,8 +21,16 @@ function dynamicContentDetails(ob)
     let imgTag = document.createElement('img')
      imgTag.id = 'imgDetails'
      //imgTag.id = ob.photos
-     imgTag.src = ob.image
-
+     //imgTag.src = ob.image
+     if(ob.image[0] !== "h"){
+        let use = JSON.parse(ob.image);
+       // console.log(use[0].substring(4,(use[0].length-4)))
+        imgTag.src = use[0].toString();
+        console.log("use => 0",use[1])
+      }else{
+        console.log(ob.image)
+        imgTag.src = ob.image
+      }
     imageSectionDiv.appendChild(imgTag)
 
     let productDetailsDiv = document.createElement('div')
