@@ -161,7 +161,6 @@ let totalDiv = document.createElement('div')
 // let h2Text = document.createTextNode('Total Amount')
 // totalh2.appendChild(h2Text)
 // totalDiv.appendChild(totalh2)
-
 // TO UPDATE THE TOTAL AMOUNT
 function amountUpdate(amount)
 {
