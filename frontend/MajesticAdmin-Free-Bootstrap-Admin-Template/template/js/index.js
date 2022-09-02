@@ -85,3 +85,4 @@ async function New_Order(){
         console.log(`${err.message}`)
     })
 }
+New_Order();
