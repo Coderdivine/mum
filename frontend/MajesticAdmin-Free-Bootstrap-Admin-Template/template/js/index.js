@@ -72,9 +72,11 @@ async function New_Order(){
                   </div>
                 </div>
                 <div class="item-content">
-                  <h6 class="font-weight-normal">New user registration</h6>
+                  <h6 class="font-weight-normal">New Order from:<br/>
+                  ${x.firstname} ${x.lastname}
+                  </h6>
                   <p class="font-weight-light small-text mb-0 text-muted">
-                    2 days ago
+                    ${x.type}
                   </p>
                 </div>
               </a>`);
