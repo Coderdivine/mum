@@ -63,6 +63,20 @@ async function New_Order(){
     axios.get("http:localhost:9099/order/get-notification")
     .then(res=>{
         let datas = res.data.data;
+        datas.map(x=>`
+        <a class="dropdown-item">
+                <div class="item-thumbnail">
+                  <div class="item-icon bg-info">
+                    <i class="mdi mdi-account-box mx-0"></i>
+                  </div>
+                </div>
+                <div class="item-content">
+                  <h6 class="font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>`)
     }).catch(err=>{
         console.log(`${err.message}`)
     })
