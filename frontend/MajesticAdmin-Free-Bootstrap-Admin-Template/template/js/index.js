@@ -58,7 +58,8 @@ async function GetOrderData() {
         alert(`Error: ${err.message}`)
     })
 }
-GetOrderData()
+GetOrderData();
+
 async function New_Order(){
     axios.get("http:localhost:9099/order/get-notification")
     .then(res=>{
